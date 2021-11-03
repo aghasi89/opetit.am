@@ -1,0 +1,10 @@
+.error_h1 {
+    font-family: 'Montserrat-Regular';
+    font-size: 100px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    /* width: 478px; */
+    margin: 0 auto;
+    padding-top: 65px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,77 @@
+.most_ordered_dishes {
+    background: #f5f5f5;
+}
+
+.ordered_dishes_h1 {
+    font-family: 'Montserrat-Regular';
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    width: 478px;
+    margin: 0 auto;
+    padding-top: 65px;
+    margin-bottom: 15px;
+}
+
+.ordered_dishes_p {
+    font-family: 'Montserrat-Regular';
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    width: 798px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+    color: #aaabab;
+}
+
+.ordered_dishes_item_p {
+    color: #5c5e62;
+}
+
+.ordered_dishes_item {
+    width: 468px;
+}
+
+.ordered_dishes_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ordered_dishes_item_h2 {
+    text-align: center;
+    margin: 15px 0 25px;
+}
+
+.ordered_dishes_btn_group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ordered_dishes_btn_group div {
+    padding: 18px 88px;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 60px 11px 81px 0;
+}
+
+.ordered_dishes_btn_group div:hover {
+    background-color: white;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.4s;
+}
+
+.slider_wrapper {
+    display: block;
+    width: 1564px;
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-list {
+    width: 1440px;
+}

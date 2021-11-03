@@ -1,0 +1,102 @@
+.contact_block_h1 {
+    font-family: 'Montserrat-Bold';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -0.015em;
+    width: 723px;
+    margin: 158px 103px 13px 0;
+    color: white;
+    float: right;
+}
+
+.contact_block_p {
+    font-family: 'Montserrat-Regular';
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    font-variant: small-caps;
+    width: 657px;
+    text-transform: uppercase;
+    color: white;
+    float: right;
+    margin: 13px 166px 0px 0px;
+}
+
+.contact_block_about {
+    background-image: url(../../assets/img/jpg/contact_us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 1120px;
+    height: 896px;
+}
+
+.contact_us_form_h1 {
+    font-family: 'Montserrat-Bold';
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 65px auto 0px;
+}
+
+.contact_us_form_h1::after {
+    content: '';
+    display: block;
+    width: 105px;
+    height: 1px;
+    background-color: black;
+    margin: 20px 0 65px 30px;
+}
+
+.contact_btn a {
+    font-family: 'Montserrat-Bold';
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 23px 156px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.contact_btn {
+    margin: 151px auto 80px;
+}
+
+.contact_us_block {
+    position: relative;
+}
+
+.d_flex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box_input {
+    margin-bottom: 75px;
+}
+
+.MuiInput-underline {
+    width: 468px;
+}
+
+.MuiOutlinedInput-notchedOutline {
+    width: 452px;
+    height: 104px;
+}
+
+@media screen and(max-width:1366px) {
+    .contact_block_p {
+        float: none;
+    }
+    .contact_block_h1 {
+        float: none;
+    }
+    .contact_block_about {
+        width: 700px;
+    }
+}

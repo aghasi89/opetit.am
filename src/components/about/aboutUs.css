@@ -1,0 +1,23 @@
+.aboutUs_h1 {
+    font-family: 'Montserrat-Regular';
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    margin: 120px 250px 60px 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    color: #050606;
+}
+
+.aboutUs_p {
+    font-family: 'Montserrat-Regular';
+    width: 1042px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: #aaabab;
+}

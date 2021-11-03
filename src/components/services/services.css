@@ -1,0 +1,86 @@
+.services_h1 {
+    font-family: 'Montserrat-Regular';
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    width: 192px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 65px;
+    margin-bottom: 15px;
+    color: #050606;
+}
+
+.services_p {
+    font-family: 'Montserrat-Regular';
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    width: 798px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+    text-align: center;
+    color: #aaabab;
+}
+
+.food_elem_img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.food_elem {
+    margin-bottom: 60px;
+    margin-right: 36px;
+    cursor: pointer;
+}
+
+.food_elem h1 {
+    text-align: center;
+    margin: 15px 0 23px 0;
+    color: #050606;
+}
+
+.food_elem p {
+    font-family: 'Montserrat-Regular';
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    text-align: center;
+    width: 276px;
+    text-align: center;
+    color: #5c5e62;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+}
+
+.services_btn {
+    margin-left: auto;
+    width: 192px;
+    margin-bottom: 80px;
+}
+
+.services_btn a {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat-Regular';
+    letter-spacing: -0.015em;
+    padding: 15.3px 71.78px 15.7px 71.22px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+.services_btn a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+}

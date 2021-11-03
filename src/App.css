@@ -1,0 +1,38 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Comfortaa-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Comfortaa-Regular'),
+        url('../src/assets/fonts/Comfortaa/static/Comfortaa-Regular.ttf')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Montserrat-Regular'),
+        url('../src/assets/fonts/Montserrat/Montserrat-Regular.ttf')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Montserrat-Regular'),
+        url('../src/assets/fonts/Montserrat/Montserrat-Bold.ttf') format('woff');
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1366px) {
+    .container {
+        width: 1220px;
+    }
+}
