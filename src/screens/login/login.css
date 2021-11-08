@@ -72,8 +72,15 @@
     position: absolute;
 }
 
-.signin_form {
+/* .signin_form {
     text-align: center;
+} */
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin-right: 50px;
 }
 
 .login_form_logo_block {
@@ -83,13 +90,13 @@
 }
 
 .login_form_h4 {
+    justify-content: left;
     font-family: 'Comfortaa-Regular';
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: -0.015em;
     color: #c4c4c4;
-    text-align: center;
     margin: 197px 0px 20px 0px;
 }
 
@@ -116,7 +123,6 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 30px;
-    text-align: center;
     letter-spacing: -0.015em;
     text-decoration-line: underline;
     color: #aaabab;
@@ -125,7 +131,7 @@
 .login_inputs {
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 .username_inputs {
@@ -133,27 +139,20 @@
     border: 1px solid #5c5e62;
     box-sizing: border-box;
     border-radius: 6px;
-    width: 550px;
-    height: 52px;
     margin-bottom: 25px;
     font-weight: 500;
     font-size: 20px;
     padding-left: 20px;
     letter-spacing: -0.015em;
-}
-
-.password_inputs {
-    border-radius: 6px;
     width: 550px;
     height: 52px;
-    margin-bottom: 10px;
 }
 
 .submit_btn {
     margin-top: 20px;
 }
 
-.submit_btn a {
+.submit_btn span {
     font-family: 'Comfortaa-Regular';
     border-radius: 6px;
     background: #1eda47;
@@ -165,10 +164,11 @@
     text-decoration: none;
 }
 
-.submit_btn a:hover {
+.submit_btn span:hover {
     background-color: black;
     color: white;
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .logo_p {
@@ -186,4 +186,8 @@
 
 .logo_img img {
     margin-left: 30px;
+}
+
+.logo_img {
+    text-align: center;
 }

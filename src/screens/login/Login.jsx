@@ -1,6 +1,8 @@
 //COMPONENTS
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { userLogin } from '../../Redux/action';
 
 //CSS
 import '../login/login.css';
@@ -13,20 +15,34 @@ import twiter from '../../assets/img/svg/twiter.svg';
 import linkedin from '../../assets/img/svg/linkedin.svg';
 
 const Login = () => {
-    let login, password;
-    const handleInput = (event) => {
-        login = event.target.value;
-        password = event.target.value;
-    };
-    useEffect(() => {
-        console.log('Login', login, 'Password', password);
+    const [state, setState] = useState({
+        username: '',
+        password: '',
+        role_code: 'CL',
     });
+    const dispatch = useDispatch();
+    const handleInput = ({ target }) => {
+        const { name, value } = target;
+        setState({
+            ...state,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = () => {
+        dispatch(userLogin(state));
+    };
+
+    useEffect(() => {});
+
     return (
         <section className="login_about">
             <div className="container">
                 <div className="d_flex">
                     <div className="login_form signin_form">
-                        <h4 className="login_form_h4">Welcome to</h4>
+                        <div className="d-flex justify-content-center">
+                            <h4 className="login_form_h4">Welcome to</h4>
+                        </div>
                         <div className="login_form_logo_block">
                             <img
                                 src={Logo}
@@ -44,22 +60,22 @@ const Login = () => {
                         <div className="login_inputs">
                             <input
                                 onChange={(event) => handleInput(event)}
-                                className="username_inputs"
+                                className="username_inputs "
                                 placeholder="User Name"
+                                name="username"
                             />
                             <input
                                 onChange={(event) => handleInput(event)}
-                                className="username_inputs password_inputs"
+                                className="username_inputs "
                                 placeholder="Password"
+                                name="password"
                             />
                         </div>
                         <Link to="" className="login_form_link">
                             Forgat your password?
                         </Link>
                         <div className="submit_btn">
-                            <a href="/#" alt="login">
-                                Sign In
-                            </a>
+                            <span onClick={() => handleSubmit()}>Sign In</span>
                         </div>
                         <div className="logo_block">
                             <p className="logo_p">continue with social media</p>

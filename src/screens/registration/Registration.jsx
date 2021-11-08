@@ -1,5 +1,8 @@
 //COMPONENTS
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { userRegistration } from '../../Redux/action';
 
 //CSS
 import '../registration/registration.css';
@@ -17,21 +20,53 @@ const inputsPlaceHoldere = [
     'Password',
     'Confirm Password',
     'Phone Number',
+    'Email',
 ];
 
-const Login = () => {
+const Registration = () => {
+    const dispatch = useDispatch();
+    const [state, setState] = useState({
+        role_code: 'CL',
+    });
+
+    const handleChangeInput = ({ target }) => {
+        const { name, value } = target;
+        setState({
+            ...state,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = () => {
+        dispatch(userRegistration(state));
+    };
+
     const inputJSX = inputsPlaceHoldere.map((item, indx) => {
+        const name = item.replace(' ', '_').toLowerCase();
+        const type =
+            name === 'password'
+                ? 'password'
+                : name === 'confirm_password'
+                ? 'password'
+                : 'text';
         return (
             <div key={indx}>
-                <input className="username_inputs " placeholder={`${item}`} />
+                <input
+                    className="username_inputs "
+                    placeholder={`${item}`}
+                    name={name}
+                    type={type}
+                    onChange={(e) => handleChangeInput(e)}
+                />
             </div>
         );
     });
+
     return (
         <section className="signup_about">
             <div className="container">
                 <div className="d_flex">
-                    <div className="signup_form">
+                    <div className="">
                         <div className="signup_logo_block">
                             <img src={Logo} alt="signup_logo" />
                             <h1 className="signup_logo_h1">photo</h1>
@@ -67,14 +102,13 @@ const Login = () => {
                             typesetting industry. Lorem Ipsum has been{' '}
                         </p>
                         <div className="signup_inputs">{inputJSX}</div>
-                        <div className="signup_form_btn">
-                            <a
-                                href="/#"
-                                alt="login"
-                                className="signup_form_btn_a"
+                        <div className="sing_up_btn">
+                            <span
+                                className="sing_up_btn_span"
+                                onClick={handleSubmit}
                             >
                                 Sign Up
-                            </a>
+                            </span>
                         </div>
                         <div className="signup_block">
                             <p className="sigup_block_p">
@@ -94,4 +128,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Registration;

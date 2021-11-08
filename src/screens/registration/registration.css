@@ -46,7 +46,7 @@
 }
 
 .signup_btn {
-    font-family: 'Comfortaa-Regular';
+    font-family: 'Montserrat-Regular';
     padding: 14px 240px;
     border: 1px solid white;
     color: white;
@@ -115,34 +115,32 @@
 }
 
 .signup_inputs input {
+    width: 100%;
     margin-bottom: 40px !important;
 }
 
-.signup_form_btn {
-    background-color: #1eda47;
-    cursor: pointer;
-    padding: 14px 40px;
-    border-radius: 6px;
-    text-align: center;
-    margin-bottom: 40px;
-    border: 1px solid #1eda47;
-}
-
-.signup_form_btn:hover {
-    background-color: white;
-    color: black;
-    border-color: black;
-}
-
-.signup_form_btn_a {
-    font-style: normal;
+.sing_up_btn_span {
     font-family: 'Comfortaa-Regular';
+    font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+    display: flex;
+    align-items: center;
     letter-spacing: -0.015em;
-    color: #ffffff;
-    text-decoration: none;
+    background: #1eda47;
+    padding: 14px 240px;
+    border: 1px solid #1eda47;
+    border-radius: 6px;
+    width: 81px;
+    color: white;
+}
+
+.sing_up_btn_span:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-color: black;
 }
 
 .sigup_block_p {
@@ -154,6 +152,7 @@
     letter-spacing: -0.015em;
     color: #aaabab;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .signup_logo_img img {

@@ -1,7 +1,6 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Login from '../screens/login/Login';
 import Registration from '../screens/registration/Registration';
-
 import App from '../App';
 import Error from './Error/Error';
 

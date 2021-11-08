@@ -1,4 +1,4 @@
-import '../main/main.css';
+import './main.css';
 // import fon from '../../assets/img/jpg/main_background_img.jpg';
 
 const Main = () => {

@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 //CSS
 import '../contactUs/contact_us.css';
 
-const formData = ['Name', 'Email', 'Subject'];
+const formData = ['Name', 'Email', 'Phone Number', 'Subject'];
 
 const ContactUs = () => {
     const formDataJSX = formData.map((item, indx) => {
