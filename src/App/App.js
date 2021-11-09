@@ -1,8 +1,9 @@
 
 import { Redirect, Route, Switch } from 'react-router';
-import { AboutUs, Boxes, Header, HomePage, Login, Register,Services } from './Components/index';
 
 import './App.css';
+import { Header } from './Components';
+import { AboutUs, Boxes, HomePage, Login, Register, Services } from './View';
 
 function App() {
   return (
