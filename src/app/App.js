@@ -1,29 +1,11 @@
 //COMPONENTS
-import {
-    Header,
-    Main,
-    AboutUs,
-    Boxes,
-    MostOrderedDishes,
-    ContactUs,
-    Footer,
-} from './components/index';
+// import {} from './components/index';
 
 //CSS
 import './App.css';
 
 function App() {
-    return (
-        <div className="App">
-            <Header />
-            <Main />
-            <AboutUs />
-            <Boxes />
-            <MostOrderedDishes />
-            <ContactUs />
-            <Footer />
-        </div>
-    );
+    return <div className="App"></div>;
 }
 
 export default App;

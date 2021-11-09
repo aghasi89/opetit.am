@@ -33,4 +33,15 @@
     .container {
         width: 1220px;
     }
+    .contact_block_p {
+        float: none;
+    }
+    .contact_block_h1 {
+        float: none;
+    }
+    .contact_block_about {
+        width: 700px;
+        background-size: cover;
+        background-position-x: center;
+    }
 }

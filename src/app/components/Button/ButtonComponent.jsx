@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom';
-import '../Button/buttonComp.css';
+import './buttonComp.css';
 
 const ButtonComponent = ({ type, link, content, className }) => {
     const history = useHistory();
