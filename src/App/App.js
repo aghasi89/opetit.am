@@ -1,13 +1,14 @@
 import { Suspense } from "react";
 import './App.css';
-import NavMenu from './NavMenu/NavMenu';
-
+import LanguageSelect from './Components/LanguageSelector/LanguageSelect'
+import Home from"./View/index"
 function App() {
   return (
     <div className="App">
       <Suspense fallback={<div>....Loading</div>}>
-      <NavMenu/>
+      <LanguageSelect/>
       </Suspense>
+      <Home/>
     </div>
   );
 }
