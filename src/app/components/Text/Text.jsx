@@ -1,4 +1,4 @@
-import '../Text/text.css';
+import './text.css';
 
 const TextComponent = ({ type, content, className }) => {
     switch (type) {

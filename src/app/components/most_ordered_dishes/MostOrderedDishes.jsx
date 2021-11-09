@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 
 //CSS
-import '../most_ordered_dishes/mostOrderedDishes.css';
+import './mostOrderedDishes.css';
 
 //PICTURE
 import img1 from '../../assets/img/jpg/dishes1.jpg';
@@ -10,40 +10,41 @@ import img3 from '../../assets/img/jpg/dishes3.jpg';
 import prev from '../../assets/img/svg/prev.svg';
 import next from '../../assets/img/svg/next.svg';
 import { useRef } from 'react';
+// import BoxesComponent from '../boxesComponent/BoxesComponent';
 
 const orderedDishes = [
     {
-        pic: img1,
+        img: img1,
         name: 'Sed ut perspiciatis unde omnis',
         description:
             'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia ',
     },
     {
-        pic: img2,
+        img: img2,
         name: 'Sed ut perspiciatis unde omnis',
         description:
             'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia ',
     },
     {
-        pic: img3,
+        img: img3,
         name: 'Sed ut perspiciatis unde omnis',
         description:
             'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia ',
     },
     {
-        pic: img1,
+        img: img1,
         name: 'Sed ut perspiciatis unde omnis',
         description:
             'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia ',
     },
     {
-        pic: img2,
+        img: img2,
         name: 'Sed ut perspiciatis unde omnis',
         description:
             'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia ',
     },
     {
-        pic: img3,
+        img: img3,
         name: 'Sed ut perspiciatis unde omnis',
         description:
             'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia ',
@@ -62,14 +63,12 @@ const settings = {
 const MostOrderedDishes = () => {
     const orderedDishesJSX = orderedDishes.map((item, indx) => {
         return (
-            <div className="ordered_dishes_item_block" key={indx}>
-                <div className="ordered_dishes_pic">
-                    <img src={item.pic} alt={item.name} />
-                    <h2 className="ordered_dishes_item_h2">{item.name}</h2>
-                    <p className="ordered_dishes_item_p ordered_dishes_p ordered_dishes_item">
-                        {item.description}
-                    </p>
-                </div>
+            <div className="ordered_dishes_pic" key={indx}>
+                <img src={item.img} alt={item.name} />
+                <h2 className="ordered_dishes_item_h2">{item.name}</h2>
+                <p className="ordered_dishes_item_p ordered_dishes_p ordered_dishes_item">
+                    {item.description}
+                </p>
             </div>
         );
     });
@@ -94,6 +93,12 @@ const MostOrderedDishes = () => {
                             autoplaySpeed={1500}
                             {...settings}
                         >
+                            {/* <div className="ordered_dishes_item_block">
+                                <BoxesComponent
+                                    data={orderedDishes}
+                                    className="ordered_dishes_pic"
+                                />
+                            </div> */}
                             {orderedDishesJSX}
                         </Slider>
                     </div>

@@ -1,11 +1,10 @@
 /* FONTS */
-
 @font-face {
     font-family: 'Comfortaa-Regular';
     font-style: normal;
     font-weight: normal;
     src: local('Comfortaa-Regular'),
-        url('../src/assets/fonts/Comfortaa/static/Comfortaa-Regular.ttf')
+        url('./assets/fonts/Comfortaa/static/Comfortaa-Regular.ttf')
             format('woff');
 }
 
@@ -14,8 +13,7 @@
     font-style: normal;
     font-weight: normal;
     src: local('Montserrat-Regular'),
-        url('../src/assets/fonts/Montserrat/Montserrat-Regular.ttf')
-            format('woff');
+        url('./assets/fonts/Montserrat/Montserrat-Regular.ttf') format('woff');
 }
 
 @font-face {
@@ -23,7 +21,7 @@
     font-style: normal;
     font-weight: bold;
     src: local('Montserrat-Regular'),
-        url('../src/assets/fonts/Montserrat/Montserrat-Bold.ttf') format('woff');
+        url('./assets/fonts/Montserrat/Montserrat-Bold.ttf') format('woff');
 }
 
 .container {
