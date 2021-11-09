@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import './App.css';
 import LanguageSelect from './Components/LanguageSelector/LanguageSelect'
-import Home from"./View/index"
+import Home from "./View/index"
 function App() {
   return (
     <div className="App">
