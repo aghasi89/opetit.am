@@ -1,6 +1,6 @@
 import '../header/header.css';
 import Logo from '../../assets/img/png/Logo.png';
-import { Link } from 'react-router-dom';
+import ButtonComponent from '../Button/ButtonComponent';
 const menuNamesArr = ['About us', 'Boxes', 'Services', 'Contact us'];
 
 const Header = () => {
@@ -21,16 +21,18 @@ const Header = () => {
                     <p className="logo">photo</p>
                     <ul className="menu">{menuJSX}</ul>
                     <div className="btn_block">
-                        <span>
-                            <Link to="/login" className="btn_login">
-                                Log in
-                            </Link>
-                        </span>
-                        <span>
-                            <Link to="/signup" className="btn_login btn_reg">
-                                Register
-                            </Link>
-                        </span>
+                        <ButtonComponent
+                            type="button"
+                            link="/login"
+                            content="Log in"
+                            className="btn_login"
+                        />
+                        <ButtonComponent
+                            type="button"
+                            link="/signup"
+                            content="Register"
+                            className="btn_login btn_reg"
+                        />
                     </div>
                 </div>
             </div>

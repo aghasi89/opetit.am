@@ -45,28 +45,6 @@
     margin-left: auto;
 }
 
-.btn_block span:nth-of-type(1) {
+.btn_block :first-child {
     margin-right: 32px;
-}
-
-.btn_login {
-    text-decoration: none;
-    font-family: 'Montserrat-Regular';
-    letter-spacing: -0.015em;
-    padding: 11px 42px;
-    border: 1px solid black;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-}
-
-.btn_reg {
-    padding: 11px 34px;
-}
-
-.btn_block a:hover {
-    background-color: black;
-    color: white;
-    transition: 0.4s;
 }

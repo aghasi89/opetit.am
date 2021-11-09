@@ -1,12 +1,18 @@
 import '../about/aboutUs.css';
+import TextComponent from '../Text/Text';
 
 const AboutUs = () => {
     return (
         <section className="about_us">
             <div className="container">
-                <h1 className="aboutUs_h1">About us</h1>
-                <p className="aboutUs_p">
-                    Lorem Ipsum is simply dummy text of the printing and
+                <TextComponent
+                    type="h1"
+                    content="About us"
+                    className="aboutUs_h1"
+                />
+                <TextComponent
+                    type="p"
+                    content="Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled it to make a
@@ -22,8 +28,9 @@ const AboutUs = () => {
                     Richard McClintock, a Latin professor at Hampden-Sydney
                     College in Virginia, looked up one of the more obscure Latin
                     words, consectetur, from a Lorem Ipsum passage, and going
-                    through the cites of the word in classical literature,
-                </p>
+                    through the cites of the word in classical literature,"
+                    className="aboutUs_p"
+                />
             </div>
         </section>
     );
