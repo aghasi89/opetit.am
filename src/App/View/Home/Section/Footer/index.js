@@ -7,14 +7,15 @@ export default () => {
     return (
         <div className="footerContenier">
             <div className="footerMenu">
-                <div className="footerLink"><h4>Mobile app</h4></div>
-                <div className="footerLink"><h4>Community</h4></div>
-                <div className="footerLink"><h4>Company</h4></div>
-                <div className="footerLink"><h4>photo</h4></div>
-                <div className="footerLink"><h4>Help desk</h4></div>
-                <div className="footerLink"><h4>Blog</h4></div>
-                <div className="footerLink"><h4>Resources</h4></div>
+                <div className="footerLink"><h6>Mobile app</h6></div>
+                <div className="footerLink"><h6>Community</h6></div>
+                <div className="footerLink"><h6>Company</h6></div>
+                <div className="footerLink d-flex"><div><h2>photo</h2></div></div>
+                <div className="footerLink"><h6>Help desk</h6></div>
+                <div className="footerLink"><h6>Blog</h6></div>
+                <div className="footerLink"><h6>Resources</h6></div>
             </div>
+            <div className="inlineDiv"></div>
             <div className="footerSocialNetworks">
                 <div className="footerSocialNetworksIcons">
                     <div className="footerIcons"><img src={LinkeDinIcone} /></div>

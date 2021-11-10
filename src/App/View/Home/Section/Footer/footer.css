@@ -41,3 +41,10 @@
     justify-content: center;
     align-items: center;
 }
+
+.inlineDiv{
+    height: 1px;
+    width: 95%;
+    background-color:gray;
+    margin: 20px 0 50px;
+}
