@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import './App.css';
 import LanguageSelect from './Components/LanguageSelector/LanguageSelect'
 import Home from "./View/index"
+import Footer from "./View/Home/Section/Footer";
 function App() {
   return (
     <div className="App">
@@ -9,6 +10,7 @@ function App() {
       <LanguageSelect/>
       </Suspense>
       <Home/>
+      <Footer/>
     </div>
   );
 }

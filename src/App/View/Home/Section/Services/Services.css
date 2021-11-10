@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 60%;
     flex-direction: column;
     
     
@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    
+    min-width: 320px;        
 }
 .servicesCard{
     display: flex;
@@ -28,14 +28,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 200px;
-    height: 200px;
+    width: 20%;
+    height: 20%;
     margin: 20px;
     
 }
 
 .servicesCardImage{
-    min-width: 100px;
-    min-height: 100px;
-    background-color: red;
+    
+}
+.servicesCardText{
+    width: 80%;
+}
+.servicesCardTitle{
+    margin: 10px 0;
 }

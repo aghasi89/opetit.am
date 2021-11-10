@@ -1,0 +1,43 @@
+.footerContenier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    flex-direction: column;
+}
+.footerMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    
+}
+
+.footerSocialNetworks{
+    
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  flex-direction: column;
+    
+    
+}
+.footerSocialNetworksIcons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 20%;
+}
+.footerIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
