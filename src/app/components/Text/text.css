@@ -81,3 +81,16 @@
     text-align: center;
     color: #aaabab;
 }
+
+.boxes_h1 {
+    font-family: 'Montserrat-Regular';
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    width: 142px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 62px;
+    margin-bottom: 15px;
+    color: #050606;
+}

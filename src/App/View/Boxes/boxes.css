@@ -1,0 +1,9 @@
+.boxes {
+    background: #f5f5f5;
+}
+
+.images_block {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-bottom: 15px;
+}
