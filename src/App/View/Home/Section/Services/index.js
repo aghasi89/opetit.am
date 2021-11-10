@@ -8,7 +8,7 @@ export default ()=>{
            </div>
            <div className="servicesCardContenier">
                <div className="servicesCard">
-                       <div className="servicesCardImage">image<button>click</button></div>
+                       <div className="servicesCardImage">image</div>
                        <div className="servicesCardTitle">Salad</div>
                        <div className="servicesCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</div>
                </div>

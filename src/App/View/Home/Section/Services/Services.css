@@ -1,3 +1,4 @@
+
 .servicesContenier{
     display: flex;
     justify-content: center;
@@ -5,19 +6,36 @@
     width: 100%;
     flex-direction: column;
     
-};
-
-.servicesInfo{
+    
+}
+.servicesInfo {
     justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
-};
-.servicesCardContenier{
+    
+}
+.servicesCardContenier {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: red;
-};
+    
+}
+.servicesCard{
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    
+}
 
+.servicesCardImage{
+    min-width: 100px;
+    min-height: 100px;
+    background-color: red;
+}
