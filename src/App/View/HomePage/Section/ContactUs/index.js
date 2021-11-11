@@ -29,7 +29,7 @@ export default function ContactUs() {
                     <input type="text" />
                     <input type="text" />
                     <input type="text" />
-                    <textarea name='massage'>write text here...</textarea>
+                    <textarea name='massage' defaultValue="write text here..."></textarea>
                     <input type="submit" />
                 </div>
             </div>
