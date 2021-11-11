@@ -1,0 +1,56 @@
+.loginPageContenier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+.loginPage{
+    background-color: lavender;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    
+}
+.loginPagePhoto{
+    background-color: indianred;
+    width: 50%;
+    background-image: url(./backgroundImage/image1.png);
+    height: 100vh;
+    
+}
+.loginPageBackground{
+    width: 100%;
+    background-image: url(./backgroundImage/image2.png);
+    height: 100%;
+}
+.loginContenier {
+    width:40% ;
+    height: 100%;
+}
+
+.loginPageForm{
+    margin: 20px 0 20px;
+    justify-content: space-between;
+}
+.loginPageLine{
+    height: 20px;
+    background-color: white;
+    width: 100%;
+}
+.loginPageSignup{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.loginPageButtton{
+    width: 300px;
+    border: 1px solid white ;
+    align-items: center;
+    background: transparent;
+    
+    
+
+}
