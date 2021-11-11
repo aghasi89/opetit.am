@@ -2,8 +2,8 @@
 import { Redirect, Route, Switch } from 'react-router';
 
 import './App.css';
-import { Header } from './Components';
-import { AboutUs, Boxes, HomePage, Login, Register, Services } from './View';
+import { Header } from './components';
+import { AboutUs, Boxes, HomePage, Login, Register, Services } from './view';
 
 function App() {
   return (
