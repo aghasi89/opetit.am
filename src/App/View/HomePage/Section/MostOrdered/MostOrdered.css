@@ -1,5 +1,9 @@
 .mostOrderedGeneralConteiner{
-    width: 65%;
+    width: 100%;
+    background: #F5F5F5;
+}
+.mostOrderedPositionConteiner{
+width: 65%;
 }
 /* ---------------------------Title----------------- */
 .mostOrderedTitleAndText{
@@ -29,5 +33,6 @@
 }
 /* ---------------------------Buttons----------------- */
 .mostOrderedButtonsConteiner{
-    height:20%
+    height:20%;
+    width: 100%;
 }
