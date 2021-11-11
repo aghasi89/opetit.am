@@ -10,5 +10,5 @@ export default function ImgSpan(props) {
         </span>
       </div>
     );
-  }
+  };
   
