@@ -4,5 +4,5 @@ export default function ImgSrc(props) {
         <img src={props.imgsrc} />
       </div>
     );
-  };
+  }
   
