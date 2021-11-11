@@ -1,6 +1,4 @@
-import BoxesComponent from './boxesComponent/BoxesComponent';
-import ButtonComponent from './button/ButtonComponent';
+import Header from './Header/Header';
+import Text from './Text/Text';
 
-import Text from './text/Text';
-
-export { BoxesComponent, ButtonComponent, Text };
+export { Header, Text };

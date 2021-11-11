@@ -1,10 +1,9 @@
 //COMPONENTS
-import ButtonComponent from '../../components/Button/ButtonComponent';
-import Text from '../../components/Text/Text';
+import ButtonComponent from '../../../../components/Button/ButtonComponent';
+import Text from '../../../../components/Text/Textt/Text';
 
 //CSS
-import '../Boxes/boxes.css';
-// import BoxesImgComp from './boxes_img_comp/BoxesImgComp';
+import './boxes.css';
 
 const Boxes = () => {
     return (
