@@ -43,3 +43,13 @@
 .servicesCardTitle{
     margin: 10px 0;
 }
+.servicesButtonDiv{
+    width: 100%;
+    
+}
+.servicesButton{
+    background: #1EDA47;
+    border-radius: 6px;
+    width: 160px;
+    height: 40px;
+}

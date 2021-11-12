@@ -32,6 +32,9 @@ export default ()=>{
                        <div className="servicesCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</div>
                </div>
            </div>
+           <div className="servicesButtonDiv d-flex justify-content-end">
+               <button className="servicesButton">Menu</button>
+           </div>
         </div>
     )
 }
