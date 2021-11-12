@@ -9,8 +9,9 @@ export default function HeaderSlide() {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        vertical: true,
-        verticalSwiping: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        
         beforeChange: function (currentSlide, nextSlide) {
             console.log("before change", currentSlide, nextSlide);
         },

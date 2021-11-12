@@ -14,7 +14,7 @@
   }
   .layer-wrapper {
     width: 70%;
-    height: 70%;
+    height: 70vh;
     /* display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -22,6 +22,7 @@
    }
   .layer-text {
     height: 60%;
+    width: 70%;
     /* display: flex;
     flex-direction: column;
     justify-content: flex-end; */
