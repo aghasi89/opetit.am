@@ -1,0 +1,53 @@
+.bg-img {
+    background-image: url(./background.png);
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;   
+  }
+  .layer {
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: white;
+    position: relative;
+  }
+  .layer-wrapper {
+    width: 70%;
+    height: 70%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between; */
+   }
+  .layer-text {
+    height: 60%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+  }
+  .background-image{
+    width: 100%;
+    height: 100vh;
+  }
+  .slick-dots {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    bottom: 120px;
+    z-index: 1;
+  }
+
+  .slick-dots li.slick-active button:before, .slick-dots li button:before {
+    color: white;
+  }
+
+  .slick-dots li button, .slick-dots li{
+    width: 12px;
+    height: 12px;
+  }
+ .slider{
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+ }

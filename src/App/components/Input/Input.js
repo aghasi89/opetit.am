@@ -1,9 +1,24 @@
-import "./input.css"
+import "./style.css"
 
-export default function Input () {
-    return (
-        <div>
-            <input type="text" placeholder="Username" className="username"/>
-        </div>
-    )
+const Input = (props) => {
+    const { type, placeholder, inputStyle } = props;
+    switch (inputStyle) {
+        case 'input-outlined':
+            return (
+                <div>
+                    <input {...props} className='input-outlined' />
+                </div>
+            )
+        case 'input-outlined-bottom':
+            return (
+                <div>
+                    <input {...props} className='input-outlined-bottom' />
+                </div>
+            )
+        default:
+            return null;
+    }
+
 }
+
+export default Input
