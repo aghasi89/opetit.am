@@ -5,8 +5,7 @@ import MostOrdered from "./Section/MostOrdered"
 export default ()=>{
     return (
     <>
-    <About/>
-    <ContactUs/>
+    
     <MostOrdered/>
     </>
     )
