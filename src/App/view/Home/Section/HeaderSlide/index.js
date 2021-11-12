@@ -36,8 +36,7 @@ export default function HeaderSlide() {
                         <img src={background} alt="bg-img" className="background-image" />
                     </div>
                 </Slider>
-            </div>
-            <div className="layer d-flex justify-content-center align-items-center">
+                <div className="layer d-flex justify-content-center align-items-center">
                 <div className="layer-wrapper d-flex flex-column align-items-start justify-content-between">
                     <div className="layer-text d-flex flex-column justify-content-end">
                         <p>LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING</p>
@@ -46,6 +45,8 @@ export default function HeaderSlide() {
                     <button>Join Today</button>
                 </div>
             </div>
+            </div>
+            
         </div>
     );
 }
