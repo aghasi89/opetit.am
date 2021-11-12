@@ -7,7 +7,7 @@
     
 }
 .loginPage{
-    background-color: lavender;
+   
     width: 50%;
     height: 100%;
     align-items: center;
@@ -17,7 +17,12 @@
     background-color: indianred;
     width: 50%;
     background-image: url(./backgroundImage/image1.png);
-    height: 100vh;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
 .loginPageBackground{
@@ -27,23 +32,32 @@
 }
 .loginContenier {
     width:40% ;
-    height: 100%;
+    height: 60%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    
+
 }
 
 .loginPageForm{
     margin: 20px 0 20px;
     justify-content: space-between;
+    height: 20%;
 }
 .loginPageLine{
-    height: 20px;
-    background-color: white;
-    width: 100%;
+    
+    width: 10%;
+    border: 1px solid #FFFFFF
 }
 .loginPageSignup{
     justify-content: space-between;
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 20%;
+    
+    
 }
 .loginPageButtton{
     width: 300px;
@@ -53,4 +67,15 @@
     
     
 
+}
+.loginSignupText{
+    width: 50%;
+}
+.formButton{
+    background: #1EDA47;
+    border-radius: 6px;
+}
+.loginPageIcons{
+    width: 30%;
+    margin: 0 auto;
 }

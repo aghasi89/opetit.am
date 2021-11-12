@@ -20,30 +20,34 @@ export default () => {
                             <input type="text" placeholder="Username" />
                             <input type="password" placeholder="Password" />
                             <div><span>Fargat your password?</span></div>
-                            <button>Sign in</button>
+                            <button className="formButton">Sign in</button>
                         </form>
-                        <div className="socialMedia d-flex justify-content-center align-items-center">
+                        
+                        
+                    </div>
+                    <div className="socialMedia d-flex justify-content-center align-items-center">
                             <div><span>continue with social media</span></div>
                         </div>
-                        <div className="loginPageIcons d-flex justify-content-center align-items-center">
+                    <div className="loginPageIcons d-flex justify-content-between align-items-center ">
                             <div><img src={LinkeDin} /></div>
                             <div><img src={Twitter} /></div>
                             <div><img src={facebook} /></div>
                             <div></div>
                         </div>
-                    </div>
                 </div>
             </div>
             <div className="loginPagePhoto">
-                <div className="loginPageBackground">
+                <div className="loginPageBackground d-flex flex-column  justify-content-center">
                     <div className="loginPageSignup">
                         <div className="loginPageLine"></div>
-                        <div>
-                            <div>88</div>
-                            <span style={{ color: "white" }}>photo</span>
+                        <div className=" d-flex  justify-content-center align-items-center" >
+                            <div style={{ color: "white" }}>88</div>
+                            <h1 style={{ color: "white" }}>photo</h1>
                         </div>
-                        <div>
-                            <span style={{ color: "white" }}>lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</span>
+                        <div className="loginSignupText">
+                            <span style={{ color: "white" }}>lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.
+                            lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.
+                            </span>
                         </div>
                         <div>
                             <button className="loginPageButtton"><span style={{color:"white"}}>sign up</span></button>
