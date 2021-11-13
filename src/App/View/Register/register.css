@@ -1,0 +1,190 @@
+.signup_wrapper {
+    display: flex;
+}
+
+.signup_logo_block {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 329px 0 25px 0;
+}
+
+.signup_logo_block::before {
+    content: '';
+    width: 132px;
+    border-top: 1px solid white;
+    position: absolute;
+}
+
+.signup_logo_block .h1_style {
+    font-family: 'Comfortaa-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 80px;
+    color: #ffffff;
+    margin: 35px 0 0 30px;
+}
+
+.signup_btn_block {
+    margin: 0 auto;
+    margin-bottom: 362px;
+    margin-top: 71px;
+    border-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.signup_btn_block > .big_btn {
+    background: none;
+    border-color: white;
+}
+.signup_btn_block a {
+    border-color: #1eda47;
+    color: white;
+}
+
+.block_1 {
+    width: 616px;
+    margin-right: calc(720px - 548px);
+    margin-left: auto;
+}
+
+.block_2 {
+    width: 550px;
+    margin-left: calc(720px - 515px);
+}
+
+.signup_form_p {
+    margin-left: 172px;
+}
+
+.signup_form_block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.signup_form_img {
+    filter: invert(1);
+}
+
+.signup_form_block .h1_style {
+    font-family: 'Comfortaa-Regular';
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 80px;
+    margin-left: 30px;
+}
+
+.signup_inputs {
+    margin-top: 25px !important;
+    margin-bottom: 40px !important;
+    margin: 0 auto;
+}
+
+.signup_inputs div {
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 52px;
+    margin-bottom: 25px;
+}
+
+.sing_up_btn {
+    text-align: center;
+}
+
+.sing_up_btn > .big_btn {
+    padding: 14px 234px;
+}
+
+.sing_up_btn_span {
+    font-family: 'Comfortaa-Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    background: #1eda47;
+    padding: 14px 240px;
+    border: 1px solid #1eda47;
+    border-radius: 6px;
+    color: white;
+}
+
+.sing_up_btn_span:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-color: black;
+}
+
+.signup_block > .p_style {
+    font-family: 'Comfortaa-Regular';
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #aaabab;
+    margin-bottom: 20px;
+}
+
+.signup_logo_img img {
+    margin-right: 30px;
+}
+
+.signup_logo_img {
+    text-align: center;
+}
+
+.signup_container {
+    width: 50%;
+    background-image: url(/src/App/assets/img/jpg/login_reg.jpg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.signup_form {
+    width: 50%;
+}
+
+.block_2 .h4_style {
+    color: #c4c4c4;
+    text-align: center;
+    margin: 105px 0px 20px 0px;
+}
+
+.signup_container .p_style {
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    margin: 0 auto;
+}
+
+.block_2 > .p_style {
+    color: #aaabab;
+    margin-bottom: 40px;
+    margin: 0 auto;
+}
+
+.signup_block {
+    margin-top: 50px;
+}
+
+/* .block_1 {
+    width: 616px;
+    margin-right: calc(720px - 548px);
+    margin-left: auto;
+}
+
+. */
+
+@media screen and (max-width: 1366px) {
+    .block_2 {
+        width: 550px;
+        margin-left: calc(100% - 90%);
+    }
+}

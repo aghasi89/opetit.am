@@ -1,0 +1,90 @@
+.btn_login {
+    font-family: 'Montserrat-Regular';
+    letter-spacing: -0.015em;
+    padding: 11px 42px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: white;
+}
+
+.btn_reg {
+    padding: 11px 34px;
+}
+
+.btn_block:hover {
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.boxes_btn {
+    padding-bottom: 80px;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    font-family: 'Montserrat-Regular';
+    letter-spacing: -0.015em;
+    padding: 15.3px 55.78px 15.7px 55.22px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid black;
+    margin-bottom: 80px;
+}
+
+.boxes_btn:hover {
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.button {
+    font-family: 'Montserrat-Regular';
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    padding: 11px 34px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.big_btn {
+    padding: 14px 240px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    background: #1eda47;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+}
+
+.small_btn {
+    background: #1eda47;
+    border-radius: 6px;
+    color: white;
+    width: 85px;
+    border-color: #1eda47;
+}
+
+.outline_btn {
+    font-family: 'Montserrat-Regular';
+    padding: 14px 240px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    border-radius: 6px;
+}
