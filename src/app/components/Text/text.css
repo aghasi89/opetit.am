@@ -94,3 +94,41 @@
     margin-bottom: 15px;
     color: #050606;
 }
+
+.p_style {
+    font-family: 'Montserrat-Regular';
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: -0.015em;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.h1_style {
+    font-family: 'Montserrat-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -0.015em;
+    color: #050606;
+    text-align: center;
+}
+
+.h4_style {
+    font-family: 'Montserrat-Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+}
+
+.color {
+    color: #050606;
+    color: #5c5e62;
+    color: #aaabab;
+    color: #c4c4c4;
+    color: #ffffff;
+}

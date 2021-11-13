@@ -1,8 +1,8 @@
 import { Redirect, Route, Switch } from 'react-router';
 
 import './App.css';
-import { Header, Text } from './Components';
-import { AboutUs, HomePage, Login, Register, Services } from './View';
+import { Header } from './components';
+import { AboutUs, HomePage, Boxes, Login, Register, Services } from './View';
 
 function App() {
     return (
@@ -18,7 +18,7 @@ function App() {
                 </Route>
                 <Route path="/boxes">
                     <Header />
-                    {/* <Boxes /> */}
+                    <Boxes />
                 </Route>
                 <Route path="/services">
                     <Header />

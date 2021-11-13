@@ -1,4 +1,4 @@
 import Header from './Header/Header';
-import Text from './Text/Text';
+import TextComponent from './Text/Text';
 
-export { Header, Text };
+export { Header, TextComponent };

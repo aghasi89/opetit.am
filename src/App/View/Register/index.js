@@ -1,3 +1,3 @@
-export default ()=>{
-    return <div><h1>Registration!</h1></div>
-}
+import Register from './Register.js';
+
+export default Register;
