@@ -29,3 +29,6 @@
   display: flex;
   
 }
+.App {
+  box-sizing: border-box;
+}

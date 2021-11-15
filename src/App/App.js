@@ -1,14 +1,12 @@
-
 import { Redirect, Route, Switch } from 'react-router';
-
 import './App.css';
 import { Header } from './Components';
 import { AboutUs, Boxes, HomePage, Login, Register, Services } from './View';
 
+
 function App() {
   return (
     <div className="App">
-
       <Switch>
         <Route exact path='/'>
           <Header />
@@ -31,13 +29,14 @@ function App() {
           <Boxes />
         </Route>
         <Route path='/login'>
-          <Login/>
+          <Login />
         </Route>
         <Route path='/registration'>
-          <Register/>
+          <Register />
         </Route>
-        <Redirect to='/'/>      
+        <Redirect to='/' />
       </Switch>
+
     </div>
   );
 }
