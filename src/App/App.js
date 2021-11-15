@@ -1,9 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
-
-
 import { Header } from './components';
-import { AboutUs, Boxes, Home, Login, Register, Services } from './view';
+import { AboutUs, Boxes, ContactUs, Home, Login, Register, Services } from './view';
 
 
 function App() {
