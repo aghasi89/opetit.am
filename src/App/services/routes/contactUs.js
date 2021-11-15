@@ -7,6 +7,6 @@ export const contactUsRequest= async (data)=>{
         return responce.data
     } catch (error) {
         console.log(error);
-        throw error.responce.data
+        
     }
 }

@@ -1,6 +1,7 @@
 .App{
   height: 100vh;
   min-width:320px ;
+  box-sizing: border-box;
 }
 
 
@@ -28,7 +29,4 @@
   width: 200px;
   display: flex;
   
-}
-.App {
-  box-sizing: border-box;
 }

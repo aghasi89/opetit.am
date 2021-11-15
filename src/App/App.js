@@ -1,16 +1,19 @@
+
+import { Provider } from 'react-redux';
 import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
-import { Header } from './components';
-import { AboutUs, Boxes, ContactUs, Home, Login, Register, Services } from './view';
-
+import { Header } from './components/index';
+import store from './store';
+import { AboutUs, Boxes, Home, Login, Register, Services } from './view/index';
 
 function App() {
   return (
+
     <div className="App">
       <Switch>
         <Route exact path='/'>
-          <Header />
-          <Home />
+        <Header />
+        <Home/>
         </Route>
         <Route path='/about'>
           <Header />
@@ -26,17 +29,18 @@ function App() {
         </Route>
         <Route path='/contactus'>
           <Header />
-          <ContactUs />
+          <Boxes />
         </Route>
         <Route path='/login'>
-          <Login />
+          <Login/>
         </Route>
         <Route path='/registration'>
-          <Register />
+          <Register/>
         </Route>
-        <Redirect to='/' />
+        <Redirect to='/'/>      
       </Switch>
     </div>
+ 
   );
 }
 
