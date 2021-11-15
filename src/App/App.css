@@ -20,12 +20,6 @@
   justify-content: start;
   align-items: center;
 }
-.logo{
-  width: 70px;
-  background-color: black;
-  height: 100%;
-
-}
 .navigationMenu{
  
   justify-content: space-between;
@@ -37,4 +31,7 @@
   width: 200px;
   display: flex;
   
+}
+.App {
+  box-sizing: border-box;
 }
