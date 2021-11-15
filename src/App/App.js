@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from 'react-router';
 
 import './App.css';
 import { Header } from './components';
-import { AboutUs, Boxes, HomePage, Login, Register, Services } from './view';
+import { AboutUs, Boxes, ContactUs, HomePage, Login, Register, Services } from './view';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         </Route>
         <Route path='/contactus'>
           <Header />
-          <Boxes />
+          <ContactUs />
         </Route>
         <Route path='/login'>
           <Login/>

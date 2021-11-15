@@ -54,9 +54,6 @@
     align-items: center;
 
 }
-.contactUsFormInputs{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.contactUsFormConteiner{
+    width: 70%;
 }
