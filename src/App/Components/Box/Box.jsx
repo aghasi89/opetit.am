@@ -7,4 +7,4 @@ export default function Box(props) {
       <span>{props.span}</span>
     </div>
   );
-}
+};
