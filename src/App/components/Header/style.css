@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #FFFFFF;
+}
+.wrapper {
+    width: 70%;
+    height: 60px; 
+}
+.nav {
+    width: 55%;
+}
+.navbar {
+    width: 100%;
+}
+.logo {
+    margin-right: 50px;
+}
+.login-buttons{
+    width: 20%;
+}
