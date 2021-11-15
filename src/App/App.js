@@ -1,8 +1,11 @@
 import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
 import { Header } from './Components';
-import { AboutUs, Boxes, HomePage, Login, Register, Services } from './View';
+import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
 
+// import Input from './components/Input';
+// import Header from './Components/Header';
+// import HeaderSlide from './view/Home/Section/HeaderSlide';
 
 function App() {
   return (
@@ -10,7 +13,7 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Header />
-          <HomePage />
+          <Home />
         </Route>
         <Route path='/about'>
           <Header />
@@ -36,7 +39,6 @@ function App() {
         </Route>
         <Redirect to='/' />
       </Switch>
-
     </div>
   );
 }
