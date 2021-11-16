@@ -1,9 +1,13 @@
+
 import { Suspense } from "react";
 import './App.css';
-import LanguageSelect from './components/LanguageSelector/LanguageSelect'
-import Home from "./view/index"
-import Footer from "./view/Home/Section/Footer";
-import Login from "./view/Login";
+import LanguageSelect from './Components/LanguageSelector/LanguageSelect'
+import Home from "./View/index"
+import Footer from "./View/Home/Section/Footer";
+import Login from "./View/Login";
+
+
+
 function App() {
   return (
     <div className="App">
@@ -13,6 +17,7 @@ function App() {
       <Home/>
       <Footer/>
       <Login/>
+    
     </div>
   );
 }

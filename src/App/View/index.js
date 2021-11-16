@@ -1,3 +1,4 @@
+
 import Services from "./Home/Section/Services"
 
 
@@ -7,3 +8,8 @@ return (<>
     </>
 )
 }
+
+
+
+export { Services }
+
