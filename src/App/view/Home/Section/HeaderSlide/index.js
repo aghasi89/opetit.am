@@ -11,7 +11,7 @@ export default function HeaderSlide() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        
+
         beforeChange: function (currentSlide, nextSlide) {
             console.log("before change", currentSlide, nextSlide);
         },
@@ -37,16 +37,16 @@ export default function HeaderSlide() {
                     </div>
                 </Slider>
                 <div className="layer d-flex justify-content-center align-items-center">
-                <div className="layer-wrapper d-flex flex-column align-items-start justify-content-between">
-                    <div className="layer-text d-flex flex-column justify-content-end">
-                        <p>LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING</p>
-                        <h1>Lorem Ipsum is simply dummy text of the printing and typesetting</h1>
+                    <div className="layer-wrapper d-flex flex-column align-items-start justify-content-between">
+                        <div className="layer-text d-flex flex-column justify-content-end">
+                            <p>LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING</p>
+                            <h1>Lorem Ipsum is simply dummy text of the printing and typesetting</h1>
+                        </div>
+                        <button>Join Today</button>
                     </div>
-                    <button>Join Today</button>
                 </div>
             </div>
-            </div>
-            
+
         </div>
     );
 }

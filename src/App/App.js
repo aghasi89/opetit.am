@@ -1,22 +1,57 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Modal from './components/Modal';
-import body from './components/Modal/ConfirmModal';
-import ModalHook from './components/Modal/ModalHook';
-// import Input from './components/Input';
-import HeaderSlide from './view/Home/Section/HeaderSlide';
+//import Modal from './components/Modal';
+// import body from './components/Modal/ConfirmModal';
+// import ModalHook from './components/Modal/ModalHook';
+
+// import { Redirect, Route, Switch } from 'react-router';
+
+// import { Header } from './components';
+// import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
+import TestRegister from './View/TestRegister/TestRegister';
+
+
 
 function App() {
 
-  const {openModal, closeModal, modalIsOpen } = ModalHook()
+  //const {openModal, closeModal, modalIsOpen } = ModalHook()
  
   return (
     <div className="App">
-       {/* <Header/>
-        <HeaderSlide/> */}
-        <button onClick={openModal}>Show Modal</button>
-       <Modal onClose={closeModal} modalIsOpen={modalIsOpen} body={body}/>
+        {/* <button onClick={openModal}>Show Modal</button>
+       <Modal onClose={closeModal} modalIsOpen={modalIsOpen} body={body}/> */}
+      {/* <TestRegister /> */}
+
+
+      <Switch>
+        <Route exact path='/'>
+          <Header />
+          <Home />
+        </Route>
+        <Route path='/about'>
+          <Header />
+          <AboutUs />
+        </Route>
+        <Route path='/boxes'>
+          <Header />
+          <Boxes />
+        </Route>
+        <Route path='/services'>
+          <Header />
+          <Services />
+        </Route>
+        {/* <Route path='/contactus'>
+          <Header />
+          <ContactUs />
+        </Route> */}
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/registration'>
+          <Register />
+        </Route>
+        <Redirect to='/' />
+      </Switch>
     </div>
   );
 }
