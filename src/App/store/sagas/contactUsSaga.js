@@ -4,11 +4,9 @@ import { contactUsTypes } from "../types";
 
 function* sendMassage({payload}){
   try {
-      console.log(payload);
     const data =yield call(contactUsRequest,payload)
-    console.log(data);
   } catch (error) {
-      console.log(error);
+      throw error
   }
     
 
@@ -16,7 +14,6 @@ function* sendMassage({payload}){
 
 
 export default function* contactUsWatch(){
-    console.log("start contact us saga!");
     yield takeEvery(contactUsTypes.SEND_MASSAGE,sendMassage)
 
 }

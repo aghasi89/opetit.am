@@ -1,9 +1,6 @@
-
-import { Provider } from 'react-redux';
 import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
 import { Header } from './components/index';
-import store from './store';
 import { AboutUs, Boxes, Home, Login, Register, Services } from './view/index';
 
 function App() {
