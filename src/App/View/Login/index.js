@@ -6,7 +6,7 @@ import facebook from "./icons/facebook.png"
 import hook from "./hook"
 
 export default () => {
-    const{register,handleSubmit,onSubmit,errors}=hook()
+    const{register,handleSubmit,onSubmit,errors,errorMassage}=hook()
     return (
         <div className="loginPageContenier">
             <div className="loginPage d-flex justify-content-center align-items-center">
@@ -19,6 +19,7 @@ export default () => {
                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</span>
                     </div>
                     <div className="loginPageForm d-flex flex-column justify-content-between " >
+                        {errorMassage&&<div className="errorMassage" style={{color:"red",fontSize:"12px"}}>{errorMassage}</div>}
                         <form className="d-flex flex-column " onSubmit={handleSubmit(onSubmit)}>
                             <input type="text" placeholder="Username" {...register ("username",{required:true}) } />
                             {errors.username&&<div style={{color:"red",fontSize:"12px"}}>this column is required</div>}

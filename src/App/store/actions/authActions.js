@@ -17,3 +17,11 @@ export const loginSuccessAction=()=>{
         type:authTypes.LOGIN_SUCCESS
     }
 }
+
+export const setErrorMassageAction=(massage)=>{
+
+    return {
+        type:authTypes.SET_ERROR_MESSAGE,
+        payload:massage
+    }
+}

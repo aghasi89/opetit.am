@@ -1,5 +1,4 @@
 export const LOGIN="@authTypes/LOGIN"
 export const LOGIN_SUCCESS="@authTypes/LOGIN_SUCCESS"
-// export const GET_MY="@authTypes/GET_MY"
-// export const SET_MY="@authTypes/SET_MY"
-// export const SET_ERROR_MESSAGE="@authTypes/SET_ERROR_MESSAGE"
+
+ export const SET_ERROR_MESSAGE="@authTypes/SET_ERROR_MESSAGE"
