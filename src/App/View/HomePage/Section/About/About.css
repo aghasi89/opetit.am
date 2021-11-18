@@ -1,0 +1,20 @@
+.aboutUsGeneralConteiner{
+    width:100% ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.aboutUsTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.aboutUsbody{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
