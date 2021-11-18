@@ -4,11 +4,12 @@ import './App.css';
 // import body from './components/Modal/ConfirmModal';
 // import ModalHook from './components/Modal/ModalHook';
 
-// import { Redirect, Route, Switch } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 
-// import { Header } from './components';
-// import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
+import { Header } from './Components';
+import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
 import TestRegister from './View/TestRegister/TestRegister';
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -20,10 +21,11 @@ function App() {
     <div className="App">
         {/* <button onClick={openModal}>Show Modal</button>
        <Modal onClose={closeModal} modalIsOpen={modalIsOpen} body={body}/> */}
-      {/* <TestRegister /> */}
+      <ToastContainer />
+      <TestRegister />
+      
 
-
-      <Switch>
+      {/* <Switch>
         <Route exact path='/'>
           <Header />
           <Home />
@@ -39,19 +41,19 @@ function App() {
         <Route path='/services'>
           <Header />
           <Services />
-        </Route>
+        </Route> */}
         {/* <Route path='/contactus'>
           <Header />
           <ContactUs />
         </Route> */}
-        <Route path='/login'>
+        {/* <Route path='/login'>
           <Login />
         </Route>
         <Route path='/registration'>
           <Register />
         </Route>
         <Redirect to='/' />
-      </Switch>
+      </Switch> */}
     </div>
   );
 }

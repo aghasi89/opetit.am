@@ -3,7 +3,6 @@ import "./style.css"
 
 const Modal = props => {
     const {modalIsOpen, onClose, body} = props
-    console.log(body, "bodyyyyyyyyy");
     if (!modalIsOpen) {
         return null
     }
