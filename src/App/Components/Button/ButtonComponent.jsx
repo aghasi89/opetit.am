@@ -7,7 +7,7 @@ const ButtonComponent = ({ type, title, link, onPress, style }) => {
     switch (type) {
         case 'submit_button':
             contect = (
-                <div style={style} className="submit_btn">
+                <div style={style} className="button">
                     {title}
                 </div>
             );
@@ -17,11 +17,13 @@ const ButtonComponent = ({ type, title, link, onPress, style }) => {
     }
 
     return link ? (
-        <Link to={link} className="submit_btn">
+        <Link to={link} className="button" style={style}>
             {title}
         </Link>
     ) : onPress ? (
-        <div onClick={onPress}>{contect}</div>
+        <div onClick={onPress} style={style} className="button">
+            {title}
+        </div>
     ) : null;
 };
 

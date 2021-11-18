@@ -1,7 +1,9 @@
 //COMPONENTS
+import { useContext } from 'react';
 import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
 import Input from '../../components/Input/';
+import { ThemeContext } from '../../../context';
 // import { useState } from 'react';
 // import { useDispatch } from 'react-redux';
 
@@ -14,11 +16,9 @@ import instagram from '../../assets/img/svg/instagram.svg';
 import fb from '../../assets/img/svg/fb.svg';
 import twiter from '../../assets/img/svg/twiter.svg';
 import linkedin from '../../assets/img/svg/linkedin.svg';
-import { useContext } from 'react';
-import { ThemeContext } from '../../../context';
 
 const Register = () => {
-    const theme = useContext(ThemeContext);
+    const { large_btn, small_text, color } = useContext(ThemeContext);
     // const dispatch = useDispatch();
     // const [state, setState] = useState({
     //     role_code: 'CL',
@@ -57,20 +57,23 @@ const Register = () => {
                             industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and
                             scrambled it to make specimen book. It has survived"
-                                style={{ color: 'white' }}
                             />
                             <div className="signup_btn_block">
                                 <ButtonComponent
                                     link="/login"
                                     title="Sign in"
+                                    style={large_btn}
                                 />
                             </div>
                         </div>
                     </div>
                     <div className="signup_form ">
                         <div className="block_2">
-                            <TextComponent type="p" title="Welcome to" />
-
+                            <TextComponent
+                                type="baisic_text"
+                                title="Welcome to"
+                                style={{ ...small_text }}
+                            />
                             <div className="signup_form_block">
                                 <img
                                     src={Logo}
@@ -81,7 +84,6 @@ const Register = () => {
                             </div>
                             <TextComponent
                                 type="baisic_text"
-                                style={{ color: theme.color.lite_white }}
                                 title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
                             />
                             <div className="signup_inputs">
@@ -121,15 +123,14 @@ const Register = () => {
                                     onPress={handleClick}
                                     title="Sign Up"
                                     type="submit_button"
-                                    style={{
-                                        background: theme.color.submit_btn,
-                                    }}
+                                    style={large_btn}
                                 />
                             </div>
                             <div className="signup_block">
                                 <TextComponent
-                                    type="p"
+                                    type="baisic_text"
                                     title="continue with social media"
+                                    style={{ color: color.lite_white }}
                                 />
                                 <div className="signup_logo_img">
                                     <img src={linkedin} alt="linkedin" />

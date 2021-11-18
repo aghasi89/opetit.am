@@ -34,15 +34,19 @@
     text-align: center;
     cursor: pointer;
 }
-.signup_btn_block > .big_btn {
+.signup_btn_block > .button {
     background: none;
-    border-color: white;
+    border: 1px solid white;
 }
 
 .block_1 {
     width: 616px;
     margin-right: calc(720px - 548px);
     margin-left: auto;
+}
+
+.block_1 > .text_main {
+    color: white;
 }
 
 .block_2 {
