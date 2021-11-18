@@ -1,5 +1,4 @@
 import Input from "../../../../components/Input/Input"
-import InputMod from "../../../../components/Input/inputMod";
 import "./ContactUs.css"
 import contactUsHook from "./hook"
 
@@ -30,18 +29,18 @@ export default function ContactUs() {
                 </div >
                 <div className="contactUsFormConteiner d-flex justify-content-start flex-column">
                     <form className="d-flex justify-content-start flex-column" onSubmit={handleSubmit(onSubmit)}>
-                    
+                
                     {/* -----------------name input------------- */}
-                    <Input inputstyle="input-outlined-bottom"
+                    <Input inputStyle="input-outlined-bottom"
                      type="text"  
                      placeholder="Name" 
                      label="name" 
-                     req={{required:true}}
-                     pattern={{pattern:/[A-Za-z]+$/i}} 
+                     required
+                     pattern={{pattern:/^[A-Za-zА-Яа-я]+$/i}}
                      register={register}
                      />                    
-                    {errors?.name?.type==="register" && "name is required"}
-                    {errors?.name?.type==="pattern" && "123456789"}
+                    {errors.name&&errors.name.type==="required" && <div  style={{color:"red", fontSize:"10px"}}>name is required</div>}
+                    {errors.name&&errors.name.type==="pattern" && <div  style={{color:"red", fontSize:"10px"}}>name can only contain letters</div>}
                     
 
 
@@ -51,10 +50,10 @@ export default function ContactUs() {
                     type="email" 
                     placeholder="Email" 
                     label="email" 
-                    pattern={{required:true}} 
+                    required
                     register={register}
                     />
-                    {errors.email&&errors.email.type==="required"&&<div style={{color:"red", fontSize:"10px"}}>this column is required</div>}
+                    {errors.email&&errors.email.type==="required"&&<div style={{color:"red", fontSize:"10px"}}>Email is required</div>}
 
                     {/* -----------------Subject input----------------- */}
                     <Input 
@@ -68,21 +67,22 @@ export default function ContactUs() {
                     <Input 
                     inputStyle="input-outlined-bottom" 
                     type="text" placeholder="Phone number" 
-                    defaultValue="+374" label="phone_number"  
-                    pattern= {{required:true ,
-                     pattern:/^[0-9,+]+$/i}} 
+                    defaultValue="+374" 
+                    label="phone_number"  
+                    pattern= {{pattern:/^[0-9,+]+$/i}} 
+                    required
                     register={register}/>
 
-                    {errors.phone_number && errors.phone_number.type==="required"&&<div style={{color:"red", fontSize:"10px"}}>this column is required</div>}
-                    {errors.phone_number&& errors.phone_number.type==="pattern"&&<div style={{color:"red", fontSize:"10px"}}>name can execute only letters</div>}
+                    {errors.phone_number && errors.phone_number.type==="required"&&<div style={{color:"red", fontSize:"10px"}}>Phone number is required</div>}
+                    {errors.phone_number&& errors.phone_number.type==="pattern"&&<div style={{color:"red", fontSize:"10px"}}>Phone number can only contain numbers </div>}
                    
                     {/* -----------------Text area----------------- */}
                     <label>Massage</label>
                     <textarea  placeholder="write text here..." {...register("message")}></textarea>
-                   <button> submit</button  >
+                     <button type="submit"> submit </button  >
                     </form>
-                    
-                    <InputMod inputStyle="input-outlined-bottom" labelsArr={["name","email","subject","phone_number"] }/>
+
+           
                 </div>
             </div>
         </div>

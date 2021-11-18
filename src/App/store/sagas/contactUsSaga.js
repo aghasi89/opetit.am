@@ -4,7 +4,7 @@ import { contactUsTypes } from "../types";
 
 function* sendMassage({payload}){
   try {
-    const data =yield call(contactUsRequest,payload)
+    yield call(contactUsRequest,payload)
   } catch (error) {
       throw error
   }
