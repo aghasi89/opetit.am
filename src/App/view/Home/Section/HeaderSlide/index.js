@@ -46,7 +46,6 @@ export default function HeaderSlide() {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }
