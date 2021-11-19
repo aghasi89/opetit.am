@@ -1,20 +1,21 @@
+
+
+
+/* ------------General conteiner-------- */
 .contactUsGeneralConteiner{
     width: 100%;
-    min-height: 1100px;
+    min-height: 650px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    margin: 20px auto;
+    align-items: start;
+    margin: 0px auto;
 }
-.contactUsFormTitle{
-    display: flex;
-    width: 70%;
-    align-items: center;
-    justify-content: flex-start;
-}
+/* --------------Left side image conteiner--------------- */
+
+
 .contactUsImage{
     width:55.53%;
-    height: 650px;
+    min-height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +23,6 @@
     background-position: center;
     background-size: cover;
 }
-
 .contactUsImageTitleAndText{
     display: flex;
     flex-direction: column;
@@ -40,6 +40,7 @@
     flex-direction: column;
 
 }
+
 .contactUsTitle{
     display: flex;
     align-items: center;
@@ -55,17 +56,43 @@
 .empty{
     height: 40%;
 }
+/* -------------------Form-------------- */
 .contactUsFormGeneral{
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 60%;
     align-items: center;
+    min-height: 650px;
 
 }
 .contactUsFormConteiner{
+    display: flex;
     width: 70%;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.contactUsFormTitle{
+    display: flex;
+    width: 70%;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+.titleLine{
+    
+    width: 10%;
+    border: 0.5px solid black;
+}
+.verificationConteiner{
+    margin: 10px 0 25px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #5C5E62;
+}
+
 .massageTextarea {
     max-width: 468px;
     height: 80px;
@@ -85,9 +112,7 @@
     font-family: 'Montserrat', sans-serif;
     color: #5C5E62;
 }
-.verificationConteiner{
-    margin: 10px 0 25px;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: #5C5E62;
+
+.contactUsButton{
+    max-width: 468px;
 }

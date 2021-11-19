@@ -25,10 +25,11 @@ export default function ContactUs() {
                 </div>
             </div>
             <div className='contactUsFormGeneral'>
-                <div className="contactUsFormTitle">
+                <div className="contactUsFormTitle ">
                     <h1>CONTACT US</h1>
+                    <div className="titleLine"></div>
                 </div >
-                <div className="contactUsFormConteiner d-flex justify-content-start flex-column">
+                <div className="contactUsFormConteiner ">
                     <form className="d-flex justify-content-start flex-column" onSubmit={handleSubmit(onSubmit)}>
 
                         {/* -----------------name input------------- */}
@@ -86,7 +87,7 @@ export default function ContactUs() {
                         </textarea>
                         <div className="verificationConteiner ">verification</div>
 
-                        <button type="submit" > submit </button  >
+                        <button type="submit" className="contactUsButton" > submit </button  >
                     </form>
                     <ToastContainer
                         position="top-right"
