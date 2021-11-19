@@ -24,10 +24,11 @@ function App() {
           <Header />
           <Services />
         </Route>
-        <Route path='/contactus'>
+        {/* <Route path='/contactus'>
           <Header />
-          <Boxes />
-        </Route>
+          <ContactUs />
+        </Route> */}
+
         <Route path='/login'>
           <Login/>
         </Route>
