@@ -1,11 +1,18 @@
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../context';
 import './textcomp.css';
 
-const TextComponent = ({ type, title, onPress, link, style }) => {
+const TextComponent = ({ type, title, onPress, link, style, color }) => {
+    const theme = useContext(ThemeContext);
+    let commonStyle = {}
+    if (color) {
+        commonStyle.color = theme.color[color];
+    }
     switch (type) {
         case 'baisic_text':
             return (
-                <p className="text_main" style={style}>
+                <p className="text_main" style={commonStyle}>
                     {title}
                 </p>
             );

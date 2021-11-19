@@ -81,7 +81,7 @@ const Register = () => {
                             </div>
                             <TextComponent
                                 type="baisic_text"
-                                style={{ color: theme.color.lite_white }}
+                                color='lite_white'
                                 title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
                             />
                             <div className="signup_inputs">
