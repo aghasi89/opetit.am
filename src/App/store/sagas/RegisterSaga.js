@@ -12,20 +12,26 @@ const notify = (text) => {
 }
 
 function* confirmCode({ payload }) {
+  //const { setLoad, ...setData } = payload
   try {
     const data = yield call(confirmCodeRequest, { email: payload.email });
     yield put(setConfirmCodeAction({ confirm_code: data ? data.code : "" }))
+    //setLoad()
   } catch (error) {
+    //setLoad();
     console.log("error confirmCode = ", error[0].message);
     notify(error[0].message)
   }
 }
 
 function* register({ payload }) {
+  const { setLoad, ...setData } = payload
   try {
-    const codeData = yield call(registerRequest, { ...payload, role_code: "CL" })
+    const codeData = yield call(registerRequest, { ...setData, role_code: "CL" })
     console.log("register in saga", codeData);
+    setLoad()
   } catch (error) {
+    setLoad();
     console.log("error massage = ", error.message);
     notify(error.message)
   }

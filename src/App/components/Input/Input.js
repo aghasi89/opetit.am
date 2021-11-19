@@ -1,27 +1,25 @@
 import "./style.css"
 
 const Input = (props) => {
-    const { type, placeholder, inputStyle, register, label, required, pattern, errorMessage, errors} = props;
-    // console.log(errors,"errors");
-    // console.log(label,"label");
-    // console.log(errorMessage,"errorMessage");
+    const { type, placeholder, inputStyle, register, label, required } = props;
     switch (inputStyle) {
         case 'input-outlined':
             return (
                 <div>
-                    <input {...props} 
-                    className='input-outlined' 
-                   {...register(label, { required })} />
-                   {/* <p>{errors && errors[label]?.type === 'required' && errorMessage}</p> */}
+                    <input type={type}
+                        placeholder={placeholder}                        
+                        className='input-outlined'
+                        {...register(label, { required })} />
                 </div>
-                
+
             )
         case 'input-outlined-bottom':
             return (
                 <div>
-                    <input {...props} 
-                    className='input-outlined-bottom' 
-                    {...register(label, { required })} />
+                    <input type={`${type}`}
+                        placeholder={`${placeholder}`}                        
+                        className='input-outlined-bottom'
+                        {...register(label, { required })} />
                 </div>
             )
         default:

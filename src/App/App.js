@@ -23,8 +23,7 @@ function App() {
        <Modal onClose={closeModal} modalIsOpen={modalIsOpen} body={body}/> */}
       <ToastContainer />
       <TestRegister />
-      
-
+    
       {/* <Switch>
         <Route exact path='/'>
           <Header />
