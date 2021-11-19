@@ -7,3 +7,9 @@ export const sendMassageAction=(payload)=>{
     }
 
 }
+export const sendMassageSuccessAction=()=>{
+    return {
+        type:contactUsTypes.SEND_MASSAGE_SUCCESS,
+    }
+
+}

@@ -1,16 +1,22 @@
 .contactUsGeneralConteiner{
-    width: 65%;
-    min-height: 500px;
+    width: 100%;
+    min-height: 1100px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 20px auto;
 }
+.contactUsFormTitle{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: flex-start;
+}
 .contactUsImage{
-    width: 60%;
+    width:55.53%;
+    height: 650px;
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     background-image: url(./Image/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
     background-position: center;
@@ -59,4 +65,29 @@
 }
 .contactUsFormConteiner{
     width: 70%;
+}
+.massageTextarea {
+    max-width: 468px;
+    height: 80px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #5C5E62;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.015em;
+    
+}
+.massageTitle{
+    margin: 25px 0 5px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #5C5E62;
+}
+.verificationConteiner{
+    margin: 10px 0 25px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #5C5E62;
 }
