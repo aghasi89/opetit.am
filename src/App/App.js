@@ -1,20 +1,30 @@
+import React from 'react';
+import './App.css';
 
 import { Redirect, Route, Switch } from 'react-router';
 
-import './App.css';
 import { Header } from './Components';
-import { AboutUs, Boxes, HomePage, Login, Register, Services } from './View';
+import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
+import TestRegister from './View/TestRegister/TestRegister';
+import { ToastContainer } from "react-toastify";
+import UserPage from './View/UserPage';
+
 
 function App() {
+
   return (
     <div className="App">
-
+      <ToastContainer />
+        
       <Switch>
+        <Route path='/panel'>
+          <UserPage />
+        </Route>
         <Route exact path='/'>
           <Header />
-          <HomePage />
+          <Home />
         </Route>
-        <Route path='/about'>
+        {/* <Route path='/about'>
           <Header />
           <AboutUs />
         </Route>
@@ -25,18 +35,19 @@ function App() {
         <Route path='/services'>
           <Header />
           <Services />
-        </Route>
-        <Route path='/contactus'>
+        </Route> */}
+        {/* <Route path='/contactus'>
           <Header />
-          <Boxes />
-        </Route>
-        <Route path='/login'>
-          <Login/>
-        </Route>
+          <ContactUs />
+        </Route> */}
+        {/* <Route path='/login'>
+          <Login />
+        </Route> */}
         <Route path='/registration'>
-          <Register/>
+          {/* <Register /> */}
+          <TestRegister />
         </Route>
-        <Redirect to='/'/>      
+        {/* <Redirect to='/' /> */}
       </Switch>
     </div>
   );
