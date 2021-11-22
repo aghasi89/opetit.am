@@ -36,13 +36,12 @@
 }
 
 .big_btn {
-    padding: 14px 240px;
-    border: 1px solid white;
-    color: white;
-    border-radius: 6px;
     width: 550px;
 }
 
+.big_btn > .button {
+    padding: 14px 236px;
+}
 .block_1 {
     width: 616px;
     margin-right: calc(720px - 548px);

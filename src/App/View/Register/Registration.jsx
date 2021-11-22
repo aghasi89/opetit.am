@@ -57,6 +57,7 @@ const Registration = () => {
                             />
                             <div className="signup_btn_block big_btn">
                                 <ButtonComponent
+                                    type="outline"
                                     link="/login"
                                     title="Sign in"
                                 />

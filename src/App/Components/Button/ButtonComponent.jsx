@@ -23,11 +23,7 @@ const ButtonComponent = ({ type, title, link, onPress, color }) => {
             return contect;
         }
         case 'outline': {
-            contect = (
-                <div style={commonStyle} className="button pointer outline">
-                    {title}
-                </div>
-            );
+            contect = <div className="button pointer outline">{title}</div>;
             return contect;
         }
         default:
