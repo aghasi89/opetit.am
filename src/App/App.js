@@ -7,7 +7,7 @@ import { Header } from './Components';
 import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
 import TestRegister from './View/TestRegister/TestRegister';
 import { ToastContainer } from "react-toastify";
-
+import UserPage from './View/UserPage';
 
 
 function App() {
@@ -15,14 +15,16 @@ function App() {
   return (
     <div className="App">
       <ToastContainer />
-      <TestRegister />
-      
-      {/* <Switch>
+        
+      <Switch>
+        <Route path='/panel'>
+          <UserPage />
+        </Route>
         <Route exact path='/'>
           <Header />
           <Home />
         </Route>
-        <Route path='/about'>
+        {/* <Route path='/about'>
           <Header />
           <AboutUs />
         </Route>
@@ -40,12 +42,13 @@ function App() {
         </Route> */}
         {/* <Route path='/login'>
           <Login />
-        </Route>
+        </Route> */}
         <Route path='/registration'>
-          <Register />
+          {/* <Register /> */}
+          <TestRegister />
         </Route>
-        <Redirect to='/' />
-      </Switch> */}
+        {/* <Redirect to='/' /> */}
+      </Switch>
     </div>
   );
 }

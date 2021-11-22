@@ -3,25 +3,9 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { getConfirmCodeAction, registerAction } from "../../store/actions"
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
+import { validationSchema } from '../../utils/validationSchema';
 
 export default function RegisterHook() {
-    const validationSchema = Yup.object().shape({
-        first_name: Yup.string()
-            .required('Firstname is required'),
-        last_name: Yup.string()
-            .required('Lastname is required'),
-        password: Yup.string()
-            .required('Password is required')
-            .min(6, 'Password must be at least 6 characters'),
-        confirm_password: Yup.string()
-            .required('Confirm Password is required')
-            .oneOf([Yup.ref('password')], 'Passwords must match'),
-        email: Yup.string()
-            .email()
-            .required('Email is required')
-
-    });
     const formOptions = { resolver: yupResolver(validationSchema) }
     const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
     const dispatch = useDispatch()
@@ -54,6 +38,6 @@ export default function RegisterHook() {
         onSubmitRegData,
         onSubmitRegCode,
         modalIsOpen,
-        setIsOpen
+        setIsOpen,
     }
 }

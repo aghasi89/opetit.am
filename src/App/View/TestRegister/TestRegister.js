@@ -7,7 +7,7 @@ import Modal from '../../Components/Modal';
 
 
 export default () => {
-    
+
     const { register,
         handleSubmit,
         errors,
@@ -15,7 +15,8 @@ export default () => {
         onSubmitRegData,
         onSubmitRegCode,
         modalIsOpen,
-        setIsOpen } = RegisterHook()
+        setIsOpen
+    } = RegisterHook()
 
     return (
         <>
@@ -25,7 +26,7 @@ export default () => {
                     inputStyle="input-outlined"
                     label="first_name"
                     register={register}
-                 />
+                />
                 <div className="input-error">
                     {errors.first_name?.message}
                 </div>
@@ -35,7 +36,7 @@ export default () => {
                     inputStyle="input-outlined"
                     label="last_name"
                     register={register}
-                 />
+                />
                 <div className="input-error">
                     {errors.last_name?.message}
                 </div>
@@ -45,7 +46,7 @@ export default () => {
                     inputStyle="input-outlined"
                     label="password"
                     register={register}
-                     />
+                />
                 <div className="input-error">
                     {errors.password?.message}
                 </div>
@@ -60,12 +61,12 @@ export default () => {
                     {errors.confirm_password?.message}
                 </div>
 
-                <Input type="email"
+                <Input type="email" novalidate
                     placeholder="Email"
                     inputStyle="input-outlined"
                     label="email"
                     register={register}
-                 />
+                />
                 <div className="input-error">
                     {errors.email?.message}
                 </div>
@@ -75,20 +76,30 @@ export default () => {
                     <span>Sign up</span>
                 </button>
             </form>
+
+            <Input placeholder="Write text here..."
+                inputStyle="input-textarea"
+                labelForTextarea="Message"
+                rows="5"
+            />
+
             <Modal onClose={() => setIsOpen(false)}
                 modalIsOpen={modalIsOpen}
                 body={
                     <form onSubmit={handleSubmit(onSubmitRegCode)}>
-                        <div className='modal-content'>
+                        <div className='modal-content d-flex justify-content-center align-items-center' >
                             <div className='modal-header'>
                                 <p className='modal-title'>Confirm code field</p>
                             </div>
-                            <div className='modal-body'>
+                            <div className='modal-body d-flex align-items-center'>
                                 <Input type="number"
                                     placeholder="Confirm code"
                                     inputStyle="input-outlined"
                                     label="confirm_code"
                                     register={register} />
+                            </div>
+                            <div className="input-error">
+                                {errors.confirm_code?.message}
                             </div>
                             <div className='modal-footer'>
                                 <button type="submit" disabled={loading}>

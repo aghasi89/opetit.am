@@ -1,5 +1,6 @@
 import "./style.css"
 import logo from "./Sample Logo.png"
+import { Link } from "react-router-dom"
 
 export default function Header() {
     return (
@@ -15,8 +16,8 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="login-buttons d-flex justify-content-between">
-                    <button>Log in</button>
-                    <button>Register</button>
+                    <Link to='/login'><button>Log in</button></Link>
+                    <Link to='/registration'><button>Register</button></Link>
                 </div>
             </div>
         </div>

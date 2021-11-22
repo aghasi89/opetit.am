@@ -31,6 +31,11 @@ function* register({ payload }) {
     const codeData = yield call(registerRequest, { ...setData, role_code: "CL" })
     console.log("register in saga", codeData);
     setLoad()
+    if (codeData.access) {
+      console.log(codeData.access);
+      localStorage.setItem("access", codeData.access);
+      window.location = "/panel"
+    }
   } catch (error) {
     setLoad();
     console.log("error massage = ", error.message);
