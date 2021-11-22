@@ -34,9 +34,13 @@
     text-align: center;
     cursor: pointer;
 }
-.signup_btn_block > .big_btn {
-    background: none;
-    border-color: white;
+
+.big_btn {
+    padding: 14px 240px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 6px;
+    width: 550px;
 }
 
 .block_1 {
@@ -49,12 +53,14 @@
     width: 550px;
     margin-left: calc(720px - 515px);
 }
-
+.block_2_logo_text {
+    margin-top: 105px;
+}
 .signup_form_p {
     margin-left: 172px;
 }
 
-.signup_form_block {
+.signup_form_logo {
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
@@ -62,16 +68,6 @@
 
 .signup_form_img {
     filter: invert(1);
-}
-
-.signup_form_block .h1_style {
-    font-family: 'Comfortaa-Regular';
-    color: #000000;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 72px;
-    line-height: 80px;
-    margin-left: 30px;
 }
 
 .signup_inputs {
@@ -88,8 +84,8 @@
     text-align: center;
 }
 
-.sing_up_btn > .big_btn {
-    padding: 14px 234px;
+.sing_up_btn > .button {
+    padding: 14px 240px;
 }
 
 .sing_up_btn_span {
@@ -133,11 +129,21 @@
 }
 
 .signup_container {
+    z-index: 0;
     width: 50%;
+    position: relative;
     background-image: url(/src/App/assets/img/jpg/login_reg.jpg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: cover;
+}
+
+.background {
+    background: linear-gradient(
+        180deg,
+        rgba(10, 11, 15, 0.518) 0%,
+        rgba(37, 40, 55, 0.7) 100%
+    );
 }
 
 .signup_form {
@@ -149,6 +155,19 @@
     margin-top: 25px;
     margin-bottom: 40px;
     margin: 0 auto;
+}
+
+.signup_container::before {
+    content: '';
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 11, 15, 0.518) 0%,
+        rgba(37, 40, 55, 0.7) 100%
+    );
 }
 
 .signup_block {

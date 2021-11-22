@@ -1,3 +1,3 @@
-export default ()=>{
-    return (<div><h1>Boxes!</h1></div>)
-}
+import Boxes from './Boxes';
+
+export default Boxes;

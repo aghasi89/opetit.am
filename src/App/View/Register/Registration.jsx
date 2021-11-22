@@ -1,7 +1,7 @@
 //COMPONENTS
 import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
-import Input from '../../components/Input/';
+import Input from '../../components/Input';
 // import { useState } from 'react';
 // import { useDispatch } from 'react-redux';
 
@@ -9,16 +9,13 @@ import Input from '../../components/Input/';
 import './registratin.css';
 
 //PICTURE
-import Logo from '../../assets/img/svg/Logo.svg';
 import instagram from '../../assets/img/svg/instagram.svg';
 import fb from '../../assets/img/svg/fb.svg';
 import twiter from '../../assets/img/svg/twiter.svg';
 import linkedin from '../../assets/img/svg/linkedin.svg';
-import { useContext } from 'react';
-import { ThemeContext } from '../../../context';
+import Logo from '../../components/Header/Sample Logo.png';
 
-const Register = () => {
-    const theme = useContext(ThemeContext);
+const Registration = () => {
     // const dispatch = useDispatch();
     // const [state, setState] = useState({
     //     role_code: 'CL',
@@ -48,18 +45,17 @@ const Register = () => {
                         <div className="block_1">
                             <div className="signup_logo_block">
                                 <img src={Logo} alt="signup_logo" />
-                                <div>Photo</div>
                             </div>
                             <TextComponent
-                                type="baisic_text"
+                                type="p"
                                 title="Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
                             industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and
                             scrambled it to make specimen book. It has survived"
-                                style={{ color: 'white' }}
+                                color="white"
                             />
-                            <div className="signup_btn_block">
+                            <div className="signup_btn_block big_btn">
                                 <ButtonComponent
                                     link="/login"
                                     title="Sign in"
@@ -67,23 +63,26 @@ const Register = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="background"></div>
                     <div className="signup_form ">
                         <div className="block_2">
-                            <TextComponent type="p" title="Welcome to" />
-
-                            <div className="signup_form_block">
-                                <img
-                                    src={Logo}
-                                    alt="signup_logo"
-                                    className="signup_form_img"
+                            <div className="block_2_logo_text">
+                                <TextComponent
+                                    type="p"
+                                    title="Welcome to"
+                                    color="light_gray"
                                 />
-                                <TextComponent type="h1" title="photo" />
                             </div>
-                            <TextComponent
-                                type="baisic_text"
-                                color='lite_white'
-                                title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
-                            />
+                            <div className="signup_form_logo">
+                                <img src={Logo} alt="signup_logo" />
+                            </div>
+                            <div>
+                                <TextComponent
+                                    type="p"
+                                    color="gray"
+                                    title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
+                                />
+                            </div>
                             <div className="signup_inputs">
                                 {
                                     <Input
@@ -121,14 +120,13 @@ const Register = () => {
                                     onPress={handleClick}
                                     title="Sign Up"
                                     type="submit_button"
-                                    style={{
-                                        background: theme.color.submit_btn,
-                                    }}
+                                    color="green"
                                 />
                             </div>
                             <div className="signup_block">
                                 <TextComponent
                                     type="p"
+                                    color="gray"
                                     title="continue with social media"
                                 />
                                 <div className="signup_logo_img">
@@ -146,4 +144,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Registration;
