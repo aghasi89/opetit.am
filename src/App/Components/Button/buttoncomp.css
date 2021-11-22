@@ -32,7 +32,7 @@
 
 .outline {
     border: 1px solid white;
-    background: none;
+    /* background: none; */
 }
 
 .pointer {

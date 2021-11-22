@@ -60,6 +60,9 @@ const Registration = () => {
                                     type="outline"
                                     link="/login"
                                     title="Sign in"
+                                    type="outline"
+                                    borderColor="white"
+                                    title_color="white"
                                 />
                             </div>
                         </div>
@@ -122,6 +125,14 @@ const Registration = () => {
                                     title="Sign Up"
                                     type="submit_button"
                                     color="green"
+                                />
+                                <ButtonComponent
+                                    onPress={handleClick}
+                                    title="Sign Up"
+                                    type="outline"
+                                    borderColor="green"
+                                    title_color="green"
+                                    color="white"
                                 />
                             </div>
                             <div className="signup_block">
