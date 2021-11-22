@@ -1,7 +1,7 @@
-import p1 from './Images/p1.png'
-import p2 from './Images/p2.png'
-import p3 from './Images/p3.png'
-import p4 from './Images/p4.png'
+import p1 from "../../../../../assets/img/mostOrdered/p1.png"
+import p2 from "../../../../../assets/img/mostOrdered/p2.png"
+import p3 from "../../../../../assets/img/mostOrdered/p3.png"
+import p4 from "../../../../../assets/img/mostOrdered/p4.png"
 import "./MostOrdered.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -42,32 +42,31 @@ export default function MostOrdered() {
                 </div>
                 <div className="mostOrderedSlides " >
                     <Slider ref={sliderRef} {...settings} >
-                        <div className='slideCard  d-flex justify-content-center align-items-center flex-column' >
-                            <div style={{ width: "90%", margin: "0px 5px" }} className="d-flex flex-column align-items-center justify-content-center">
+                        <div className='slideCardConteiner  d-flex justify-content-center align-items-center flex-column' >
+                            <div className="slideCard d-flex flex-column align-items-center justify-content-center">
                                 <Box src={p1} h3="Sed ut parspiciatis unde omnis" span="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"/>
                             </div>
                         </div>
-                        <div className='slideCard  d-flex justify-content-center align-items-center flex-column' >
-                            <div style={{ width: "90%", margin: "0px 5px" }} className="d-flex flex-column align-items-center justify-content-center">
+                        <div className='slideCardConteiner d-flex justify-content-center align-items-center flex-column' >
+                            <div className="slideCard d-flex flex-column align-items-center justify-content-center">
                                 <Box src={p2} h3="Sed ut parspiciatis unde omnis" span="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"/>
                             </div>
                         </div>
-                        <div className='slideCard  d-flex justify-content-center align-items-center flex-column' >
-                            <div style={{ width: "90%", margin: "0px 5px" }} className="d-flex flex-column align-items-center justify-content-center">
+                        <div className='slideCardConteiner  d-flex justify-content-center align-items-center flex-column' >
+                            <div className="slideCard d-flex flex-column align-items-center justify-content-center">
                                 <Box src={p3} h3="Sed ut parspiciatis unde omnis" span="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"/>
                             </div>
                         </div>
-                        <div className='slideCard  d-flex justify-content-center align-items-center flex-column' >
-                            <div style={{ width: "90%", margin: "0px 5px" }} className="d-flex flex-column align-items-center justify-content-center">
+                        <div className='slideCardConteiner d-flex justify-content-center align-items-center flex-column' >
+                            <div className="slideCard d-flex flex-column align-items-center justify-content-center">
                                 <Box src={p1} h3="Sed ut parspiciatis unde omnis" span="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"/>
                             </div>
                         </div>
-                        <div className='slideCard  d-flex justify-content-center align-items-center flex-column' >
-                            <div style={{ width: "90%", margin: "0px 5px" }} className="d-flex flex-column align-items-center justify-content-center">
+                        <div className='slideCardConteiner d-flex justify-content-center align-items-center flex-column' >
+                            <div className="slideCard d-flex flex-column align-items-center justify-content-center">
                                 <Box src={p2} h3="Sed ut parspiciatis unde omnis" span="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"/>
                             </div>
                         </div>
-
                     </Slider>
 
                 </div>

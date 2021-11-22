@@ -19,7 +19,10 @@ margin: auto;
     height: 60%;
     
 }
-
+.slideCard{
+    width: 90%; 
+    margin: 0px 5px;    
+}
 
 /* ---------------------------Buttons----------------- */
 .mostOrderedButtonsConteiner{

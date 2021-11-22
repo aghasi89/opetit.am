@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(./Image/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
+    background-image: url(../../../../../assets/img/contactUs/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
     background-position: center;
     background-size: cover;
 }
@@ -115,4 +115,9 @@
 
 .contactUsButton{
     max-width: 468px;
+}
+
+.errorMessageConteiner{
+    color: red;
+    font-size: 13px;
 }

@@ -22,7 +22,7 @@ const Input = (props) => {
                     <input 
                     type={`${type}`} 
                     placeholder={`${placeholder}`} 
-                    className='input-outlined-bottom' 
+                    className='input-outlined-bottom'
                     {...register(label,{...pattern,required})}/>
                 </div>
             )
