@@ -1,3 +1,13 @@
+
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+   
+}
+
 .header{
   width: 100%;
   justify-content: space-between;
@@ -10,12 +20,6 @@
   display: flex;
   justify-content: start;
   align-items: center;
-}
-.logo{
-  width: 70px;
-  background-color: black;
-  height: 100%;
-
 }
 .navigationMenu{
  

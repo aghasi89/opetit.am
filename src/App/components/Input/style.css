@@ -1,0 +1,30 @@
+.input-outlined {
+    max-width: 100%;
+    width: 550px;
+    height: 52px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #5C5E62;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.015em;
+    padding: 14px 20px;
+}
+
+.input-outlined-bottom {
+    max-width: 100%;
+    width: 468px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 35px 0 10px 0;
+    
+}
+.input-outlined-bottom:focus {
+    outline: none;
+}

@@ -1,43 +1,23 @@
 
-import { Redirect, Route, Switch } from 'react-router';
-
+import { Suspense } from "react";
 import './App.css';
-import { Header } from './Components';
-import { AboutUs, Boxes, HomePage, Login, Register, Services } from './View';
+import LanguageSelect from './Components/LanguageSelector/LanguageSelect'
+import Home from "./View/index"
+import Footer from "./View/Home/Section/Footer";
+import Login from "./View/Login";
+
+
 
 function App() {
   return (
     <div className="App">
-
-      <Switch>
-        <Route exact path='/'>
-          <Header />
-          <HomePage />
-        </Route>
-        <Route path='/about'>
-          <Header />
-          <AboutUs />
-        </Route>
-        <Route path='/boxes'>
-          <Header />
-          <Boxes />
-        </Route>
-        <Route path='/services'>
-          <Header />
-          <Services />
-        </Route>
-        <Route path='/contactus'>
-          <Header />
-          <Boxes />
-        </Route>
-        <Route path='/login'>
-          <Login/>
-        </Route>
-        <Route path='/registration'>
-          <Register/>
-        </Route>
-        <Redirect to='/'/>      
-      </Switch>
+      <Suspense fallback={<div>....Loading</div>}>
+      <LanguageSelect/>
+      </Suspense>
+      <Home/>
+      <Footer/>
+      <Login/>
+    
     </div>
   );
 }
