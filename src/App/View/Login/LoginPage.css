@@ -14,7 +14,7 @@
     
 }
 .loginPagePhoto{
-    background-color: indianred;
+    
     width: 50%;
     background-image: url(./backgroundImage/image1.png);
     height: 100%;
@@ -43,7 +43,7 @@
 .loginPageForm{
     margin: 20px 0 20px;
     justify-content: space-between;
-    height: 20%;
+    height: 25%;
 }
 .loginPageLine{
     
@@ -55,7 +55,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 20%;
+    height: 40%;
     
     
 }

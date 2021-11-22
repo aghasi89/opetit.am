@@ -28,13 +28,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    width: 20%;
+    width: 165px;
 }
 .footerIcons{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .footerText{
     display: flex;
@@ -47,4 +47,15 @@
     width: 95%;
     background-color:gray;
     margin: 20px 0 50px;
+}
+
+.footerLink{
+    align-items: center;
+    display: flex;
+    
+}
+
+.footerFhoto{
+    width: 30px;
+    height: 20px;
 }
