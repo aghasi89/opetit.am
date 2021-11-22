@@ -2,3 +2,22 @@
     color: red;
     margin: 5px 10px;
 }
+.modal-content {
+    height: 230px;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-header, .modal-footer {
+    border: none;
+    padding: 10px
+  }
+  .modal-title {
+    margin: 0
+  }
+  .modal-body {
+    display: flex;
+    align-items: center;
+  }

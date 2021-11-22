@@ -12,11 +12,12 @@ const notify = (text) => {
 }
 
 function* confirmCode({ payload }) {
-  //const { setLoad, ...setData } = payload
+  const { setOpen, ...setData } = payload
   try {
-    const data = yield call(confirmCodeRequest, { email: payload.email });
+    const data = yield call(confirmCodeRequest, { email: setData.email });
     yield put(setConfirmCodeAction({ confirm_code: data ? data.code : "" }))
     //setLoad()
+    setOpen()
   } catch (error) {
     //setLoad();
     console.log("error confirmCode = ", error[0].message);
