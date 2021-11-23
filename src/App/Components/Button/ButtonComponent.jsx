@@ -14,7 +14,7 @@ const ButtonComponent = ({
 }) => {
     const theme = useContext(ThemeContext);
     const commonStyle = {};
-    let contect = null;
+    let content = null;
 
     if (color || borderColor || title_color) {
         commonStyle.backgroundColor = theme.color[color];
@@ -24,32 +24,27 @@ const ButtonComponent = ({
 
     switch (type) {
         case 'button': {
-            console.log('in button case');
-            contect = (
+            content = (
                 <div style={commonStyle} className="button pointer">
                     {title}
                 </div>
             );
-            return contect;
         }
         case 'outline': {
-            console.log('outline button case');
-            contect = (
+            content = (
                 <div style={commonStyle} className="button pointer outline">
                     {title}
                 </div>
             );
-            return contect;
         }
         default:
-            contect = null;
+            content = null;
     }
-    console.log('switchic durs');
 
     return link ? (
-        <Link to={link}>{title}</Link>
+        <Link to={link}>{content}</Link>
     ) : onPress ? (
-        <div onClick={onPress}>{title}</div>
+        <div onClick={onPress}>{content}</div>
     ) : null;
 };
 
