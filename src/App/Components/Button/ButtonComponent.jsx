@@ -16,6 +16,7 @@ const ButtonComponent = ({ type, title, link, onPress, color, borderColor, title
 
     switch (type) {
         case 'button': {
+            console.log("in button case");
             contect = (
                 <div style={commonStyle} className="button pointer">
                     {title}
@@ -32,11 +33,11 @@ const ButtonComponent = ({ type, title, link, onPress, color, borderColor, title
     }
 
     return link ? (
-        <Link to={link} style={commonStyle} className="button pointer">
+        <Link to={link}>
             {title}
         </Link>
     ) : onPress ? (
-        <div onClick={onPress} style={commonStyle} className="button pointer">
+        <div onClick={onPress}>
             {title}
         </div>
     ) : null;

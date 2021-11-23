@@ -123,7 +123,7 @@ const Registration = () => {
                                 <ButtonComponent
                                     onPress={handleClick}
                                     title="Sign Up"
-                                    type="submit_button"
+                                    type="button"
                                     color="green"
                                 />
                                 <ButtonComponent
