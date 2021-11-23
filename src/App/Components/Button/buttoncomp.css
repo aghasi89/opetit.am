@@ -1,0 +1,39 @@
+.button {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+.small_btn {
+    font-size: 15px;
+    line-height: 18px;
+    color: white;
+    background: #1eda47;
+    border-color: #1eda47;
+    padding: 11px 41px;
+}
+
+.norm_btn {
+    font-size: 17px;
+    line-height: 21px;
+    padding: 15.7px 51px;
+}
+
+.outline {
+    border: 1px solid white;
+}
+
+.pointer {
+    cursor: pointer;
+}
