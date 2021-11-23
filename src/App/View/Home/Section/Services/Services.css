@@ -1,3 +1,8 @@
+.servicesGeneralContenier{
+    min-height: 600px;
+}
+
+
 
 .servicesContenier{
     display: flex;

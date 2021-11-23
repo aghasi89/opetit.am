@@ -16,7 +16,7 @@
 .loginPagePhoto{
     background-color: indianred;
     width: 50%;
-    background-image: url(./backgroundImage/image1.png);
+    background-image: url(../../../assets/img/image1.png);
     height: 100%;
     background-position: center;
     background-size: cover;
@@ -27,7 +27,7 @@
 }
 .loginPageBackground{
     width: 100%;
-    background-image: url(./backgroundImage/image2.png);
+    background-image: url(../../../assets/img/image2.png);
     height: 100%;
 }
 .loginContenier {
@@ -40,11 +40,15 @@
 
 }
 
-.loginPageForm{
-    margin: 20px 0 20px;
+.loginPageFormConteiner{
+  
     justify-content: space-between;
-    height: 20%;
+    height: 50%;
 }
+.loginForm{
+    
+    justify-content: space-between;
+    height: 85%}
 .loginPageLine{
     
     width: 10%;
@@ -55,7 +59,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 20%;
+    height: 35%;
     
     
 }
@@ -76,6 +80,9 @@
     border-radius: 6px;
 }
 .loginPageIcons{
-    width: 30%;
+    width: 40%;
     margin: 0 auto;
+}
+.loginPageSignupIcone{
+    width: 60%;
 }

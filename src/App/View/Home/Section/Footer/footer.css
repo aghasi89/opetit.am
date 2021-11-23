@@ -5,6 +5,9 @@
     width: 70%;
     flex-direction: column;
 }
+.footerGeneralContenier{
+    min-height: 300px;
+}
 .footerMenu{
     display: flex;
     justify-content: space-between;
@@ -47,4 +50,17 @@
     width: 95%;
     background-color:gray;
     margin: 20px 0 50px;
+}
+.footerLink{ 
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.footerLinkLogo{
+    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

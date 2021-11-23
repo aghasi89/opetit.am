@@ -1,10 +1,12 @@
 
 import "./LoginPage.css"
-import LinkeDin from "./icons/LinkeDin.png"
-import Twitter from "./icons/Twitter.png"
-import facebook from "./icons/facebook.png"
-import Instagram from "./icons/Instagram.png"
-import SampleLogo from "./icons/SampleLogo.png"
+import LinkeDin from "../../../assets/img/LinkeDin.png"
+import Twitter from "../../../assets/img/Twitter.png"
+import facebook from "../../../assets/img/facebook.png"
+import Instagram from "../../../assets/img/Instagram.png"
+import SampleLogo from "../../../assets/img/SampleLogo.png"
+import SampleLogo1 from "../../../assets/img/SampleLogo1.png"
+import Input from "../../Components/Input/index"
 import hook from "./hook"
 
 export default () => {
@@ -20,13 +22,33 @@ export default () => {
                     <div className="loginPageText d-flex justify-content-center align-items-center">
                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</span>
                     </div>
-                    <div className="loginPageForm d-flex flex-column justify-content-between " >
+                    <div className="loginPageFormConteiner d-flex flex-column justify-content-between " >
                         {errorMassage&&<div className="errorMassage" style={{color:"red",fontSize:"12px"}}>{errorMassage}</div>}
-                        <form className="d-flex flex-column " onSubmit={handleSubmit(onSubmit)}>
-                            <input type="text" placeholder="Username" {...register ("username",{required:true}) } />
-                            {errors.username&&<div style={{color:"red",fontSize:"12px"}}>this column is required</div>}
-                            <input type="password" placeholder="Password" {...register("password",{required:true})}/>
+                        <form className="loginForm d-flex flex-column " onSubmit={handleSubmit(onSubmit)}>
+                            <Input 
+                            inputStyle="input-outlined" 
+                            name="username" 
+                            type="text" 
+                            placeholder="Username" 
+                            register={register} 
+                            required
+                            pattern={{minLength:4}} 
+                            />
+
+                            {errors.username&&errors.username.type==="required"&&<div style={{color:"red",fontSize:"12px"}}>this column is required</div>}
+                            {errors.username&&errors.username.type==="minLength"&&<div style={{color:"red",fontSize:"12px"}}>user name must include minimum 4 symbols</div>}
+                           
+
+                            <Input 
+                            inputStyle="input-outlined" 
+                            type="password"
+                            name="password" 
+                            placeholder="Password"    
+                            register={register}
+                            required />
+
                             {errors.password&&<div style={{color:"red",fontSize:"12px"}}>this column is required</div>}
+
                             <div><span>Fargat your password?</span></div>
                             <button type="submit" className="formButton">Sign in</button>
                         </form>
@@ -49,8 +71,8 @@ export default () => {
                     <div className="loginPageSignup">
                         <div className="loginPageLine"></div>
                         <div className=" d-flex  justify-content-center align-items-center" >
-                            <div style={{ color: "white",width:"30px" }}>88</div>
-                            <h1 style={{ color: "white" }}>photo</h1>
+                            <div className="loginPageSignupIcone"><img src={SampleLogo1}></img></div>
+                          
                         </div>
                         <div className="loginSignupText">
                             <span style={{ color: "white" }}>lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.

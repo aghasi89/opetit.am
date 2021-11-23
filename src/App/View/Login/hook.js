@@ -7,9 +7,10 @@ export default ()=>{
     const dispatch=useDispatch()
 const {register,handleSubmit,formState:{errors}}=useForm()
 const onSubmit=(data)=>{
+    console.log(data);
     dispatch(authActions.loginAction({...data,role_code:"CL"}))
 }
 const errorMassage=useSelector(authSelector.errorMessageSelector)
-console.log(errorMassage);
+
 return{register,handleSubmit,onSubmit,errors,errorMassage}
 }
