@@ -3,6 +3,8 @@ import "./LoginPage.css"
 import LinkeDin from "./icons/LinkeDin.png"
 import Twitter from "./icons/Twitter.png"
 import facebook from "./icons/facebook.png"
+import Instagram from "./icons/Instagram.png"
+import SampleLogo from "./icons/SampleLogo.png"
 import hook from "./hook"
 
 export default () => {
@@ -13,7 +15,7 @@ export default () => {
                 <div className="loginContenier d-flex flex-column  justify-content-center" >
                     <div className="loginPageHeader d-flex justify-content-center align-items-center"><span>welcome to</span></div>
                     <div className="loginPageIconandPhoto d-flex justify-content-center align-items-center">
-                        <div>33</div><h1>photo</h1>
+                        <div style={{width:"150px"}}><img src={SampleLogo}/></div>
                     </div>
                     <div className="loginPageText d-flex justify-content-center align-items-center">
                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</span>
@@ -38,7 +40,7 @@ export default () => {
                             <div><img src={LinkeDin} /></div>
                             <div><img src={Twitter} /></div>
                             <div><img src={facebook} /></div>
-                            <div></div>
+                            <div><img src={Instagram}/></div>
                         </div>
                 </div>
             </div>
@@ -47,7 +49,7 @@ export default () => {
                     <div className="loginPageSignup">
                         <div className="loginPageLine"></div>
                         <div className=" d-flex  justify-content-center align-items-center" >
-                            <div style={{ color: "white" }}>88</div>
+                            <div style={{ color: "white",width:"30px" }}>88</div>
                             <h1 style={{ color: "white" }}>photo</h1>
                         </div>
                         <div className="loginSignupText">
