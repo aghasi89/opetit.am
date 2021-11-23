@@ -31,10 +31,10 @@ const Boxes = () => {
                 </div>
                 <div className="boxes_btn">
                     <ButtonComponent
-                        // onPress={handleClick}
-                        link="/"
+                        onPress={handleClick}
                         title="See more"
                         color="green"
+                        type="button"
                     />
                 </div>
             </div>
