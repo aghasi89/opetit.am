@@ -2,8 +2,8 @@ import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
 
 
-import { Header } from './components';
-import { AboutUs, Boxes, Home, Login, Register, Services } from './view';
+import { Header } from './Components';
+import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
 
 
 function App() {
@@ -26,10 +26,6 @@ function App() {
           <Header />
           <Services />
         </Route>
-        {/* <Route path='/contactus'>
-          <Header />
-          <ContactUs />
-        </Route> */}
         <Route path='/login'>
           <Login />
         </Route>
