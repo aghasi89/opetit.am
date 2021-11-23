@@ -3,7 +3,7 @@ import './App.css';
 
 
 import { Header } from './Components';
-import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
+import { AboutUs, Boxes, Home, Login, Register, Services, } from './View';
 
 
 function App() {
@@ -22,15 +22,16 @@ function App() {
           <Header />
           <Boxes />
         </Route>
-        <Route path='/services'>
-          <Header />
-          <Services />
-        </Route>
+     
         <Route path='/login'>
           <Login />
         </Route>
         <Route path='/registration'>
           <Register />
+        </Route>
+       
+        <Route path='/services'>
+          <Services />
         </Route>
         <Redirect to='/' />
       </Switch>
