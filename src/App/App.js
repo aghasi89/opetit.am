@@ -9,6 +9,7 @@ import TestRegister from './View/TestRegister/TestRegister';
 import { ToastContainer } from "react-toastify";
 import UserPage from './View/UserPage';
 
+// import MyComponent from 'react-fullpage-custom-loader'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/'>
           <Header />
           <Home />
+          {/* <MyComponent sentences loaderType="pacman" wrapperBackgroundColor="rgba(192,192,192,0.5)" className="loader"/> */}
         </Route>
         {/* <Route path='/about'>
           <Header />
