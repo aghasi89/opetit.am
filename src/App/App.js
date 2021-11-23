@@ -3,7 +3,7 @@ import './App.css';
 
 import { Redirect, Route, Switch } from 'react-router';
 
-import { Header } from './Components';
+import { Header } from './components';
 import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
 import TestRegister from './View/TestRegister/TestRegister';
 import { ToastContainer } from "react-toastify";

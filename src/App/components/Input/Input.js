@@ -1,4 +1,4 @@
-import "./style.css"
+import './style.css';
 
 const Input = (props) => {
     const { type, placeholder, inputStyle, register, label, required, labelForTextarea, rows } = props;
@@ -39,7 +39,6 @@ const Input = (props) => {
         default:
             return null;
     }
+};
 
-}
-
-export default Input
+export default Input;
