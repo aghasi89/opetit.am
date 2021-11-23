@@ -126,14 +126,6 @@ const Registration = () => {
                                     type="button"
                                     color="green"
                                 />
-                                <ButtonComponent
-                                    onPress={handleClick}
-                                    title="Sign Up"
-                                    type="outline"
-                                    borderColor="green"
-                                    title_color="green"
-                                    color="white"
-                                />
                             </div>
                             <div className="signup_block">
                                 <TextComponent
