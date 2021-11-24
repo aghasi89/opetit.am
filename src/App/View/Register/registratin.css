@@ -40,7 +40,7 @@
     width: 550px;
 }
 
-.big_btn > .button {
+.big_btn .button {
     padding: 14px 236px;
 }
 .block_1 {
@@ -84,8 +84,8 @@
     text-align: center;
 }
 
-.sing_up_btn > .button {
-    padding: 14px 240px;
+.sing_up_btn .button {
+    padding: 14px 240px !important;
 }
 
 .sing_up_btn_span {

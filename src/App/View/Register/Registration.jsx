@@ -57,7 +57,7 @@ const Registration = () => {
                             />
                             <div className="signup_btn_block big_btn">
                                 <ButtonComponent
-                                    type="outline"
+                                    button_style="outline"
                                     link="/login"
                                     title="Sign in"
                                     borderColor="white"
@@ -122,7 +122,7 @@ const Registration = () => {
                                 <ButtonComponent
                                     onPress={handleClick}
                                     title="Sign Up"
-                                    type="button"
+                                    button_style="button"
                                     color="green"
                                 />
                             </div>

@@ -4,6 +4,7 @@ import { ThemeContext } from '../../../context';
 import './buttoncomp.css';
 
 const ButtonComponent = ({
+    button_style,
     type,
     title,
     link,
@@ -22,25 +23,26 @@ const ButtonComponent = ({
         commonStyle.color = theme.color[title_color];
     }
 
-    switch (type) {
+    switch (button_style) {
         case 'button': {
             content = (
-                <div style={commonStyle} className="button pointer">
+                <button type={type} style={commonStyle} className="button pointer">
                     {title}
-                </div>
+                </button>
             );
+            console.log(content, "contentcontentcontent");
         }
         case 'outline': {
             content = (
-                <div style={commonStyle} className="button pointer outline">
+                <button type={type} style={commonStyle} className="button pointer outline">
                     {title}
-                </div>
+                </button>
             );
         }
         default:
-            content = null;
+            content = content;
     }
-
+    console.log(content, "qqqqqqqqqqqqqqqqqqqqqqqqqqqq");
     return link ? (
         <Link to={link}>{content}</Link>
     ) : onPress ? (
