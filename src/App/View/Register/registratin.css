@@ -14,6 +14,7 @@
     width: 132px;
     border-top: 1px solid white;
     position: absolute;
+    margin-top: -35px;
 }
 
 .signup_logo_block .h1_style {

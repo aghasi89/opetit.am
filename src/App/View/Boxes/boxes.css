@@ -2,7 +2,7 @@
     background-color: #f5f5f5;
 }
 
-.boxes_h3 {
+.boxes_h2 {
     padding-top: 65px;
 }
 
@@ -15,8 +15,15 @@
     width: 192px;
     height: 52px;
     margin-left: auto;
+    padding-bottom: 80px;
 }
 
 .boxes_btn > .button {
     padding: 15.3px 54px;
+}
+
+.box_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
 }

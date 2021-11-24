@@ -60,7 +60,6 @@ const Registration = () => {
                                     type="outline"
                                     link="/login"
                                     title="Sign in"
-                                    type="outline"
                                     borderColor="white"
                                     title_color="white"
                                 />
