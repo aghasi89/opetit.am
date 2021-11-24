@@ -15,9 +15,10 @@
     width: 192px;
     height: 52px;
     margin-left: auto;
+    padding-bottom: 80px;
 }
 
-.boxes_btn > .button {
+.boxes_btn .button {
     padding: 15.3px 54px;
 }
 

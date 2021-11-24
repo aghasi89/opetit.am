@@ -1,5 +1,5 @@
 import AboutUs from './AboutUs';
-import Boxes from './Boxes';
+import Boxes from './Home/Section/Boxes';
 import ContactUs from './ContactUs';
 import Home from './Home';
 import Login from './Login';
