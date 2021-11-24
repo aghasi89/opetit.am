@@ -32,11 +32,11 @@ export default () => {
                             placeholder="Username" 
                             register={register} 
                             required
-                            pattern={{minLength:4}} 
+                            pattern={{minLength:5}} 
                             />
 
                             {errors.username&&errors.username.type==="required"&&<div style={{color:"red",fontSize:"12px"}}>this column is required</div>}
-                            {errors.username&&errors.username.type==="minLength"&&<div style={{color:"red",fontSize:"12px"}}>user name must include minimum 4 symbols</div>}
+                            {errors.username&&errors.username.type==="minLength"&&<div style={{color:"red",fontSize:"12px"}}>user name must include minimum 5 symbols</div>}
                            
 
                             <Input 
@@ -45,10 +45,11 @@ export default () => {
                             name="password" 
                             placeholder="Password"    
                             register={register}
+                            
                             required />
 
                             {errors.password&&<div style={{color:"red",fontSize:"12px"}}>this column is required</div>}
-
+                          
                             <div><span>Fargat your password?</span></div>
                             <button type="submit" className="formButton">Sign in</button>
                         </form>
