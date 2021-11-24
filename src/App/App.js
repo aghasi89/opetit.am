@@ -4,10 +4,10 @@ import './App.css';
 import { Redirect, Route, Switch } from 'react-router';
 
 import { Header } from './components';
-import { AboutUs, Boxes, Home, Login, Register, Services } from './View';
-import TestRegister from './View/TestRegister/TestRegister';
+import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
+import TestRegister from './view/TestRegister/TestRegister';
 import { ToastContainer } from "react-toastify";
-import UserPage from './View/UserPage';
+import UserPage from './view/UserPage';
 
 // import MyComponent from 'react-fullpage-custom-loader'
 
@@ -46,8 +46,8 @@ function App() {
           <Login />
         </Route> */}
         <Route path='/registration'>
-          {/* <Register /> */}
-          <TestRegister />
+          <Registration />
+          {/* <TestRegister /> */}
         </Route>
         {/* <Redirect to='/' /> */}
       </Switch>

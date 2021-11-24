@@ -5,6 +5,7 @@ import { getConfirmCodeAction, registerAction } from "../../store/actions"
 import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from '../../utils/validationSchema';
 import { useState } from 'react';
+
 export default function RegisterHook() {
     const [regData, setRegdata]=useState(null);
     const formOptions = { resolver: yupResolver(validationSchema) }

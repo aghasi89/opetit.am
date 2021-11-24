@@ -11,7 +11,6 @@ const Input = (props) => {
                         className='input-outlined'
                         {...register(label, { required })} />
                 </div>
-
             )
         case 'input-outlined-bottom':
             return (

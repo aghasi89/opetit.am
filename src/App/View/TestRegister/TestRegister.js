@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Input from "../../Components/Input";
+import Input from "../../components/Input";
 import Loading from './Loading';
-import RegisterHook from './RegisterHook';
+import RegisterHook from '../Register/RegisterHook';
 import "./style.css"
-import Modal from '../../Components/Modal';
+import Modal from '../../components/Modal';
 import MyComponent from 'react-fullpage-custom-loader'
 
 export default () => {
