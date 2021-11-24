@@ -1,3 +1,4 @@
+import React from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
 import { Header } from './components/index';
@@ -40,6 +41,7 @@ function App() {
     </div>
  
   );
+
 }
 
 export default App;
