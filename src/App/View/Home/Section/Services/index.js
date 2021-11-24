@@ -3,7 +3,7 @@ import saladIcons from "../../../../../assets/img/salad.png"
 import servingdishIcons from "../../../../../assets/img/servingdish.png"
 import dessertIcons from "../../../../../assets/img/dessert.png"
 import cocktailIcons from "../../../../../assets/img/cocktail.png"
-import { Box } from "../../../../Components/Box/"
+import  Box  from "../../../../Components/Box"
 export default () => {
     return (
         <div className="servicesGeneralContenier d-flex align-items-center justify-content-center">

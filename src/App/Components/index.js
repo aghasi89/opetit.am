@@ -1,6 +1,5 @@
+import Header from './Header';
+import ButtonComponent from './Button';
+import TextComponent from './Text';
 
-import Header from "./Header";
-
-
-
-export { Header }
+export { Header, ButtonComponent, TextComponent };

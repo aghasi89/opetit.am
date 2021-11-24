@@ -1,4 +1,5 @@
 
+
 import "./LoginPage.css"
 import LinkeDin from "../../../assets/img/LinkeDin.png"
 import Twitter from "../../../assets/img/Twitter.png"
@@ -92,3 +93,4 @@ export default () => {
 
 
 }
+

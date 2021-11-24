@@ -1,12 +1,19 @@
+import React from 'react';
 import { Redirect, Route, Switch } from 'react-router';
+
 import './App.css';
 
 
 import { Header } from './Components';
-import { AboutUs, Boxes, Home, Login, Register, Services, } from './View';
+import { AboutUs, Boxes, Home, Login, Registration, Services, } from './View';
 
+
+
+
+import './App.css';
 
 function App() {
+
   return (
     <div className="App">
       <Switch>
@@ -22,14 +29,12 @@ function App() {
           <Header />
           <Boxes />
         </Route>
-     
         <Route path='/login'>
           <Login />
         </Route>
         <Route path='/registration'>
-          <Register />
+          <Registration/>
         </Route>
-       
         <Route path='/services'>
           <Services />
         </Route>
@@ -37,6 +42,8 @@ function App() {
       </Switch>
     </div>
   );
+
+
 }
 
 export default App;
