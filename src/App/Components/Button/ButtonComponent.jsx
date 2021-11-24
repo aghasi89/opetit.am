@@ -23,24 +23,27 @@ const ButtonComponent = ({
     }
 
     switch (type) {
-        case 'button': {
-            content = (
-                <div style={commonStyle} className="button pointer">
-                    {title}
-                </div>
-            );
-        }
-        case 'outline': {
-            content = (
-                <div style={commonStyle} className="button pointer outline">
-                    {title}
-                </div>
-            );
-        }
+        case 'button':
+            {
+                content = (
+                    <div style={commonStyle} className="button pointer">
+                        {title}
+                    </div>
+                );
+            }
+            break;
+        case 'outline':
+            {
+                content = (
+                    <div style={commonStyle} className="button pointer outline">
+                        {title}
+                    </div>
+                );
+            }
+            break;
         default:
-            content = null;
+            content = content;
     }
-
     return link ? (
         <Link to={link}>{content}</Link>
     ) : onPress ? (

@@ -1,18 +1,18 @@
 //COMPONENTS
-import TextComponent from '../../components/Text';
-import ButtonComponent from '../../components/Button';
-import Box from '../../components/Box';
+import TextComponent from '../../../../components/Text';
+import ButtonComponent from '../../../../components/Button';
+import Box from '../../../../components/Box';
 
-import boxe_img1 from '../../assets/img/jpg/boxe_img1.jpg';
-import boxe_img2 from '../../assets/img/jpg/boxe_img2.jpg';
-import boxe_img3 from '../../assets/img/jpg/boxe_img3.jpg';
+import boxe_img1 from '../../../../assets/img/jpg/boxe_img1.jpg';
+import boxe_img2 from '../../../../assets/img/jpg/boxe_img2.jpg';
+import boxe_img3 from '../../../../assets/img/jpg/boxe_img3.jpg';
 
 //CSS
 import './boxes.css';
 
 const Boxes = () => {
     const handleClick = () => {
-        console.log();
+        console.log('click');
     };
     return (
         <div className="boxes_wrapper">
@@ -46,7 +46,8 @@ const Boxes = () => {
                 </div>
                 <div className="boxes_btn">
                     <ButtonComponent
-                        onPress={handleClick}
+                        link="/"
+                        // onPress={handleClick}
                         title="See more"
                         color="green"
                         type="button"

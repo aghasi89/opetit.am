@@ -1,5 +1,11 @@
-import HeaderSlide from "./Section/HeaderSlide"
+import { Boxes } from '..';
+import HeaderSlide from './Section/HeaderSlide';
 
 export default () => {
-    return (<div><HeaderSlide /></div>)
-}
+    return (
+        <div>
+            <HeaderSlide />
+            <Boxes />
+        </div>
+    );
+};
