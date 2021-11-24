@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Input from "../../components/Input";
 import Loading from './Loading';
-import RegisterHook from '../Register/RegisterHook';
+import RegisterHook from './RegisterHook';
 import "./style.css"
 import Modal from '../../components/Modal';
-import MyComponent from 'react-fullpage-custom-loader'
+
 
 export default () => {
 
@@ -15,16 +15,12 @@ export default () => {
         onSubmitRegData,
         onSubmitRegCode,
         modalIsOpen,
-        setIsOpen,
-        register2,
-        errors2,
-        handleSubmit2
+        setIsOpen
     } = RegisterHook()
 
     return (
         <>
-        {loading && <MyComponent sentences loaderType="pacman" wrapperBackgroundColor="rgba(192,192,192,0.5)" className="loader"/>}
-            <form key={1} onSubmit={handleSubmit(onSubmitRegData)}>
+            <form onSubmit={handleSubmit(onSubmitRegData)}>
                 <Input type="text"
                     placeholder="Firstname"
                     inputStyle="input-outlined"
@@ -80,43 +76,40 @@ export default () => {
                     <span>Sign up</span>
                 </button>
             </form>
+
+            <Input placeholder="Write text here..."
+                inputStyle="input-textarea"
+                labelForTextarea="Message"
+                rows="5"
+            />
+
             <Modal onClose={() => setIsOpen(false)}
                 modalIsOpen={modalIsOpen}
                 body={
-                    <>
-                        <div>
-                            <form key={2} onSubmit={handleSubmit2(onSubmitRegCode)}>
-                                <div className='modal-content d-flex justify-content-center align-items-center' >
-                                    <div className='modal-header'>
-                                        <p className='modal-title'>Confirm code field</p>
-                                    </div>
-                                    <div className='modal-body d-flex align-items-center'>
-                                        <Input type="number"
-                                            placeholder="Confirm code"
-                                            inputStyle="input-outlined"
-                                            label="confirm_code"
-                                            register={register2} />
-                                    </div>
-                                    <div className="input-error">
-                                        {errors2.confirm_code?.message}
-                                    </div>
-                                    <div className='modal-footer'>
-                                        <button type="submit" disabled={loading}>
-                                            {loading ?
-                                                <Loading type="spinningBubbles" color="grey" /> :
-                                                <span>Sign up</span>}
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                    <form onSubmit={handleSubmit(onSubmitRegCode)}>
+                        <div className='modal-content d-flex justify-content-center align-items-center' >
+                            <div className='modal-header'>
+                                <p className='modal-title'>Confirm code field</p>
+                            </div>
+                            <div className='modal-body d-flex align-items-center'>
+                                <Input type="number"
+                                    placeholder="Confirm code"
+                                    inputStyle="input-outlined"
+                                    label="confirm_code"
+                                    register={register} />
+                            </div>
+                            <div className="input-error">
+                                {errors.confirm_code?.message}
+                            </div>
+                            <div className='modal-footer'>
+                                <button type="submit" disabled={loading}>
+                                    {loading ?
+                                        <Loading type="spinningBubbles" color="grey" /> :
+                                        <span>Sign up</span>}
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <form key={1} onSubmit={handleSubmit(onSubmitRegData)}>
-                                <input type="submit" value="Send code again" />
-                            </form>
-                        </div>
-                        {loading && <MyComponent sentences loaderType="pacman" wrapperBackgroundColor="rgba(192,192,192,0.5)" className="loader"/>}
-                    </>
+                    </form>
                 }
             />
         </>

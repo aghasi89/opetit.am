@@ -47,7 +47,7 @@ function App() {
         </Route> */}
         <Route path='/registration'>
           <Registration />
-          {/* <TestRegister /> */}
+          <TestRegister />
         </Route>
         {/* <Redirect to='/' /> */}
       </Switch>
