@@ -19,27 +19,33 @@ const TextComponent = ({ type, title, onPress, link, color }) => {
                     {title}
                 </p>
             );
+        case 'span':
+            return (
+                <span className="text_main" style={commonStyle}>
+                    {title}
+                </span>
+            );
         case 'h1':
             return (
-                <h1 className="h1_text" style={commonStyle}>
+                <h1 className="text_main h1_text" style={commonStyle}>
                     {title}
                 </h1>
             );
         case 'h2':
             return (
-                <h2 className="" style={commonStyle}>
+                <h2 className="text_main h2_text" style={commonStyle}>
                     {title}
                 </h2>
             );
         case 'h3':
             return (
-                <h3 className="h3_text" style={commonStyle}>
+                <h3 className="text_main h3_text" style={commonStyle}>
                     {title}
                 </h3>
             );
         case 'h4':
             return (
-                <h3 className="" style={commonStyle}>
+                <h3 className="text_main h4_text" style={commonStyle}>
                     {title}
                 </h3>
             );

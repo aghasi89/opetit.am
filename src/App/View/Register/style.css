@@ -14,6 +14,7 @@
     width: 132px;
     border-top: 1px solid white;
     position: absolute;
+    margin-top: -35px;
 }
 
 .signup_logo_block .h1_style {
@@ -39,7 +40,7 @@
     width: 550px;
 }
 
-.big_btn > .button {
+.big_btn .button {
     padding: 14px 236px;
 }
 .block_1 {
@@ -83,8 +84,8 @@
     text-align: center;
 }
 
-.sing_up_btn > .button {
-    padding: 14px 240px;
+.sing_up_btn .button {
+    padding: 14px 240px !important;
 }
 
 .sing_up_btn_span {
@@ -194,4 +195,17 @@
   }
   .modal-title {
     margin: 0
+  }
+.styles_WrapperUi__2TxXl {
+    bottom: 0 !important;
+    position: fixed !important;
+  }
+
+  .square-jelly-box-min_la-square-jelly-box__3qdI1 {
+    color: #fade6f !important;
+  }
+  .send_code_again_btn {
+    border-bottom: 1px solid;
+    width: 100%;
+    padding: 5px 15px;
   }

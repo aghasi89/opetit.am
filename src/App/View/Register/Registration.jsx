@@ -54,10 +54,9 @@ const Registration = () => {
                             />
                             <div className="signup_btn_block big_btn">
                                 <ButtonComponent
-                                    type="outline"
+                                    button_style="outline"
                                     link="/login"
                                     title="Sign in"
-                                    type="outline"
                                     borderColor="white"
                                     title_color="white"
                                 />
@@ -85,105 +84,111 @@ const Registration = () => {
                                 />
                             </div>
                             <div className="signup_inputs">
-                                    {/* {loading && <MyComponent sentences loaderType="pacman" wrapperBackgroundColor="rgba(192,192,192,0.5)" className="loader" />} */}
-                                    <form key={1} onSubmit={handleSubmit(onSubmitRegData)}>
-                                        <Input type="text"
-                                            placeholder="Firstname"
-                                            inputStyle="input-outlined"
-                                            label="first_name"
-                                            register={register}
-                                        />
-                                        <div className="input-error">
-                                            {errors.first_name?.message}
-                                        </div>
-
-                                        <Input type="text"
-                                            placeholder="Lastname"
-                                            inputStyle="input-outlined"
-                                            label="last_name"
-                                            register={register}
-                                        />
-                                        <div className="input-error">
-                                            {errors.last_name?.message}
-                                        </div>
-
-                                        <Input type="password"
-                                            placeholder="Password"
-                                            inputStyle="input-outlined"
-                                            label="password"
-                                            register={register}
-                                        />
-                                        <div className="input-error">
-                                            {errors.password?.message}
-                                        </div>
-
-                                        <Input type="password"
-                                            placeholder="Confirm password"
-                                            inputStyle="input-outlined"
-                                            label="confirm_password"
-                                            register={register}
-                                        />
-                                        <div className="input-error">
-                                            {errors.confirm_password?.message}
-                                        </div>
-
-                                        <Input type="email" novalidate
-                                            placeholder="Email"
-                                            inputStyle="input-outlined"
-                                            label="email"
-                                            register={register}
-                                        />
-                                        <div className="input-error">
-                                            {errors.email?.message}
-                                        </div>
-                                        <div className="sing_up_btn">
-                                            <ButtonComponent
-                                                onPress={handleClick}
-                                                title="Sign Up"
-                                                type="button"
-                                                color="green"
-                                            />
-                                        </div>
-                                    </form>
-                                    <Modal onClose={() => setIsOpen(false)}
-                                        modalIsOpen={modalIsOpen}
-                                        body={
-                                            <>
-                                                <div>
-                                                    <form key={2} onSubmit={handleSubmit2(onSubmitRegCode)}>
-                                                        <div className='modal-content d-flex justify-content-center align-items-center' >
-                                                            <div className='modal-header'>
-                                                                <p className='modal-title'>Confirm code field</p>
-                                                            </div>
-                                                            <div className='modal-body d-flex align-items-center'>
-                                                                <Input type="number"
-                                                                    placeholder="Confirm code"
-                                                                    inputStyle="input-outlined"
-                                                                    label="confirm_code"
-                                                                    register={register2} />
-                                                            </div>
-                                                            <div className="input-error">
-                                                                {errors2.confirm_code?.message}
-                                                            </div>
-                                                            <div className='modal-footer'>
-                                                                <button type="submit" disabled={loading}>
-                                                                    {/* {loading ?
-                                                                        <Loading type="spinningBubbles" color="grey" /> : */}
-                                                                    <span>Sign up</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div>
-                                                    <form key={1} onSubmit={handleSubmit(onSubmitRegData)}>
-                                                        <input type="submit" value="Send code again" />
-                                                    </form>
-                                                </div>
-                                                {loading && <MyComponent sentences loaderType="pacman" wrapperBackgroundColor="rgba(192,192,192,0.5)" className="loader" />}
-                                            </>
-                                        }
+                                {/* <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.5)" /> */}
+                                {loading && <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
+                                <form onSubmit={handleSubmit(onSubmitRegData)}>
+                                    <Input type="text"
+                                        placeholder="Firstname"
+                                        inputStyle="input-outlined"
+                                        label="first_name"
+                                        register={register}
                                     />
+                                    <div className="input-error">
+                                        {errors.first_name?.message}
+                                    </div>
+
+                                    <Input type="text"
+                                        placeholder="Lastname"
+                                        inputStyle="input-outlined"
+                                        label="last_name"
+                                        register={register}
+                                    />
+                                    <div className="input-error">
+                                        {errors.last_name?.message}
+                                    </div>
+
+                                    <Input type="password"
+                                        placeholder="Password"
+                                        inputStyle="input-outlined"
+                                        label="password"
+                                        register={register}
+                                    />
+                                    <div className="input-error">
+                                        {errors.password?.message}
+                                    </div>
+
+                                    <Input type="password"
+                                        placeholder="Confirm password"
+                                        inputStyle="input-outlined"
+                                        label="confirm_password"
+                                        register={register}
+                                    />
+                                    <div className="input-error">
+                                        {errors.confirm_password?.message}
+                                    </div>
+
+                                    <Input type="email" novalidate
+                                        placeholder="Email"
+                                        inputStyle="input-outlined"
+                                        label="email"
+                                        register={register}
+                                    />
+                                    <div className="input-error">
+                                        {errors.email?.message}
+                                    </div>
+                                    <div className="sing_up_btn">
+                                        <ButtonComponent
+                                            button_style="button"
+                                            onPress={handleClick}
+                                            title="Sign Up"
+                                            type="submit"
+                                            color="green"
+                                        />
+                                    </div>
+                                </form>
+
+                                <Modal onClose={() => setIsOpen(false)}
+                                    modalIsOpen={modalIsOpen}
+                                    body={
+                                        <>
+                                            <form onSubmit={handleSubmit(onSubmitRegCode)}>
+                                                <div className='modal-content d-flex justify-content-center align-items-center' >
+                                                    <div className='modal-header'>
+                                                    <TextComponent type="p" className='modal-title' title="Confirm code field"/>
+                                                    </div>
+                                                    <div className= 'd-flex align-items-center'>
+                                                        <Input type="number"
+                                                            placeholder="Confirm code"
+                                                            inputStyle="input-outlined"
+                                                            label="confirm_code"
+                                                            register={register} />
+                                                    </div>
+                                                    <div className="input-error">
+                                                        {errors.confirm_code?.message}
+                                                    </div>
+                                                    <div className='modal-footer'>
+                                                        <div className="sing_up_btn">
+                                                            <ButtonComponent
+                                                                button_style="button"
+                                                                onPress={handleClick}
+                                                                title="Sign Up"
+                                                                type="submit"
+                                                                color="green"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    {loading && <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
+                                                </div>
+                                            </form>
+                                            <form key={1} onSubmit={handleSubmit(onSubmitRegData)}>
+                                                <div className="send_code_again_btn">
+                                                    <button type="submit">Send code again</button>
+                                                </div>
+                                            </form>
+                                        </>
+                                    }
+                                />
+
                             </div>
 
                             <div className="signup_block">

@@ -1,13 +1,9 @@
 .box {
-  height: auto;
+    height: auto;
+    width: 467px;
+    justify-content: space-between;
 }
 
-span {
-  color: #a1a1a1;
-}
-
-
-img{
-  width: 100%;
-  height: auto;
+.box_span {
+    color: #a1a1a1;
 }

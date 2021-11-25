@@ -4,7 +4,7 @@ import Loading from './Loading';
 import RegisterHook from './RegisterHook';
 import "./style.css"
 import Modal from '../../components/Modal';
-
+//import MyComponent from 'react-fullpage-custom-loader'
 
 export default () => {
 
@@ -20,6 +20,7 @@ export default () => {
 
     return (
         <>
+        {/* {loading && <MyComponent sentences loaderType="pacman" wrapperBackgroundColor="rgba(192,192,192,0.5)" className="loader"/>} */}
             <form onSubmit={handleSubmit(onSubmitRegData)}>
                 <Input type="text"
                     placeholder="Firstname"
@@ -76,13 +77,6 @@ export default () => {
                     <span>Sign up</span>
                 </button>
             </form>
-
-            <Input placeholder="Write text here..."
-                inputStyle="input-textarea"
-                labelForTextarea="Message"
-                rows="5"
-            />
-
             <Modal onClose={() => setIsOpen(false)}
                 modalIsOpen={modalIsOpen}
                 body={

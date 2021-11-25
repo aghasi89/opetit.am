@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <ToastContainer />
+      <ToastContainer autoClose={false}/>
         
       <Switch>
         <Route path='/panel'>
@@ -47,7 +47,7 @@ function App() {
         </Route> */}
         <Route path='/registration'>
           <Registration />
-          <TestRegister />
+          {/* <TestRegister /> */}
         </Route>
         {/* <Redirect to='/' /> */}
       </Switch>

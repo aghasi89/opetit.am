@@ -10,7 +10,12 @@
     text-align: center;
     color: #fff;
 }
-
+button{
+    width: 100%;
+    height: fit-content;
+    border: none;
+    background: none;
+}
 .button:hover {
     text-decoration: none;
 }
@@ -32,7 +37,6 @@
 
 .outline {
     border: 1px solid white;
-    /* background: none; */
 }
 
 .pointer {

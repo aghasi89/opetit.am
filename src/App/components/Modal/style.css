@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .modal-content {
     height: 230px;
@@ -33,7 +34,7 @@
   .modal-title {
     margin: 0
   }
-  .modal-body {
+  /* .modal-body {
     display: flex;
     align-items: center;
-  }
+  } */

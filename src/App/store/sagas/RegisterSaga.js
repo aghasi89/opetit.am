@@ -7,13 +7,15 @@ import "react-toastify/dist/ReactToastify.css";
 
 const notify = (text) => {
   toast.error(text, {
-    position: toast.POSITION.TOP_CENTER
+    position: toast.POSITION.TOP_CENTER,
+  
   });
 }
 
 function* confirmCode({ payload }) {
   const { setLoad, setOpen, ...setData } = payload
   try {
+    console.log("confirm code in saga----------")
     const data = yield call(confirmCodeRequest, { email: setData.email });
     // yield put(setConfirmCodeAction({ confirm_code: data ? data.code : "" }))
     setLoad()
