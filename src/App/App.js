@@ -1,30 +1,37 @@
 import * as React from 'react';
 import './App.css';
-
 import { Redirect, Route, Switch } from 'react-router';
-
 import { Header } from './components';
 import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
-//import TestRegister from './view/TestRegister/TestRegister';
 import { ToastContainer } from "react-toastify";
 import UserPage from './view/UserPage';
-
-// import MyComponent from 'react-fullpage-custom-loader'
+import { useDispatch, useSelector } from 'react-redux';
+import { authSuccessAction } from './store/actions';
+import PrivatePage from './view/PrivatePage';
 
 function App() {
- 
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    let access = localStorage.getItem("access");
+    if (access) {
+      dispatch(authSuccessAction());
+    }
+  }, []);
+
   return (
     <div className="App">
-      <ToastContainer autoClose={false}/>
-        
+      <ToastContainer autoClose={false} />
+
       <Switch>
-        <Route path='/panel'>
-          <UserPage />
+        <Route path="/panel">
+          <PrivatePage>
+            <UserPage></UserPage>
+          </PrivatePage>
         </Route>
         <Route exact path='/'>
           <Header />
           <Home />
-          {/* <MyComponent sentences loaderType="pacman" wrapperBackgroundColor="rgba(192,192,192,0.5)" className="loader"/> */}
         </Route>
         {/* <Route path='/about'>
           <Header />
@@ -42,9 +49,9 @@ function App() {
           <Header />
           <ContactUs />
         </Route> */}
-        {/* <Route path='/login'>
+        <Route path='/login'>
           <Login />
-        </Route> */}
+        </Route>
         <Route path='/registration'>
           <Registration />
           {/* <TestRegister /> */}

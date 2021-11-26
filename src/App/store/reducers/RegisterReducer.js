@@ -1,18 +1,19 @@
 import { RegisterTypes } from "../types";
 
 const INIT_STATE = {
+    isAuth: false,
+    user: null
     
 }
 
 export default (state=INIT_STATE, action) => {
     const {type, payload} = action;
-    console.log(payload);
     switch (type) {
-        case RegisterTypes.GET_CONFIRM_CODE:
-            console.log("payload in reducer", payload);
-            return {...state, ...payload }
-        case RegisterTypes.SET_CONFIRM_CODE:
-            return {...state, ...payload}
+        case RegisterTypes.SET_USER_DATA:
+            console.log(state);
+            return {...state, user: payload}
+        case RegisterTypes.AUTH_SUCCESS:
+            return {...state, isAuth: true}
 
         default:
             break;

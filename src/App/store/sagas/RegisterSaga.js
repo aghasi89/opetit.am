@@ -1,9 +1,10 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 import { confirmCodeRequest, registerRequest } from "../../services/routes/register";
-import { setConfirmCodeAction } from "../actions";
+import { setUserDataAction } from "../actions";
 import { RegisterTypes } from "../types";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { authSuccessAction } from "../actions/RegisterActions";
 
 const notify = (text) => {
   toast.error(text, {
@@ -11,14 +12,12 @@ const notify = (text) => {
   
   });
 }
-function preventBack() {window.history.forward();}        
 
 function* confirmCode({ payload }) {
   const { setLoad, setOpen, ...setData } = payload
   try {
     console.log("confirm code in saga----------")
     const data = yield call(confirmCodeRequest, { email: setData.email });
-    // yield put(setConfirmCodeAction({ confirm_code: data ? data.code : "" }))
     setLoad()
     setOpen()
   } catch (error) {
@@ -32,25 +31,22 @@ function* register({ payload }) {
   const { setLoad, ...setData } = payload
   try {
     const codeData = yield call(registerRequest, { ...setData, role_code: "CL" })
-    console.log("register in saga", codeData);
-    setLoad()
+    yield put(setUserDataAction({ user: codeData.user.user ? codeData.user.user : "" }))
+    // console.log("codeData.......", codeData);
+    // console.log("register in saga", codeData.user);
+    setLoad() 
     if (codeData.access) {
       console.log(codeData.access);
       localStorage.setItem("access", codeData.access);
-      window.location = "/panel"
-      setTimeout(preventBack(), 0);
-      //preventBack()
-      
-      window.onload = null
+      yield put(authSuccessAction());
+      //window.location = "/panel"
     }
   } catch (error) {
     setLoad();
-    console.log("error massage = ", error.message);
+    //console.log("error massage = ", error.message);
     notify(error.message)
   }
 }
-
-
 
 function* watchRegisterSaga() {
   yield takeLatest(RegisterTypes.GET_CONFIRM_CODE, confirmCode)
