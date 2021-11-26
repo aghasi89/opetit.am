@@ -12,18 +12,6 @@ import UserPage from './view/UserPage';
 // import MyComponent from 'react-fullpage-custom-loader'
 
 function App() {
-
-  function preventBack() {window.history.forward();}  
-  
-  React.useEffect(() => {
-    let access = localStorage.getItem("access");
-    if (access) {
-      setTimeout(preventBack(), 0);
-      //window.onunload = () => {null}
-    }
-    
-  }, []);
-
  
   return (
     <div className="App">
