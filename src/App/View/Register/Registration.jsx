@@ -24,10 +24,10 @@ const Registration = () => {
         onSubmitRegData,
         onSubmitRegCode,
         modalIsOpen,
-        setIsOpen,
-        register2,
-        errors2,
-        handleSubmit2
+        setIsOpen, 
+        handleSubmitCode,
+        registerCode,
+        errorsCode
     } = RegisterHook()
 
     const handleClick = () => {
@@ -84,7 +84,6 @@ const Registration = () => {
                                 />
                             </div>
                             <div className="signup_inputs">
-                                {/* <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.5)" /> */}
                                 {loading && <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
                                 <form onSubmit={handleSubmit(onSubmitRegData)}>
                                     <Input type="text"
@@ -151,7 +150,7 @@ const Registration = () => {
                                     modalIsOpen={modalIsOpen}
                                     body={
                                         <>
-                                            <form onSubmit={handleSubmit(onSubmitRegCode)}>
+                                            <form onSubmit={handleSubmitCode(onSubmitRegCode)}>
                                                 <div className='modal-content d-flex justify-content-center align-items-center' >
                                                     <div className='modal-header'>
                                                     <TextComponent type="p" className='modal-title' title="Confirm code field"/>
@@ -161,10 +160,10 @@ const Registration = () => {
                                                             placeholder="Confirm code"
                                                             inputStyle="input-outlined"
                                                             label="confirm_code"
-                                                            register={register} />
+                                                            register={registerCode} />
                                                     </div>
                                                     <div className="input-error">
-                                                        {errors.confirm_code?.message}
+                                                        {errorsCode?.confirm_code?.message}
                                                     </div>
                                                     <div className='modal-footer'>
                                                         <div className="sing_up_btn">
@@ -180,7 +179,7 @@ const Registration = () => {
                                                     {loading && <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
                                                 </div>
                                             </form>
-                                            <form key={1} onSubmit={handleSubmit(onSubmitRegData)}>
+                                            <form onSubmit={handleSubmit(onSubmitRegData)}>
                                                 <div className="send_code_again_btn">
                                                     <button type="submit">Send code again</button>
                                                 </div>

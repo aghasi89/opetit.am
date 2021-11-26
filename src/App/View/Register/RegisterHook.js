@@ -3,19 +3,17 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { getConfirmCodeAction, registerAction } from "../../store/actions"
 import { yupResolver } from "@hookform/resolvers/yup";
-import { validationSchema } from '../../utils/validationSchema';
 import { useState } from 'react';
+import { confirmCodeSchema, dataSchema } from '../../utils/';
 
 export default function RegisterHook() {
     const [regData, setRegdata]=useState(null);
-    const formOptions = { resolver: yupResolver(validationSchema) }
+    const formOptions = { mode: 'onBlur', resolver: yupResolver(dataSchema) }
+    const formOptionsCode = { mode: 'onBlur', resolver: yupResolver(confirmCodeSchema) }
+
     const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
-    const {
-        register: register2,
-        formState: { errors: errors2 },
-        handleSubmit: handleSubmit2,
-      } = useForm(formOptions);
-      
+    const { register: registerCode, handleSubmit: handleSubmitCode, formState: { errors: errorsCode } } = useForm(formOptionsCode);
+
     const dispatch = useDispatch()
     const [loading, setLoading] = React.useState(false);
     const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -32,7 +30,6 @@ export default function RegisterHook() {
     };
 
     const onSubmitRegCode = (data) => {
-        console.log(regData, "aaaaaaaaaaaaaaa");
         setLoading(true)
         console.log(regData);
         if (data) {
@@ -51,8 +48,8 @@ export default function RegisterHook() {
         onSubmitRegCode,
         modalIsOpen,
         setIsOpen,
-        register2,
-        errors2,
-        handleSubmit2
+        handleSubmitCode,
+        registerCode,
+        errorsCode
     }
 }

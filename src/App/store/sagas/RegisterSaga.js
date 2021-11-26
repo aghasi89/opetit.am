@@ -11,6 +11,7 @@ const notify = (text) => {
   
   });
 }
+function preventBack() {window.history.forward();}        
 
 function* confirmCode({ payload }) {
   const { setLoad, setOpen, ...setData } = payload
@@ -37,6 +38,10 @@ function* register({ payload }) {
       console.log(codeData.access);
       localStorage.setItem("access", codeData.access);
       window.location = "/panel"
+      setTimeout(preventBack(), 0);
+      //preventBack()
+      
+      window.onload = null
     }
   } catch (error) {
     setLoad();
@@ -44,6 +49,8 @@ function* register({ payload }) {
     notify(error.message)
   }
 }
+
+
 
 function* watchRegisterSaga() {
   yield takeLatest(RegisterTypes.GET_CONFIRM_CODE, confirmCode)

@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import './App.css';
 
 import { Redirect, Route, Switch } from 'react-router';
 
 import { Header } from './components';
 import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
-import TestRegister from './view/TestRegister/TestRegister';
+//import TestRegister from './view/TestRegister/TestRegister';
 import { ToastContainer } from "react-toastify";
 import UserPage from './view/UserPage';
 
@@ -13,6 +13,18 @@ import UserPage from './view/UserPage';
 
 function App() {
 
+  function preventBack() {window.history.forward();}  
+  
+  React.useEffect(() => {
+    let access = localStorage.getItem("access");
+    if (access) {
+      setTimeout(preventBack(), 0);
+      //window.onunload = () => {null}
+    }
+    
+  }, []);
+
+ 
   return (
     <div className="App">
       <ToastContainer autoClose={false}/>

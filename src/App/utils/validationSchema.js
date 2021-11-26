@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-export const validationSchema = Yup.object().shape({
+export const dataSchema = Yup.object().shape({
     first_name: Yup.string()
         .required('Firstname is required'),
     last_name: Yup.string()
@@ -14,6 +14,11 @@ export const validationSchema = Yup.object().shape({
     email: Yup.string()
         .email()
         .required('Email is required'),
+});
+
+
+export const confirmCodeSchema = Yup.object().shape({
+    
     confirm_code: Yup.string()
         .length(6, "Must be 6 characters")
 });
