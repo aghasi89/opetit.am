@@ -4,7 +4,7 @@
 /* ------------General conteiner-------- */
 .contactUsGeneralConteiner{
     width: 100%;
-    min-height: 650px;
+    min-height: 700px;
     display: flex;
     justify-content: flex-start;
     align-items: start;
@@ -15,7 +15,7 @@
 
 .contactUsImage{
     width:55.53%;
-    min-height: 650px;
+    min-height:700px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,11 +59,12 @@
 /* -------------------Form-------------- */
 .contactUsFormGeneral{
     display: flex;
+    min-height: 700px;
     justify-content: center;
     flex-direction: column;
     width: 60%;
     align-items: center;
-    min-height: 650px;
+   
 
 }
 .contactUsFormConteiner{
@@ -71,8 +72,11 @@
     width: 70%;
     align-items: center;
     justify-content: flex-start;
+    height: 100%;
 }
-
+.contactUsForm{
+    height: 100%;
+}
 .contactUsFormTitle{
     display: flex;
     width: 70%;
@@ -87,7 +91,7 @@
     border: 0.5px solid black;
 }
 .verificationConteiner{
-    margin: 10px 0 25px;
+    margin: 10px 0 10px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     color: #5C5E62;
@@ -113,11 +117,13 @@
     color: #5C5E62;
 }
 
-.contactUsButton{
-    max-width: 468px;
-}
+
 
 .errorMessageConteiner{
     color: red;
     font-size: 13px;
 }
+.submitButtnConteiner{
+   width: 100%;
+  min-height: 95px
+   }

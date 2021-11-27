@@ -12,6 +12,7 @@ const ButtonComponent = ({
     color,
     borderColor,
     title_color,
+    add_class
 }) => {
     const theme = useContext(ThemeContext);
     const commonStyle = {};
@@ -34,7 +35,7 @@ const ButtonComponent = ({
         }
         case 'outline': {
             content = (
-                <button type={type} style={commonStyle} className="button pointer outline">
+                <button type={type} style={commonStyle} className={`button pointer outline ${add_class}`}>
                     {title}
                 </button>
             );
@@ -46,7 +47,7 @@ const ButtonComponent = ({
     return link ? (
         <Link to={link}>{content}</Link>
     ) : onPress ? (
-        <div onClick={onPress}>{content}</div>
+        <div className="buttonConteiner" onClick={onPress}>{content}</div>
     ) : null;
 };
 

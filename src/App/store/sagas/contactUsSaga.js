@@ -1,6 +1,5 @@
-import { call, takeEvery , put} from "@redux-saga/core/effects";
+import { call, takeEvery} from "@redux-saga/core/effects";
 import { contactUsRequest } from "../../services/routes/contactUs";
-import { contactUsActions } from "../actions";
 import { contactUsTypes } from "../types";
 import { toast } from 'react-toastify';
 const toastSuccess=(text)=>{toast.success(text, {

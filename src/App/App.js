@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import { Header } from './components/index';
 import { AboutUs, Boxes, Home, Login, Register, Services } from './view/index';
@@ -8,10 +9,22 @@ function App() {
   return (
 
     <div className="App">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <ToastContainer />
       <Switch>
         <Route exact path='/'>
-        <Header />
-        <Home/>
+          <Header />
+          <Home />
         </Route>
         <Route path='/about'>
           <Header />
@@ -31,15 +44,15 @@ function App() {
         </Route> */}
 
         <Route path='/login'>
-          <Login/>
+          <Login />
         </Route>
         <Route path='/registration'>
-          <Register/>
+          <Register />
         </Route>
-        <Redirect to='/'/>      
+        <Redirect to='/' />
       </Switch>
     </div>
- 
+
   );
 
 }
