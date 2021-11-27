@@ -13,13 +13,19 @@ export default function ContactUs() {
                 <div className="contactUsImageTitleAndText">
                     <div className='contactUsTitleAndText'>
                         <div className="contactUsTitle">
-                            <h2>Lorem ipsum dolor sit,amet consectetur
-                                adipisicing elit. Incidunt</h2>
+                        <TextComponent 
+                            type="h2"
+                            title="Lorem ipsum dolor sit,amet consectetur
+                            adipisicing elit. Incidunt"
+                            />
+                           
                         </div>
                         <div className="contactUsText">
-                            <span>
-                                Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a
-                            </span>
+                        <TextComponent 
+                            type="span"
+                            title="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"
+                            />
+                           
                         </div>
                     </div>
                     <div className='empty'></div>
