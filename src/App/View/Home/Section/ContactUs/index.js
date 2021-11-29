@@ -81,7 +81,7 @@ export default function ContactUs() {
                             inputStyle="input-outlined-bottom"
                             type="text" placeholder="Phone number"
                             label="phone_number"
-                            pattern={{ pattern: /^\+?([0-9]{2,3})\)?([-. ]{1})?([0-9]{2,3})?([-. ]{1})?([0-9]{2,3})?([-. ]{1})?([0-9]{2,3})?([-. ]{1})?([0-9]{2,3})$/, minLength: 8 }}
+                            pattern={{ pattern: /^\+?([0-9]{2,3})\)?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})$/, minLength: 8 }}
                             required
                             register={register} />
 
