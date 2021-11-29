@@ -4,13 +4,26 @@ import servingdishIcons from "../../../../../assets/img/servingdish.png"
 import dessertIcons from "../../../../../assets/img/dessert.png"
 import cocktailIcons from "../../../../../assets/img/cocktail.png"
 import  Box  from "../../../../Components/Box"
+import TextComponent from "../../../../Components/Text"
+import ButtonComponent from "../../../../Components/Button"
 export default () => {
     return (
         <div className="servicesGeneralContenier d-flex align-items-center justify-content-center">
             <div className="servicesContenier">
                 <div className="servicesInfo">
-                    <div className="servicesTitle"><h1>Services</h1></div>
-                    <div className="servicesInfoText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</div>
+                    <div className="servicesTitle">
+                       
+                        <TextComponent
+                        title="Services"
+                        type="h1"
+                        />
+                        </div>
+                    <div className="servicesInfoText">
+                        <TextComponent
+                        type="span"
+                        title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."
+                        />
+                    </div>
                 </div>
                 <div className="servicesCardContenier">
                     <div className="servicesCard">
@@ -42,7 +55,13 @@ export default () => {
                     </div> */}
                 </div>
                 <div className="servicesButtonDiv d-flex justify-content-end">
-                    <button className="servicesButton">Menu</button>
+                    <ButtonComponent
+                    button_style="button"
+                    type="submit"
+                    title="Menu"
+                    onPress
+                    color="green"
+                    />
                 </div>
             </div>
         </div>
