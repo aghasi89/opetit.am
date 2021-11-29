@@ -8,14 +8,21 @@ import UserPage from './view/UserPage';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSuccessAction } from './store/actions';
 import PrivatePage from './view/PrivatePage';
+import { isAuthSelector } from './store/selectors';
 
 function App() {
   const dispatch = useDispatch();
+  const isAuth = useSelector(isAuthSelector);
 
   React.useEffect(() => {
+    
+    console.log(isAuth, " befoer access");
     let access = localStorage.getItem("access");
+    console.log(isAuth, "after access");
     if (access) {
+      console.log(isAuth, " before dispatch");
       dispatch(authSuccessAction());
+      console.log(isAuth, "after dispatch");
     }
   }, []);
 

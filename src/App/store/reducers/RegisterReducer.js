@@ -13,10 +13,13 @@ export default (state=INIT_STATE, action) => {
             console.log(state);
             return {...state, user: payload}
         case RegisterTypes.AUTH_SUCCESS:
-            return {...state, isAuth: true}
+            console.log("reducer...........", state);
+            const stateNew = {...state, isAuth: true}
+            console.log(stateNew);
+            return stateNew
 
         default:
-            break;
+            return state;
     }
     return state
 }

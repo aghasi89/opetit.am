@@ -43,7 +43,6 @@ function* register({ payload }) {
     }
   } catch (error) {
     setLoad();
-    //console.log("error massage = ", error.message);
     notify(error.message)
   }
 }
