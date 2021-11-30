@@ -1,32 +1,47 @@
-import React from 'react';
-import { Redirect, Route, Switch } from 'react-router';
-import { ToastContainer } from 'react-toastify';
+import * as React from 'react';
 import './App.css';
-import { Header } from './components/index';
-import { AboutUs, Boxes, Home, Login, Register, Services } from './view/index';
+import { Redirect, Route, Switch } from 'react-router';
+import { Header } from './components';
+import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
+import { ToastContainer } from "react-toastify";
+import UserPage from './view/UserPage';
+import { useDispatch, useSelector } from 'react-redux';
+import { authSuccessAction } from './store/actions';
+import PrivatePage from './view/PrivatePage';
+import { isAuthSelector } from './store/selectors';
 
 function App() {
-  return (
+  const dispatch = useDispatch();
+  const isAuth = useSelector(isAuthSelector);
 
+  React.useEffect(() => {
+    
+    console.log(isAuth, " befoer access");
+    let access = localStorage.getItem("access");
+    console.log(isAuth, "after access");
+    if (access) {
+      console.log(isAuth, " before dispatch");
+      dispatch(authSuccessAction());
+      console.log(isAuth, "after dispatch");
+    }
+  }, []);
+
+  return (
     <div className="App">
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <ToastContainer />
+      <ToastContainer autoClose={false} />
+
       <Switch>
+        <Route path="/panel">
+          <PrivatePage>
+            <UserPage></UserPage>
+          </PrivatePage>
+        </Route>
+
         <Route exact path='/'>
           <Header />
           <Home />
         </Route>
-        <Route path='/about'>
+        {/* <Route path='/about'>
           <Header />
           <AboutUs />
         </Route>
@@ -37,7 +52,8 @@ function App() {
         <Route path='/services'>
           <Header />
           <Services />
-        </Route>
+
+        </Route> */}
         {/* <Route path='/contactus'>
           <Header />
           <ContactUs />
@@ -47,12 +63,13 @@ function App() {
           <Login />
         </Route>
         <Route path='/registration'>
-          <Register />
+
+          <Registration />
+          {/* <TestRegister /> */}
         </Route>
-        <Redirect to='/' />
+        {/* <Redirect to='/' /> */}
       </Switch>
     </div>
-
   );
 
 }

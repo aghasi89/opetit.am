@@ -31,7 +31,6 @@ const ButtonComponent = ({
                     {title}
                 </button>
             );
-            console.log(content, "contentcontentcontent");
         }
         case 'outline': {
             content = (
@@ -43,7 +42,7 @@ const ButtonComponent = ({
         default:
             content = content;
     }
-    console.log(content, "qqqqqqqqqqqqqqqqqqqqqqqqqqqq");
+    //console.log(content, "qqqqqqqqqqqqqqqqqqqqqqqqqqqq");
     return link ? (
         <Link to={link}>{content}</Link>
     ) : onPress ? (

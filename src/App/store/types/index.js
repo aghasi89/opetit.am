@@ -1,2 +1,5 @@
 import * as contactUsTypes from "./contactUsTypes"
-export {contactUsTypes}
+import * as RegisterTypes from "./RegisterTypes"
+
+export {RegisterTypes,contactUsTypes}
+

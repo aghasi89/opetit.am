@@ -12,13 +12,13 @@ import store from './App/store';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <Router>
-    <ThemeContext.Provider value={Themes}>
-      <App />
-      </ThemeContext.Provider>
-    </Router>
+      <Router>
+        <ThemeContext.Provider value={Themes}>
+          <App />
+        </ThemeContext.Provider>
+      </Router>
     </Provider>
-  </React.StrictMode >,
+  </React.StrictMode>,
   document.getElementById('root')
 
 );

@@ -1,5 +1,9 @@
 import { combineReducers } from "redux";
 import contactUs from "./contactUsReducer";
-const reducers = combineReducers({contactUs})
+import register from "./RegisterReducer"
 
-export default reducers
+export default combineReducers({
+  register,
+  contactUs
+})
+

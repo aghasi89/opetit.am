@@ -1,4 +1,5 @@
 import * as contactUsActions from "./contactUs"
-export {
-    contactUsActions
-}
+import {getConfirmCodeAction, setUserDataAction, registerAction, authSuccessAction } from "./RegisterActions"
+
+export {getConfirmCodeAction, setUserDataAction, registerAction, authSuccessAction,contactUsActions}
+

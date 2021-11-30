@@ -1,7 +1,9 @@
 import { all } from "redux-saga/effects";
-import contactusSaga from "./contactUsSaga"
+import { watchRegisterSaga } from "./RegisterSaga";
+
 function* rootSaga() {
-  yield all([contactusSaga()]);
+  yield all([watchRegisterSaga(),contactusSaga()]);
+
 }
 
 export default rootSaga;
