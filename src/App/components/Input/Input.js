@@ -9,8 +9,8 @@ const Input = (props) => {
             return (
                 <div>
                     <input
-                        type={`${type}`}
-                        placeholder={`${placeholder}`}
+                        type={type}
+                        placeholder={placeholder}
                         className='input-outlined'
                         {...register(label, { ...pattern, required })} />
                 </div>
@@ -20,8 +20,8 @@ const Input = (props) => {
             return (
                 <div>
                     <input
-                        type={`${type}`}
-                        placeholder={`${placeholder}`}
+                        type={type}
+                        placeholder={placeholder}
                         className='input-outlined-bottom'
                         {...register(label, { ...pattern, required })} />
                 </div>
@@ -35,6 +35,7 @@ const Input = (props) => {
                         rows={rows}
                         // cols={cols}
                         className='input-textarea'
+                        {...register(label, { ...pattern, required })}
                     >
                     </textarea>
                 </div>

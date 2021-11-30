@@ -36,6 +36,7 @@ function* sendMassage({payload}){
 
 
 export default function* contactUsWatch(){
+  console.log("4564886464156");
     yield takeEvery(contactUsTypes.SEND_MASSAGE,sendMassage)
 
 }
