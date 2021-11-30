@@ -9,6 +9,7 @@ export const getConfirmCodeAction = (data) => {
 }
 
 export const setUserDataAction = (data) => {
+    console.log("setUserDataAction>>>>>>>>>>.", data);
     return{
         type: RegisterTypes.SET_USER_DATA,
         payload: data

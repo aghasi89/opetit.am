@@ -4,6 +4,7 @@ import { isAuthSelector } from "../../store/selectors"
 
 export default ({children})=>{
     const isAuth = useSelector(isAuthSelector);
-    console.log(isAuth);
-    return isAuth?children:<Redirect to="/login"/>
+    const access = localStorage.getItem("access")
+   
+    return access?children:<Redirect to="/login"/>
 }

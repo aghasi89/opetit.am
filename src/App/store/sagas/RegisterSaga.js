@@ -30,15 +30,17 @@ function* confirmCode({ payload }) {
 function* register({ payload }) {
   const { setLoad, ...setData } = payload
   try {
-    const codeData = yield call(registerRequest, { ...setData, role_code: "CL" })
-    yield put(setUserDataAction({ user: codeData.user.user ? codeData.user.user : "" }))
+    const data = yield call(registerRequest, { ...setData, role_code: "CL" })
     // console.log("codeData.......", codeData);
     // console.log("register in saga", codeData.user);
+    const userData = data.user.user
     setLoad() 
-    if (codeData.access) {
-      console.log(codeData.access);
-      localStorage.setItem("access", codeData.access);
+    if (data.access) {
+      console.log(data.user.user);
+      localStorage.setItem("access", data.access);
       yield put(authSuccessAction());
+      yield put(setUserDataAction(userData))
+      console.log(userData);
       //window.location = "/panel"
     }
   } catch (error) {
