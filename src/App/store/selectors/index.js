@@ -1,2 +1,3 @@
 import * as authSelector from "./authSelectors"
-export {authSelector}
+import { isAuthSelector } from "./RegisterSelectors";
+export {isAuthSelector,authSelector}

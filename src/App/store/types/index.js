@@ -1,3 +1,6 @@
-import * as authTypes from "./AuthType"
 
-export {authTypes}
+import * as authTypes from "./AuthType"
+import * as RegisterTypes from "./RegisterTypes"
+
+export {RegisterTypes,authTypes}
+

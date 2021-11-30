@@ -180,3 +180,32 @@
         margin-left: calc(100% - 90%);
     }
 }
+.input-error {
+    color: red;
+    margin: 5px 10px;
+}
+.modal-content {
+    height: 230px;
+    width: 100%;
+    border: none;
+  }
+  .modal-header, .modal-footer {
+    border: none;
+    padding: 10px
+  }
+  .modal-title {
+    margin: 0
+  }
+.styles_WrapperUi__2TxXl {
+    bottom: 0 !important;
+    position: fixed !important;
+  }
+
+  .square-jelly-box-min_la-square-jelly-box__3qdI1 {
+    color: #fade6f !important;
+  }
+  .send_code_again_btn {
+    border-bottom: 1px solid;
+    width: 100%;
+    padding: 5px 15px;
+  }

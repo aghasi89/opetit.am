@@ -10,4 +10,5 @@ export default () => {
         <MostOedered/>
         <Footer/>
         </div>)
+
 }
