@@ -1,2 +1,2 @@
 export const isAuthSelector = (state) => state.register.isAuth
-export const userSelector = (state) => state.register.user
+export const getMeSelector = (state) => state.register.user;

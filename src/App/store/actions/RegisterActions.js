@@ -8,14 +8,6 @@ export const getConfirmCodeAction = (data) => {
     }
 }
 
-export const setUserDataAction = (data) => {
-    console.log("setUserDataAction>>>>>>>>>>.", data);
-    return{
-        type: RegisterTypes.SET_USER_DATA,
-        payload: data
-    }
-}
-
 export const registerAction = (data) => {
     console.log(data,"in action");
     return {
@@ -29,3 +21,17 @@ export const authSuccessAction = () => {
       type: RegisterTypes.AUTH_SUCCESS
     };
   };
+
+  export const getMeAction =()=>{
+    return {
+      type: RegisterTypes.GET_ME
+    }
+  }
+  
+  export const setMeAction = (payload) => {
+    return {
+      type: RegisterTypes.SET_ME,
+      payload
+    }
+  }
+  

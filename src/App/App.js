@@ -8,9 +8,14 @@ import UserPage from './view/UserPage';
 import { useDispatch, useSelector } from 'react-redux';
 
 import PrivatePage from './view/PrivatePage';
+import { getMeAction } from './store/actions';
 
 
 function App() {
+  const dispatch = useDispatch()
+  React.useEffect(()=>{
+    dispatch(getMeAction());
+  },[])
   
   return (
     <div className="App">

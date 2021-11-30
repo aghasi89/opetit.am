@@ -1,4 +1,4 @@
-import api from "../index";
+import api, { setApiAuthorizationHeader } from "../../index";
 
 export const confirmCodeRequest = async (email)=>{
     try {
@@ -13,7 +13,7 @@ export const confirmCodeRequest = async (email)=>{
 
 export const registerRequest = async (data)=>{
     try {
-        const response= await api.post('register_user', data)
+        const response = await api.post('register_user', data)
         console.log(response);
         return response.data
     } catch (error) {
@@ -21,3 +21,15 @@ export const registerRequest = async (data)=>{
         throw error.response.data
     }
 }
+export const getMeRequest = async () => {
+    try {
+      const response = await api.get("get_me");
+      return response.data;
+    } catch (error) {
+      if (error.response) {
+        throw error.response.data;
+      }
+      throw error;
+    }
+  };
+  

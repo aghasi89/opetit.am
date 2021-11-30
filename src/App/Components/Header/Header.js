@@ -1,14 +1,14 @@
 import "./style.css"
 import logo from "./Sample Logo.png"
 import { ButtonComponent, TextComponent } from "..";
-import { userSelector } from "../../store/selectors";
+import { getMeSelector } from "../../store/selectors";
 import { useSelector } from "react-redux";
 
 
 export default function Header() {
     const access = localStorage.getItem("access")
-    const user = useSelector(userSelector);
-    console.log(user);
+    const user = useSelector(getMeSelector);
+
     return (
         <div className="header d-flex justify-content-center align-items-center">
             <div className="wrapper d-flex justify-content-between align-items-center">
@@ -32,7 +32,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="login-buttons d-flex justify-content-between">
-                    {access ? <div>Hello {user?.first_name}</div> :
+                    {access ? <div>{user?.first_name} {user?.last_name}</div> :
                         (
                             <>
                                 <div className="log_in_btn">
