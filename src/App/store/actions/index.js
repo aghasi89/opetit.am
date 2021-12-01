@@ -1,3 +1,15 @@
-import {getConfirmCodeAction, setUserDataAction, registerAction, authSuccessAction } from "./RegisterActions"
+import {
+    getConfirmCodeAction, 
+    registerAction, 
+    authSuccessAction, 
+    getMeAction, 
+    setMeAction 
+} from "./RegisterActions"
 
-export {getConfirmCodeAction, setUserDataAction, registerAction, authSuccessAction}
+export {
+    getConfirmCodeAction, 
+    registerAction, 
+    authSuccessAction,
+    getMeAction, 
+    setMeAction
+}

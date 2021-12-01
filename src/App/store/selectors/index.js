@@ -1,2 +1,4 @@
 import { isAuthSelector } from "./RegisterSelectors";
-export {isAuthSelector}
+import { getMeSelector } from "./RegisterSelectors"
+
+export { isAuthSelector, getMeSelector }
