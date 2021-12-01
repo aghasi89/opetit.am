@@ -1,20 +1,12 @@
 import './style.css';
 
 const Input = (props) => {
-    const { type, placeholder, inputstyle } = props;
+    const { inputstyle } = props;
     switch (inputstyle) {
         case 'input-outlined':
-            return (
-                <div>
-                    <input {...props} className="input-outlined" />
-                </div>
-            );
+            return <input {...props} className="input-outlined" />;
         case 'input-outlined-bottom':
-            return (
-                <div>
-                    <input {...props} className="input-outlined-bottom" />
-                </div>
-            );
+            return <input {...props} className="input-outlined-bottom" />;
         default:
             return null;
     }

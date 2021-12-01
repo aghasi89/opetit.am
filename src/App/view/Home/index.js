@@ -1,4 +1,4 @@
-import { Boxes } from '..';
+import Boxes from './Section/Boxes';
 import HeaderSlide from './Section/HeaderSlide';
 
 export default () => {

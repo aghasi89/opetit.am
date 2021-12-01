@@ -57,7 +57,7 @@ const Registration = () => {
                             />
                             <div className="signup_btn_block big_btn">
                                 <ButtonComponent
-                                    type="outline"
+                                    button_style="outline"
                                     link="/login"
                                     title="Sign in"
                                     borderColor="white"
@@ -73,16 +73,16 @@ const Registration = () => {
                                 <TextComponent
                                     type="p"
                                     title="Welcome to"
-                                    color="light_gray"
+                                    color="light"
                                 />
                             </div>
                             <div className="signup_form_logo">
                                 <img src={Logo} alt="signup_logo" />
                             </div>
-                            <div>
+                            <div className="signup_form_about">
                                 <TextComponent
                                     type="p"
-                                    color="gray"
+                                    color="secondary"
                                     title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
                                 />
                             </div>
@@ -122,14 +122,14 @@ const Registration = () => {
                                 <ButtonComponent
                                     onPress={handleClick}
                                     title="Sign Up"
-                                    type="button"
-                                    color="green"
+                                    button_style="button"
+                                    color="primary"
                                 />
                             </div>
                             <div className="signup_block">
                                 <TextComponent
                                     type="p"
-                                    color="gray"
+                                    color="secondary"
                                     title="continue with social media"
                                 />
                                 <div className="signup_logo_img">

@@ -50,7 +50,7 @@ const Boxes = () => {
                         // onPress={handleClick}
                         title="See more"
                         color="green"
-                        type="button"
+                        button_style="button"
                     />
                 </div>
             </div>
