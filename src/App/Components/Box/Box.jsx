@@ -6,7 +6,7 @@ export default function Box({ src, h3, span }) {
         <div className="box">
             <img className="box_img" src={src} alt="" />
             <TextComponent title={h3} type="h3" color="black" />
-            <TextComponent type="span" title={span} color="charcoal" />
+            <TextComponent type="span" title={span} color="dim_gray" />
         </div>
     );
 }
