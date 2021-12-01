@@ -21,18 +21,12 @@ export default function RegisterHook() {
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
     const history = useHistory();
-    // const isAuth = useSelector(isAuthSelector);
-    // React.useEffect(() => {
-    //     if (isAuth) {
-    //         history.push("/panel");
-    //     }
-    // }, [isAuth]);
-    const access = localStorage.getItem("access")
+    const isAuth = useSelector(isAuthSelector);
     React.useEffect(() => {
-        if (access) {
+        if (isAuth) {
             history.push("/panel");
         }
-    }, [access]);
+    }, [isAuth]);
 
     const onSubmitRegData = (data) => {
         //console.log(data, data.email);
