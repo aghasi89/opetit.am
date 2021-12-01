@@ -18,13 +18,13 @@ const Boxes = () => {
         <div className="boxes_wrapper">
             <div className="container">
                 <div className="boxes_h2">
-                    <TextComponent type="h2" title="Boxes" color="raven" />
+                    <TextComponent type="h2" title="Boxes" color="dark" />
                 </div>
                 <div className="boxes_p">
                     <TextComponent
                         type="p"
                         title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys stand"
-                        color="gray"
+                        color="secondary"
                     />
                 </div>
                 <div className="box_wrapper">
