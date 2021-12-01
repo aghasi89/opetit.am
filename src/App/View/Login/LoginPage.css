@@ -26,7 +26,11 @@
 }
 .loginPageBackground{
     width: 100%;
-    background-image: url(../../../assets/img/image2.png);
+    background: linear-gradient(
+        180deg,
+        rgba(10, 11, 15, 0.518) 0%,
+        rgba(37, 40, 55, 0.7) 100%
+    );
     height: 100%;
 }
 .loginContenier {
@@ -62,15 +66,8 @@
     
     
 }
-.loginPageButtton{
-    width: 300px;
-    border: 1px solid white ;
-    align-items: center;
-    background: transparent;
-    
-    
 
-}
+
 .loginSignupText{
     width: 50%;
 }
@@ -84,4 +81,10 @@
 }
 .loginPageSignupIcone{
     width: 60%;
+}
+.signUpButtonConteiner{
+    width: 300px;
+    
+    
+    
 }

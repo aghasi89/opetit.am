@@ -1,7 +1,7 @@
 //COMPONENTS
-import TextComponent from '../../Components/Text';
-import ButtonComponent from '../../Components/Button';
-import Box from '../../Components/Box';
+import TextComponent from '../../components/Text';
+import ButtonComponent from '../../components/Button';
+import Box from '../../components/Box';
 
 import boxe_img1 from '../../assets/img/jpg/boxe_img1.jpg';
 import boxe_img2 from '../../assets/img/jpg/boxe_img2.jpg';

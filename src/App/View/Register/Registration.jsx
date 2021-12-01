@@ -1,20 +1,13 @@
 import * as React from 'react';
 //COMPONENTS
-<<<<<<< HEAD
-import TextComponent from '../../Components/Text';
-import ButtonComponent from '../../Components/Button';
-import Input from '../../Components/Input';
-// import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
 
-=======
 import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
 import Input from '../../components/Input';
 import Modal from '../../components/Modal';
 import MyComponent from 'react-fullpage-custom-loader'
 import RegisterHook from './RegisterHook';
->>>>>>> dev
+
 //CSS
 import "./style.css"
 
@@ -23,7 +16,7 @@ import instagram from '../../assets/img/svg/instagram.svg';
 import fb from '../../assets/img/svg/fb.svg';
 import twiter from '../../assets/img/svg/twiter.svg';
 import linkedin from '../../assets/img/svg/linkedin.svg';
-import Logo from '../../Components/Header/Sample Logo.png';
+import Logo from '../../components/Header/Sample Logo.png';
 
 const Registration = () => {
     const { register,

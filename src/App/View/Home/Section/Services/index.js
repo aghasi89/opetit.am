@@ -3,9 +3,9 @@ import saladIcons from "../../../../../assets/img/salad.png"
 import servingdishIcons from "../../../../../assets/img/servingdish.png"
 import dessertIcons from "../../../../../assets/img/dessert.png"
 import cocktailIcons from "../../../../../assets/img/cocktail.png"
-import  Box  from "../../../../Components/Box"
-import TextComponent from "../../../../Components/Text"
-import ButtonComponent from "../../../../Components/Button"
+import  Box  from "../../../../components/Box"
+import TextComponent from "../../../../components/Text"
+import ButtonComponent from "../../../../components/Button"
 export default () => {
     return (
         <div className="servicesGeneralContenier d-flex align-items-center justify-content-center">
@@ -27,16 +27,16 @@ export default () => {
                 </div>
                 <div className="servicesCardContenier">
                     <div className="servicesCard">
-                        <Box src={saladIcons} h3="Salad" span="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
+                        <Box src={saladIcons} title="Salad" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
                     </div>
                     <div className="servicesCard">
-                        <Box src={servingdishIcons} h3="Hot Dish" span="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
+                        <Box src={servingdishIcons} title="Hot Dish" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
                     </div>
                     <div className="servicesCard">
-                        <Box src={dessertIcons} h3="Dessert" span="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
+                        <Box src={dessertIcons} title="Dessert" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
                     </div>
                     <div className="servicesCard">
-                        <Box src={cocktailIcons} h3="Drinks" span="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
+                        <Box src={cocktailIcons} title="Drinks" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
                     </div>
                     {/* <div className="servicesCard">
                         <div className="servicesCardImage"><img src={servingdishIcons} /></div>

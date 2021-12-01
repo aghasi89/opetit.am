@@ -32,9 +32,10 @@ function App() {
 
       <Switch>
         <Route path="/panel">
-          <PrivatePage>
-            <UserPage></UserPage>
-          </PrivatePage>
+       {/* <PrivatePage> */}
+            <UserPage/>
+   
+          {/* </PrivatePage>` */}
         </Route>
         <Route exact path='/'>
           <Header />
@@ -60,7 +61,6 @@ function App() {
           <Login />
         </Route>
         <Route path='/registration'>
-
           <Registration />
           {/* <TestRegister /> */}
         </Route>

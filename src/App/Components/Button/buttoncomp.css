@@ -42,3 +42,6 @@ button{
 .pointer {
     cursor: pointer;
 }
+.buttonContener{
+    width: 100%;
+}

@@ -45,7 +45,9 @@ const ButtonComponent = ({
     return link ? (
         <Link to={link}>{content}</Link>
     ) : onPress ? (
-        <div onClick={onPress}>{content}</div>
+        <div className="buttonContener" 
+        // onClick={onPress}
+        >{content}</div>
     ) : null;
 };
 

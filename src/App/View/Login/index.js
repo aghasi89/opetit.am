@@ -7,12 +7,21 @@ import facebook from "../../../assets/img/facebook.png"
 import Instagram from "../../../assets/img/Instagram.png"
 import SampleLogo from "../../../assets/img/SampleLogo.png"
 import SampleLogo1 from "../../../assets/img/SampleLogo1.png"
-import Input from "../../Components/Input/index"
+import Input from "../../components/Input/index"
 import hook from "./hook"
-import TextComponent from "../../Components/Text"
-import ButtonComponent from "../../Components/Button"
+import TextComponent from "../../components/Text"
+import ButtonComponent from "../../components/Button"
+import { useEffect } from "react"
+import { useHistory } from "react-router"
 
 export default () => {
+    const isAuth=localStorage.getItem('access')
+    const history=useHistory()
+    useEffect(()=>{
+        if (isAuth) {
+            history.push('/panel')
+        }
+    },[])
     const { register, handleSubmit, onSubmit, errors, errorMassage } = hook()
     return (
         <div className="loginPageContenier">
@@ -38,7 +47,7 @@ export default () => {
                         <form className="loginForm d-flex flex-column " onSubmit={handleSubmit(onSubmit)}>
                             <Input
                                 inputStyle="input-outlined"
-                                name="username"
+                                label="username"
                                 type="text"
                                 placeholder="Username"
                                 register={register}
@@ -53,11 +62,11 @@ export default () => {
                             <Input
                                 inputStyle="input-outlined"
                                 type="password"
-                                name="password"
+                                label="password"
                                 placeholder="Password"
                                 register={register}
-
-                                required />
+                                required 
+                                />
 
                             {errors.password && <div style={{ color: "red", fontSize: "12px" }}>this column is required</div>}
 
@@ -111,8 +120,7 @@ export default () => {
                             color="white"
                         />
                         </div>
-                        <div>
-                            {/* <button className="loginPageButtton"><span style={{ color: "white" }}>sign up</span></button> */}
+                        <div className="signUpButtonConteiner">
                             <ButtonComponent
                             button_style="outline"
                             title="Sign up"

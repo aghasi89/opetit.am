@@ -4,7 +4,7 @@ import LinkeDinIcone from "../../../../../assets/img/LinkeDin.png"
 import TwitterIcone from "../../../../../assets/img/Twitter.png"
 import InstagramIcone from "../../../../../assets/img/Instagram.png"
 import logo from "../../../../../assets/img/SampleLogo.png"
-import { TextComponent } from "../../../../Components"
+import { TextComponent } from "../../../../components"
 export default () => {
     return (
         <div className="footerGeneralContenier d-flex align-items-center justify-content-center">

@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 import background from './background.png';
 import './style.css';
-import ButtonComponent from "../../../../components/Button/"
+import ButtonComponent from "../../../../components/Button"
 import { TextComponent } from '../../../../components';
 
 export default function HeaderSlide() {
