@@ -60,7 +60,7 @@ export default () => {
                     type="submit"
                     title="Menu"
                     onPress
-                    color="green"
+                    color="primary"
                     />
                 </div>
             </div>

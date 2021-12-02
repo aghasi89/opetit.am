@@ -1,6 +1,4 @@
-
+import * as RegisterTypes from "./RegisterTypes";
+import * as contactUsTypes from "./contactUsTypes";
 import * as authTypes from "./AuthType"
-import * as RegisterTypes from "./RegisterTypes"
-
-export {RegisterTypes,authTypes}
-
+export { RegisterTypes, contactUsTypes, authTypes }

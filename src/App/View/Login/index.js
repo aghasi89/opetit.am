@@ -15,13 +15,13 @@ import { useEffect } from "react"
 import { useHistory } from "react-router"
 
 export default () => {
-    const isAuth=localStorage.getItem('access')
-    const history=useHistory()
-    useEffect(()=>{
+    const isAuth = localStorage.getItem('access')
+    const history = useHistory()
+    useEffect(() => {
         if (isAuth) {
             history.push('/panel')
         }
-    },[])
+    }, [])
     const { register, handleSubmit, onSubmit, errors, errorMassage } = hook()
     return (
         <div className="loginPageContenier">
@@ -65,8 +65,8 @@ export default () => {
                                 label="password"
                                 placeholder="Password"
                                 register={register}
-                                required 
-                                />
+                                required
+                            />
 
                             {errors.password && <div style={{ color: "red", fontSize: "12px" }}>this column is required</div>}
 
@@ -79,7 +79,7 @@ export default () => {
                             <ButtonComponent
                                 button_style="button"
                                 title="Sign in"
-                                color="green"
+                                color="primary"
                                 type="submit"
                                 onPress
 
@@ -114,19 +114,19 @@ export default () => {
 
                         </div>
                         <div className="loginSignupText">
-                        <TextComponent
-                            type="span"
-                            title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore"
-                            color="white"
-                        />
+                            <TextComponent
+                                type="span"
+                                title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore"
+                                color="white"
+                            />
                         </div>
                         <div className="signUpButtonConteiner">
                             <ButtonComponent
-                            button_style="outline"
-                            title="Sign up"
-                            type="submit"
-                            onPress
-                            
+                                button_style="outline"
+                                title="Sign up"
+                                type="submit"
+                                onPress
+
                             />
                         </div>
                     </div>
