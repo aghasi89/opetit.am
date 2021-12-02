@@ -51,7 +51,7 @@ const TextComponent = ({ type, title, onPress, link, color }) => {
             );
         case 'link':
             return (
-                <Link className="" style={commonStyle}>
+                <Link className="" to={link} style={commonStyle}>
                     {title}
                 </Link>
             );

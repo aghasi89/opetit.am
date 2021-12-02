@@ -1,0 +1,90 @@
+.loginPageContenier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+.loginPage{
+   
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    
+}
+.loginPagePhoto{
+    width: 50%;
+    background-image: url(../../../assets/img/image1.png);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.loginPageBackground{
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 11, 15, 0.518) 0%,
+        rgba(37, 40, 55, 0.7) 100%
+    );
+    height: 100%;
+}
+.loginContenier {
+    width:40% ;
+    height: 60%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.loginPageFormConteiner{
+  
+    justify-content: space-between;
+    height: 50%;
+}
+.loginForm{
+    
+    justify-content: space-between;
+    height: 85%}
+.loginPageLine{
+    
+    width: 10%;
+    border: 1px solid #FFFFFF
+}
+.loginPageSignup{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 35%;
+    
+    
+}
+
+
+.loginSignupText{
+    width: 50%;
+}
+.formButton{
+    background: #1EDA47;
+    border-radius: 6px;
+}
+.loginPageIcons{
+    width: 40%;
+    margin: 0 auto;
+}
+.loginPageSignupIcone{
+    width: 60%;
+}
+.signUpButtonConteiner{
+    width: 300px;
+    
+    
+    
+}

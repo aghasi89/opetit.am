@@ -1,0 +1,37 @@
+.boxes_wrapper {
+    background-color: #f5f5f5;
+}
+
+.boxes_h2 {
+    padding-top: 65px;
+}
+
+.boxes_h2 .h2_text {
+    text-align: center;
+}
+
+.boxes_p {
+    margin: 15px 321px 55px 321px;
+}
+
+.boxes_p .text_main {
+    text-align: center;
+}
+
+.boxes_btn {
+    text-align: right;
+    width: 192px;
+    height: 52px;
+    margin-left: auto;
+    padding-bottom: 80px;
+}
+
+.boxes_btn .button {
+    padding: 15.3px 54px;
+}
+
+.box_wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 60px;
+}
