@@ -1,15 +1,17 @@
 import {
-    getConfirmCodeAction, 
-    registerAction, 
-    authSuccessAction, 
-    getMeAction, 
-    setMeAction 
-} from "./RegisterActions"
-
-export {
-    getConfirmCodeAction, 
-    registerAction, 
+    getConfirmCodeAction,
+    registerAction,
     authSuccessAction,
-    getMeAction, 
+    getMeAction,
     setMeAction
+
+} from "./RegisterActions"
+import * as contactUsActions from "./contactUs"
+export {
+    getConfirmCodeAction,
+    registerAction,
+    authSuccessAction,
+    getMeAction,
+    setMeAction,
+    contactUsActions
 }

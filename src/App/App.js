@@ -6,10 +6,8 @@ import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
 import { ToastContainer } from "react-toastify";
 import UserPage from './view/UserPage';
 import { useDispatch, useSelector } from 'react-redux';
-
 import PrivatePage from './view/PrivatePage';
 import { getMeAction } from './store/actions';
-
 
 function App() {
   const dispatch = useDispatch()
@@ -33,6 +31,8 @@ function App() {
           <Home />
         </Route>
         {/* <Route path='/about'>
+
+        <Route path='/about'>
           <Header />
           <AboutUs />
         </Route>
@@ -43,7 +43,7 @@ function App() {
         <Route path='/services'>
           <Header />
           <Services />
-        </Route> */}
+        </Route>
         {/* <Route path='/contactus'>
           <Header />
           <ContactUs />
@@ -53,12 +53,12 @@ function App() {
         </Route>
         <Route path='/registration'>
           <Registration />
-          {/* <TestRegister /> */}
         </Route>
-        {/* <Redirect to='/' /> */}
+        <Redirect to='/' />
       </Switch>
     </div>
   );
+
 }
 
 export default App;

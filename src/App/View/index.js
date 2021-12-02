@@ -5,5 +5,5 @@ import Home from './Home';
 import Login from './Login';
 import Registration from './Register';
 import Services from './Services';
-
 export { Boxes, Home, Login, Registration, Services };
+

@@ -13,6 +13,7 @@ const Input = (props) => {
                 </div>
             )
         case 'input-outlined-bottom':
+
             return (
                 <div>
                     <input type={type}

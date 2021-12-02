@@ -11,7 +11,7 @@ export default function Header() {
 
     return (
         <div className="header d-flex justify-content-center align-items-center">
-            <div className="wrapper d-flex justify-content-between align-items-center">
+            <div className="container wrapper d-flex justify-content-between align-items-center">
                 <div className="nav d-flex  flex-nowrap align-items-center">
                     <div className="logo">
                         <img src={logo} alt="" />

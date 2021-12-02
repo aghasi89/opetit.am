@@ -1,0 +1,29 @@
+.aboutUsGeneralConteiner{
+    width:100% ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 550px;
+    
+
+}
+.titleAndTextConteiner{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.aboutUsTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+}
+.aboutUsbody{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
