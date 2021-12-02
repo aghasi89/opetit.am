@@ -1,4 +1,4 @@
-import api from "../index";
+import api from "../../index";
 
 export const loginRequest=async(username,password,role_code)=>{
     try {

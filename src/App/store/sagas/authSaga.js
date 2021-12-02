@@ -1,7 +1,7 @@
 import { call, takeLatest,put } from "@redux-saga/core/effects";
 import { toast } from "react-toastify";
 import api from "../../services";
-import { loginRequest } from "../../services/routes/login";
+import { loginRequest } from "../../services/api/routes/login";
 import { authActions } from "../actions";
 import { authTypes } from "../types";
 const notify = (text) => {

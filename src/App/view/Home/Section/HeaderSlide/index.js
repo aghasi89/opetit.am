@@ -57,11 +57,13 @@ export default function HeaderSlide() {
                 <div className="layer d-flex justify-content-center align-items-center">
                     <div className="layer-wrapper d-flex flex-column align-items-start justify-content-between">
                         <div className="layer-text d-flex flex-column justify-content-center">
-                            <TextComponent type="p"
+                            <TextComponent 
+                                type="p"
                                 color="white"
                                 title="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING
                                 AND TYPESETTING" />
-                            <TextComponent type="h1"
+                            <TextComponent 
+                                type="h1"
                                 color="white"
                                 title="Lorem Ipsum is simply dummy text of the printing
                                 and typesetting" />
@@ -75,7 +77,6 @@ export default function HeaderSlide() {
                                 title_color="white"
                             />
                         </div>
-                        {/* <button>Join Today</button> */}
                     </div>
                 </div>
             </div>

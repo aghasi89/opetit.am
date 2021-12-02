@@ -6,36 +6,26 @@ import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
 import { ToastContainer } from "react-toastify";
 import UserPage from './view/UserPage';
 import { useDispatch, useSelector } from 'react-redux';
-import { authSuccessAction } from './store/actions';
+
 import PrivatePage from './view/PrivatePage';
-import { isAuthSelector } from './store/selectors';
+import { getMeAction } from './store/actions';
+
 
 function App() {
-  const dispatch = useDispatch();
-  const isAuth = useSelector(isAuthSelector);
-
-  React.useEffect(() => {
-    
-    console.log(isAuth, " befoer access");
-    let access = localStorage.getItem("access");
-    console.log(isAuth, "after access");
-    if (access) {
-      console.log(isAuth, " before dispatch");
-      dispatch(authSuccessAction());
-      console.log(isAuth, "after dispatch");
-    }
-  }, []);
-
+  const dispatch = useDispatch()
+  React.useEffect(()=>{
+    dispatch(getMeAction());
+  },[])
+  
   return (
     <div className="App">
-      <ToastContainer autoClose={false} />
-
+      <ToastContainer />
       <Switch>
         <Route path="/panel">
-       {/* <PrivatePage> */}
-            <UserPage/>
-   
-          {/* </PrivatePage>` */}
+          <PrivatePage>
+          <Header />
+            <UserPage></UserPage>
+          </PrivatePage>
         </Route>
         <Route exact path='/'>
           <Header />

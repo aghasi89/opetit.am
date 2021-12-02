@@ -5,7 +5,7 @@ import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
 import Input from '../../components/Input';
 import Modal from '../../components/Modal';
-import MyComponent from 'react-fullpage-custom-loader'
+import LoaderComponent from 'react-fullpage-custom-loader'
 import RegisterHook from './RegisterHook';
 
 //CSS
@@ -26,7 +26,7 @@ const Registration = () => {
         onSubmitRegData,
         onSubmitRegCode,
         modalIsOpen,
-        setIsOpen, 
+        setIsOpen,
         handleSubmitCode,
         registerCode,
         errorsCode
@@ -86,7 +86,7 @@ const Registration = () => {
                                 />
                             </div>
                             <div className="signup_inputs">
-                                {loading && <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
+                                {loading && <LoaderComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
                                 <form onSubmit={handleSubmit(onSubmitRegData)}>
                                     <Input type="text"
                                         placeholder="Firstname"
@@ -155,9 +155,9 @@ const Registration = () => {
                                             <form onSubmit={handleSubmitCode(onSubmitRegCode)}>
                                                 <div className='modal-content d-flex justify-content-center align-items-center' >
                                                     <div className='modal-header'>
-                                                    <TextComponent type="p" className='modal-title' title="Confirm code field"/>
+                                                        <TextComponent type="p" className='modal-title' title="Confirm code field" />
                                                     </div>
-                                                    <div className= 'd-flex align-items-center'>
+                                                    <div className='d-flex align-items-center'>
                                                         <Input type="number"
                                                             placeholder="Confirm code"
                                                             inputStyle="input-outlined"
@@ -178,7 +178,7 @@ const Registration = () => {
                                                             />
                                                         </div>
                                                     </div>
-                                                    {loading && <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
+                                                    {loading && <LoaderComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
                                                 </div>
                                             </form>
                                             <form onSubmit={handleSubmit(onSubmitRegData)}>
