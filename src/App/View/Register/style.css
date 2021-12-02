@@ -1,5 +1,7 @@
 .signup_wrapper {
     display: flex;
+    position: relative;
+    height: 100vh;
 }
 
 .signup_logo_block {
@@ -51,13 +53,19 @@
 
 .block_2 {
     width: 550px;
-    margin-left: calc(720px - 515px);
+    margin-left: calc(100% - 74%);
 }
+
 .block_2_logo_text {
     margin-top: 105px;
+    margin-bottom: 20px;
 }
-.signup_form_p {
-    margin-left: 172px;
+
+.block_2_logo_text,
+.signup_form_about,
+.block_1,
+.signup_block > .text_main {
+    text-align: center;
 }
 
 .signup_form_logo {
@@ -66,17 +74,13 @@
     margin-bottom: 25px;
 }
 
-.signup_form_img {
-    filter: invert(1);
-}
-
 .signup_inputs {
     margin-top: 25px !important;
-    margin-bottom: 40px !important;
+    margin-bottom: 6px !important;
     margin: 0 auto;
 }
 
-.signup_inputs div {
+.signup_inputs .input-outlined {
     margin-bottom: 25px;
 }
 
@@ -85,28 +89,8 @@
 }
 
 .sing_up_btn .button {
-    padding: 14px 240px !important;
-}
-
-.sing_up_btn_span {
-    font-family: 'Comfortaa-Regular';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.015em;
-    background: #1eda47;
-    padding: 14px 240px;
-    border: 1px solid #1eda47;
-    border-radius: 6px;
-    color: white;
-}
-
-.sing_up_btn_span:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    border-color: black;
+    width: 550px;
+    height: 52px;
 }
 
 .signup_block > .p_style {
@@ -131,14 +115,16 @@
 .signup_container {
     z-index: 0;
     width: 50%;
-    position: relative;
+    position: fixed;
     background-image: url(/src/App/assets/img/jpg/login_reg.jpg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: cover;
+    bottom: 0;
 }
 
 .background {
+    position: fixed;
     background: linear-gradient(
         180deg,
         rgba(10, 11, 15, 0.518) 0%,
@@ -148,6 +134,8 @@
 
 .signup_form {
     width: 50%;
+    position: absolute;
+    right: 0;
 }
 
 .signup_container .p_style {
@@ -172,6 +160,11 @@
 
 .signup_block {
     margin-top: 50px;
+    margin-bottom: 204px;
+}
+
+.signup_block .text_main {
+    margin-bottom: 25px;
 }
 
 @media screen and (max-width: 1366px) {

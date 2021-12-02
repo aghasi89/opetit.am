@@ -13,10 +13,10 @@ import { getMeAction } from './store/actions';
 
 function App() {
   const dispatch = useDispatch()
-  React.useEffect(()=>{
+  React.useEffect(() => {
     dispatch(getMeAction());
-  },[])
-  
+  }, [])
+
   return (
     <div className="App">
       <ToastContainer />
@@ -24,7 +24,7 @@ function App() {
       <Switch>
         <Route path="/panel">
           <PrivatePage>
-          <Header />
+            <Header />
             <UserPage></UserPage>
           </PrivatePage>
         </Route>

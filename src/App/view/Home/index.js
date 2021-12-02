@@ -1,13 +1,14 @@
 import HeaderSlide from "./Section/HeaderSlide"
-import About from "../HomePage/Section/About"
-
+// import About from "./Section/About"
+import Boxes from "./Section/Boxes"
 export default () => {
     return (
-    <div className="conatainer">
-       
-        <HeaderSlide />
-        <About />
-        
-    
-    </div>)
+        <div className="conatainer">
+
+            <HeaderSlide />
+            {/* <About /> */}
+            <Boxes />
+
+        </div>)
 }
+

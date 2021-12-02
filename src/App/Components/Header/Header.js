@@ -18,16 +18,16 @@ export default function Header() {
                     </div>
                     <div className="navbar d-flex align-items-center">
                         <div className="navbar_links">
-                            <TextComponent type="link" link="/about" color="charcoal" title="About us" />
+                            <TextComponent type="link" link="/about" color="dim_gray" title="About us" />
                         </div>
                         <div className="navbar_links">
-                            <TextComponent type="link" link="/boxes" color="charcoal" title="Boxes" />
+                            <TextComponent type="link" link="/boxes" color="dim_gray" title="Boxes" />
                         </div>
                         <div className="navbar_links">
-                            <TextComponent type="link" link="/servicest" color="charcoal" title="Services" />
+                            <TextComponent type="link" link="/servicest" color="dim_gray" title="Services" />
                         </div>
                         <div className="navbar_links">
-                            <TextComponent type="link" link="/contactus" color="charcoal" title="Contact us" />
+                            <TextComponent type="link" link="/contactus" color="dim_gray" title="Contact us" />
                         </div>
                     </div>
                 </div>
@@ -40,8 +40,8 @@ export default function Header() {
                                         button_style="outline"
                                         link="/login"
                                         title="Log in"
-                                        borderColor="green"
-                                        title_color="green"
+                                        borderColor="primary"
+                                        title_color="primary"
                                     />
                                 </div>
                                 <div className="log_in_btn">
@@ -49,8 +49,8 @@ export default function Header() {
                                         button_style="button"
                                         link="/registration"
                                         title="Register"
-                                        color="green"
-                                        borderColor="green"
+                                        color="primary"
+                                        borderColor="primary"
                                     />
                                 </div>
                             </>
