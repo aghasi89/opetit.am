@@ -1,11 +1,13 @@
 import * as React from 'react';
 //COMPONENTS
+
 import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
 import Input from '../../components/Input';
 import Modal from '../../components/Modal';
 import LoaderComponent from 'react-fullpage-custom-loader'
 import RegisterHook from './RegisterHook';
+
 //CSS
 import "./style.css"
 

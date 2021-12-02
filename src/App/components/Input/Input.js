@@ -1,25 +1,34 @@
 import './style.css';
 
 const Input = (props) => {
-    const { type, placeholder, inputStyle, register, label, required, labelForTextarea, rows } = props;
+ 
+
+    const { type, placeholder, inputStyle, register, label, required, labelForTextarea, rows,pattern } = props;
+
     switch (inputStyle) {
         case 'input-outlined':
             return (
                 <div>
-                    <input type={type}
-                        placeholder={placeholder}
-                        className='input-outlined'
-                        {...register(label, { required })} />
+
+                    <input 
+                    type={type}  
+                    placeholder={placeholder}  
+                    className='input-outlined' 
+                    {...register(label,{required,...pattern})}/>
+
                 </div>
             )
         case 'input-outlined-bottom':
 
             return (
                 <div>
-                    <input type={type}
-                        placeholder={placeholder}
-                        className='input-outlined-bottom'
-                        {...register(label, { required })} />
+
+                    <input 
+                    type={type}  
+                    placeholder={placeholder}   
+                    {...register(label,{required,...pattern})}
+                    className='input-outlined-bottom' />
+
                 </div>
             )
         case 'input-textarea':

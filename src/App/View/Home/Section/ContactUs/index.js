@@ -90,21 +90,19 @@ export default function ContactUs() {
                         {errors.phone_number && errors.phone_number.type === "minLength" && <div className="errorMessageConteiner">Phone number must include min 8 symbolse </div>}
 
                         {/* -----------------Text area----------------- */}
-                        <div className="massageTitle">
-                            <TextComponent
-                                type="span"
-                                color="charcoal"
-                                title="Massage"
-                            />
 
-                        </div>
-                        <textarea
-                            className="massageTextarea"
+                        <Input
+                            labelForTextarea="Massage"
+                            inputStyle="input-textarea"
                             placeholder="write text here..."
-                            {...register("message", { required: true, minLength: 10 })}>
-                        </textarea>
+                            label="message"
+                            pattern={{ minLength: 10 }}
+                            required
+                            register={register} />
+
                         {errors.message && errors.message.type === "required" && <div className="errorMessageConteiner"> please enter a message</div>}
                         {errors.message && errors.message.type === "minLength" && <div className="errorMessageConteiner"> message must include min 10 symbolse</div>}
+
                         <div className="verificationConteiner ">verification</div>
                         <div className="submitButtnConteiner">
                             <ButtonComponent
@@ -112,7 +110,7 @@ export default function ContactUs() {
                                 title="submit"
                                 color="primary"
                                 type="submit"
-                                onPress
+                                onPress={() => { }}
                                 add_class="fontSize"
                             />
                         </div>
