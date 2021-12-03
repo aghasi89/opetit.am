@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getConfirmCodeAction, registerAction } from "../../store/actions"
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from 'react';
-import { confirmCodeSchema, dataSchema } from '../../utils';
+import { confirmCodeSchema, dataSchema } from '../../utils/';
 import { useHistory } from 'react-router';
 import { isAuthSelector } from '../../store/selectors';
 
@@ -21,18 +21,12 @@ export default function RegisterHook() {
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
     const history = useHistory();
-    // const isAuth = useSelector(isAuthSelector);
-    // React.useEffect(() => {
-    //     if (isAuth) {
-    //         history.push("/panel");
-    //     }
-    // }, [isAuth]);
-    const access = localStorage.getItem("access")
+    const isAuth = useSelector(isAuthSelector);
     React.useEffect(() => {
-        if (access) {
+        if (isAuth) {
             history.push("/panel");
         }
-    }, [access]);
+    }, [isAuth]);
 
     const onSubmitRegData = (data) => {
         //console.log(data, data.email);
