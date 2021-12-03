@@ -1,15 +1,17 @@
 import {
-    getConfirmCodeAction, 
-    registerAction, 
-    authSuccessAction, 
-    getMeAction, 
-    setMeAction 
-} from "./RegisterActions"
+    getConfirmCodeAction,
+    registerAction,
+    authSuccessAction,
+    getMeAction,
+    setMeAction,
+} from './RegisterActions';
+import { getSliderImg } from './SliderAction';
 
 export {
-    getConfirmCodeAction, 
-    registerAction, 
+    getConfirmCodeAction,
+    registerAction,
     authSuccessAction,
-    getMeAction, 
-    setMeAction
-}
+    getMeAction,
+    setMeAction,
+    getSliderImg,
+};

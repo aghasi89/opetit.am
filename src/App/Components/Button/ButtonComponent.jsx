@@ -26,27 +26,30 @@ const ButtonComponent = ({
     switch (button_style) {
         case 'button': {
             content = (
-                <button type={type} style={commonStyle} className="button pointer">
+                <button style={commonStyle} className="button pointer">
                     {title}
                 </button>
             );
+            break;
         }
         case 'outline': {
             content = (
-                <button type={type} style={commonStyle} className="button pointer outline">
+                <button style={commonStyle} className="button pointer outline">
                     {title}
                 </button>
             );
+            break;
         }
         default:
             content = content;
     }
-    //console.log(content, "qqqqqqqqqqqqqqqqqqqqqqqqqqqq");
     return link ? (
         <Link to={link}>{content}</Link>
     ) : onPress ? (
         <div onClick={onPress}>{content}</div>
-    ) : null;
+    ) : (
+        content
+    );
 };
 
 export default ButtonComponent;

@@ -1,10 +1,34 @@
 import Slider from 'react-slick';
-import background from './background.png';
-import './style.css';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import ButtonComponent from '../../../../components/Button';
 import { TextComponent } from '../../../../components';
+import './style.css';
+import { getSliderImg } from '../../../../store/actions';
 
 export default function HeaderSlide() {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getSliderImg());
+    }, []);
+
+    const imgsData = useSelector(({ slider }) => slider.images);
+
+    const imgsDataJSX = imgsData
+        ? imgsData.map((item, indx) => {
+              return (
+                  <div key={indx}>
+                      <img
+                          src={item.image}
+                          alt={item.alt}
+                          className="background-image"
+                      />
+                  </div>
+              );
+          })
+        : null;
+
     const settings = {
         dots: true,
         arrows: false,
@@ -24,7 +48,8 @@ export default function HeaderSlide() {
         <div className="slide-content">
             <div className="slider">
                 <Slider {...settings}>
-                    <div>
+                    {imgsDataJSX ? imgsDataJSX : null}
+                    {/* <div>
                         <img
                             src={background}
                             alt="bg-img"
@@ -51,7 +76,7 @@ export default function HeaderSlide() {
                             alt="bg-img"
                             className="background-image"
                         />
-                    </div>
+                    </div> */}
                 </Slider>
                 <div className="layer d-flex justify-content-center align-items-center">
                     <div className="layer-wrapper d-flex flex-column align-items-start justify-content-between">

@@ -31,18 +31,18 @@ function App() {
                     <Header />
                     <Home />
                 </Route>
-                {/* <Route path='/about'>
-          <Header />
-          <AboutUs />
-        </Route>
-        <Route path='/boxes'>
-          <Header />
-          <Boxes />
-        </Route>
-        <Route path='/services'>
-          <Header />
-          <Services />
-        </Route> */}
+                <Route path="/about">
+                    <Header />
+                    <AboutUs />
+                </Route>
+                <Route path="/boxes">
+                    <Header />
+                    <Boxes />
+                </Route>
+                <Route path="/services">
+                    <Header />
+                    <Services />
+                </Route>
                 {/* <Route path='/contactus'>
           <Header />
           <ContactUs />

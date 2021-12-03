@@ -1,3 +1,3 @@
-import * as RegisterTypes from "./RegisterTypes"
-
-export {RegisterTypes}
+import * as RegisterTypes from './RegisterTypes';
+import * as SliderTypes from './SliderTypes';
+export { RegisterTypes, SliderTypes };

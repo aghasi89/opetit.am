@@ -1,12 +1,17 @@
 .box {
-    display: flex;
-    flex-direction: column;
+    width: 468px;
 }
+
+.box .box_img {
+    width: 468px;
+    height: 276px;
+}
+
 .box_span {
     color: #a1a1a1;
 }
-.box_img{
-    width: 100%;
-    height: auto;
+
+.box_img {
     margin: 0px auto;
+    border-radius: 10px;
 }
