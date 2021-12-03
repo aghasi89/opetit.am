@@ -4,6 +4,7 @@ import { ThemeContext } from '../../../context';
 import './buttoncomp.css';
 
 const ButtonComponent = ({
+    button_style,
     type,
     title,
     link,
@@ -14,7 +15,7 @@ const ButtonComponent = ({
 }) => {
     const theme = useContext(ThemeContext);
     const commonStyle = {};
-    let contect = null;
+    let content = null;
 
     if (color || borderColor || title_color) {
         commonStyle.backgroundColor = theme.color[color];
@@ -22,35 +23,33 @@ const ButtonComponent = ({
         commonStyle.color = theme.color[title_color];
     }
 
-    switch (type) {
+    switch (button_style) {
         case 'button': {
-            console.log('in button case');
-            contect = (
-                <div style={commonStyle} className="button pointer">
+            content = (
+                <button style={commonStyle} className="button pointer">
                     {title}
-                </div>
+                </button>
             );
-            return contect;
+            break;
         }
         case 'outline': {
-            console.log('outline button case');
-            contect = (
-                <div style={commonStyle} className="button pointer outline">
+            content = (
+                <button style={commonStyle} className="button pointer outline">
                     {title}
-                </div>
+                </button>
             );
-            return contect;
+            break;
         }
         default:
-            contect = null;
+            content = content;
     }
-    console.log('switchic durs');
-
     return link ? (
-        <Link to={link}>{title}</Link>
+        <Link to={link}>{content}</Link>
     ) : onPress ? (
-        <div onClick={onPress}>{title}</div>
-    ) : null;
+        <div onClick={onPress}>{content}</div>
+    ) : (
+        content
+    );
 };
 
 export default ButtonComponent;

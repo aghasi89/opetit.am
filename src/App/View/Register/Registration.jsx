@@ -1,12 +1,13 @@
+import * as React from 'react';
 //COMPONENTS
 import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
 import Input from '../../components/Input';
-// import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-
+import Modal from '../../components/Modal';
+import LoaderComponent from 'react-fullpage-custom-loader';
+import RegisterHook from './RegisterHook';
 //CSS
-import './registratin.css';
+import './style.css';
 
 //PICTURE
 import instagram from '../../assets/img/svg/instagram.svg';
@@ -16,22 +17,19 @@ import linkedin from '../../assets/img/svg/linkedin.svg';
 import Logo from '../../components/Header/Sample Logo.png';
 
 const Registration = () => {
-    // const dispatch = useDispatch();
-    // const [state, setState] = useState({
-    //     role_code: 'CL',
-    // });
-
-    // const handleChangeInput = ({ target }) => {
-    //     const { name, value } = target;
-    //     setState({
-    //         ...state,
-    //         [name]: value,
-    //     });
-    // };
-
-    // const handleSubmit = () => {
-    //     dispatch(userRegistration(state));
-    // };
+    const {
+        register,
+        handleSubmit,
+        errors,
+        loading,
+        onSubmitRegData,
+        onSubmitRegCode,
+        modalIsOpen,
+        setIsOpen,
+        handleSubmitCode,
+        registerCode,
+        errorsCode,
+    } = RegisterHook();
 
     const handleClick = () => {
         console.log('click');
@@ -42,7 +40,7 @@ const Registration = () => {
             <div className="">
                 <div className="signup_wrapper">
                     <div className="signup_container">
-                        <div className="block_1">
+                        <div className="block_1 text_center">
                             <div className="signup_logo_block">
                                 <img src={Logo} alt="signup_logo" />
                             </div>
@@ -55,9 +53,9 @@ const Registration = () => {
                             scrambled it to make specimen book. It has survived"
                                 color="white"
                             />
-                            <div className="signup_btn_block big_btn">
+                            <div className="signup_form_btn_block big_btn">
                                 <ButtonComponent
-                                    type="outline"
+                                    button_style="outline"
                                     link="/login"
                                     title="Sign in"
                                     borderColor="white"
@@ -69,74 +67,206 @@ const Registration = () => {
                     <div className="background"></div>
                     <div className="signup_form ">
                         <div className="block_2">
-                            <div className="block_2_logo_text">
+                            <div className="block_2_logo_text text_center">
                                 <TextComponent
                                     type="p"
                                     title="Welcome to"
-                                    color="light_gray"
+                                    color="secondary"
                                 />
                             </div>
                             <div className="signup_form_logo">
                                 <img src={Logo} alt="signup_logo" />
                             </div>
-                            <div>
+                            <div className="text_center">
                                 <TextComponent
                                     type="p"
-                                    color="gray"
+                                    color="secondary"
                                     title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
                                 />
                             </div>
                             <div className="signup_inputs">
-                                {
-                                    <Input
-                                        inputstyle="input-outlined"
-                                        placeholder="Firstname"
+                                {loading && (
+                                    <LoaderComponent
+                                        sentences
+                                        loaderType="square-jelly-box"
+                                        wrapperBackgroundColor="rgba(192,192,192,0.3)"
                                     />
-                                }
-                                {
-                                    <Input
-                                        inputstyle="input-outlined"
-                                        placeholder="Lastname"
-                                    />
-                                }
-                                {
-                                    <Input
-                                        inputstyle="input-outlined"
-                                        placeholder="Password"
-                                    />
-                                }
-                                {
-                                    <Input
-                                        inputstyle="input-outlined"
-                                        placeholder="Confirm password"
-                                    />
-                                }
-                                {
-                                    <Input
-                                        inputstyle="input-outlined"
-                                        placeholder="Phone number "
-                                    />
-                                }
-                            </div>
-                            <div className="sing_up_btn">
-                                <ButtonComponent
-                                    onPress={handleClick}
-                                    title="Sign Up"
-                                    type="button"
-                                    color="green"
+                                )}
+                                <form onSubmit={handleSubmit(onSubmitRegData)}>
+                                    <div className="input_wrapper">
+                                        <Input
+                                            type="text"
+                                            placeholder="Firstname"
+                                            inputStyle="input-outlined"
+                                            label="first_name"
+                                            register={register}
+                                        />
+                                        <div className="input-error">
+                                            {errors.first_name?.message}
+                                        </div>
+                                    </div>
+                                    <div className="input_wrapper">
+                                        <Input
+                                            type="text"
+                                            placeholder="Lastname"
+                                            inputStyle="input-outlined"
+                                            label="last_name"
+                                            register={register}
+                                        />
+                                        <div className="input-error">
+                                            {errors.last_name?.message}
+                                        </div>
+                                    </div>
+                                    <div className="input_wrapper">
+                                        <Input
+                                            type="password"
+                                            placeholder="Password"
+                                            inputStyle="input-outlined"
+                                            label="password"
+                                            register={register}
+                                        />
+                                        <div className="input-error">
+                                            {errors.password?.message}
+                                        </div>
+                                    </div>
+                                    <div className="input_wrapper">
+                                        <Input
+                                            type="password"
+                                            placeholder="Confirm password"
+                                            inputStyle="input-outlined"
+                                            label="confirm_password"
+                                            register={register}
+                                        />
+                                        <div className="input-error">
+                                            {errors.confirm_password?.message}
+                                        </div>
+                                    </div>
+                                    <div className="input_wrapper">
+                                        <Input
+                                            type="email"
+                                            novalidate
+                                            placeholder="Email"
+                                            inputStyle="input-outlined"
+                                            label="email"
+                                            register={register}
+                                        />
+                                        <div className="input-error">
+                                            {errors.email?.message}
+                                        </div>
+                                    </div>
+                                    <div className="sing_up_btn big_btn">
+                                        <ButtonComponent
+                                            button_style="button"
+                                            onPress={handleClick}
+                                            title="Sign Up"
+                                            type="submit"
+                                            color="primary"
+                                        />
+                                    </div>
+                                </form>
+
+                                <Modal
+                                    onClose={() => setIsOpen(false)}
+                                    modalIsOpen={modalIsOpen}
+                                    body={
+                                        <>
+                                            <form
+                                                onSubmit={handleSubmitCode(
+                                                    onSubmitRegCode
+                                                )}
+                                            >
+                                                <div className="modal-content d-flex justify-content-center align-items-center">
+                                                    <div className="modal-header">
+                                                        <TextComponent
+                                                            type="p"
+                                                            color="black"
+                                                            className="modal-title"
+                                                            title="Confirm code field"
+                                                        />
+                                                    </div>
+                                                    <div className="d-flex align-items-center">
+                                                        <Input
+                                                            type="number"
+                                                            placeholder="Confirm code"
+                                                            inputStyle="input-outlined"
+                                                            label="confirm_code"
+                                                            register={
+                                                                registerCode
+                                                            }
+                                                        />
+                                                    </div>
+                                                    <div className="input-error">
+                                                        {
+                                                            errorsCode
+                                                                ?.confirm_code
+                                                                ?.message
+                                                        }
+                                                    </div>
+                                                    <div className="modal-footer">
+                                                        <div className="sing_up_form_btn big_btn">
+                                                            <ButtonComponent
+                                                                button_style="button"
+                                                                onPress={
+                                                                    handleClick
+                                                                }
+                                                                title="Sign Up"
+                                                                type="submit"
+                                                                color="primary"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    {loading && (
+                                                        <LoaderComponent
+                                                            sentences
+                                                            loaderType="square-jelly-box"
+                                                            wrapperBackgroundColor="rgba(192,192,192,0.3)"
+                                                        />
+                                                    )}
+                                                </div>
+                                            </form>
+                                            <form
+                                                onSubmit={handleSubmit(
+                                                    onSubmitRegData
+                                                )}
+                                            >
+                                                <div className="send_code_again_btn">
+                                                    <button type="submit">
+                                                        Send code again
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </>
+                                    }
                                 />
                             </div>
-                            <div className="signup_block">
+
+                            <div className="signup_block text_center">
                                 <TextComponent
                                     type="p"
-                                    color="gray"
+                                    color="secondary"
                                     title="continue with social media"
                                 />
-                                <div className="signup_logo_img">
-                                    <img src={linkedin} alt="linkedin" />
-                                    <img src={twiter} alt="twiter" />
-                                    <img src={fb} alt="fb" />
-                                    <img src={instagram} alt="instagram" />
+                                <div className="signup_logo">
+                                    <img
+                                        className="signup_logo_img"
+                                        src={linkedin}
+                                        alt="linkedin"
+                                    />
+                                    <img
+                                        className="signup_logo_img"
+                                        src={twiter}
+                                        alt="twiter"
+                                    />
+                                    <img
+                                        className="signup_logo_img"
+                                        src={fb}
+                                        alt="fb"
+                                    />
+                                    <img
+                                        className="signup_logo_img"
+                                        src={instagram}
+                                        alt="instagram"
+                                    />
                                 </div>
                             </div>
                         </div>

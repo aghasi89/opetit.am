@@ -1,5 +1,6 @@
 .signup_wrapper {
     display: flex;
+    position: relative;
 }
 
 .signup_logo_block {
@@ -27,22 +28,19 @@
     margin: 35px 0 0 30px;
 }
 
-.signup_btn_block {
+.signup_form_btn_block {
     margin: 0 auto;
     margin-bottom: 362px;
     margin-top: 71px;
     border-color: white;
-    text-align: center;
     cursor: pointer;
 }
 
-.big_btn {
+.big_btn .button {
     width: 550px;
+    height: 52px;
 }
 
-.big_btn > .button {
-    padding: 14px 236px;
-}
 .block_1 {
     width: 616px;
     margin-right: calc(720px - 548px);
@@ -53,9 +51,16 @@
     width: 550px;
     margin-left: calc(720px - 515px);
 }
+
 .block_2_logo_text {
     margin-top: 105px;
+    margin-bottom: 20px;
 }
+
+.text_center {
+    text-align: center;
+}
+
 .signup_form_p {
     margin-left: 172px;
 }
@@ -76,62 +81,23 @@
     margin: 0 auto;
 }
 
-.signup_inputs div {
+.input_wrapper {
     margin-bottom: 25px;
+    position: relative;
 }
 
-.sing_up_btn {
+.signup_logo {
     text-align: center;
-}
-
-.sing_up_btn > .button {
-    padding: 14px 240px;
-}
-
-.sing_up_btn_span {
-    font-family: 'Comfortaa-Regular';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.015em;
-    background: #1eda47;
-    padding: 14px 240px;
-    border: 1px solid #1eda47;
-    border-radius: 6px;
-    color: white;
-}
-
-.sing_up_btn_span:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    border-color: black;
-}
-
-.signup_block > .p_style {
-    font-family: 'Comfortaa-Regular';
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #aaabab;
-    margin-bottom: 20px;
-}
-
-.signup_logo_img img {
-    margin-right: 30px;
+    margin-top: 20px;
 }
 
 .signup_logo_img {
-    text-align: center;
+    margin-right: 30px;
 }
-
 .signup_container {
     z-index: 0;
     width: 50%;
-    position: relative;
+    position: fixed;
     background-image: url(/src/App/assets/img/jpg/login_reg.jpg);
     background-repeat: no-repeat;
     background-position-y: center;
@@ -148,6 +114,8 @@
 
 .signup_form {
     width: 50%;
+    position: absolute;
+    right: 0;
 }
 
 .signup_container .p_style {
@@ -172,6 +140,7 @@
 
 .signup_block {
     margin-top: 50px;
+    margin-bottom: 204px;
 }
 
 @media screen and (max-width: 1366px) {
@@ -179,4 +148,39 @@
         width: 550px;
         margin-left: calc(100% - 90%);
     }
+    .signup_logo_block {
+        margin-top: 225px;
+    }
+}
+.input-error {
+    color: red;
+    position: absolute;
+    margin: 0px 10px 0px;
+    font-size: 12px;
+}
+.modal-content {
+    height: 230px;
+    width: 100%;
+    border: none;
+}
+.modal-header,
+.modal-footer {
+    border: none;
+    padding: 10px;
+}
+.modal-title {
+    margin: 0;
+}
+.styles_WrapperUi__2TxXl {
+    bottom: 0 !important;
+    position: fixed !important;
+}
+
+.square-jelly-box-min_la-square-jelly-box__3qdI1 {
+    color: #fade6f !important;
+}
+.send_code_again_btn {
+    border-bottom: 1px solid;
+    width: 100%;
+    padding: 5px 15px;
 }
