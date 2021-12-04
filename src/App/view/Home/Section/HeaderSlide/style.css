@@ -5,8 +5,8 @@
     position: absolute;
     top: 0;
     left: 0;
-  }
-  .layer-wrapper {
+}
+.layer-wrapper {
     width: 70%;
     height: 50%;
    }
@@ -18,22 +18,24 @@
   .background-image{
     width: 100%;
     height: auto;
-  }
-  .slick-dots {
+}
+.slick-dots {
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    bottom: 120px;
+    bottom: 120px !important;
     z-index: 1;
-  }
+}
 
-  .slick-dots li.slick-active button:before, .slick-dots li button:before {
-    color: white;
-  }
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    color: white !important;
+}
 
-  .slick-dots li button, .slick-dots li{
-    width: 12px;
-    height: 12px;
+.slick-dots li button,
+.slick-dots li {
+    width: 12px !important;
+    height: 12px !important;
   }
  .slider{
    width: 100%;
@@ -51,3 +53,4 @@
   z-index: 20;
  }
  
+

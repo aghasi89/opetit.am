@@ -38,7 +38,7 @@ export default function MostOrdered() {
 
     return (
         <div className='mostOrderedGeneralConteiner d-flex justify-content-center align-items-center ' >
-            <div className="mostOrderedPositionConteiner" >
+            <div className="container mostOrderedPositionConteiner" >
                 <div className="mostOrderedTitleAndText d-flex flex-column justify-content-center align-items-center">
                     <div className="mostOrderedTitle">
                         <TextComponent
@@ -91,9 +91,9 @@ export default function MostOrdered() {
                         <ButtonComponent
                             button_style="button"
                             title={<ArrowBackIcon />}
-                            color="green"
+                            color="primary"
                             onPress={previousSlide}
-                            />
+                        />
                     </div>
                     <div className="rightArrow d-flex ">
 
@@ -101,8 +101,8 @@ export default function MostOrdered() {
                             button_style="outline"
                             title={<ArrowForwardIcon />}
                             onPress={nextSlide}
-                            borderColor="green"
-                            title_color="green" />
+                            borderColor="primary"
+                            title_color="primary" />
                     </div>
                 </div>
             </div>

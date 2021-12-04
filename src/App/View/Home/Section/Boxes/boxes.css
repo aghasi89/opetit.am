@@ -6,8 +6,16 @@
     padding-top: 65px;
 }
 
+.boxes_h2 .h2_text {
+    text-align: center;
+}
+
 .boxes_p {
     margin: 15px 321px 55px 321px;
+}
+
+.boxes_p .text_main {
+    text-align: center;
 }
 
 .boxes_btn {
@@ -18,12 +26,12 @@
     padding-bottom: 80px;
 }
 
-.boxes_btn > .button {
+.boxes_btn .button {
     padding: 15.3px 54px;
 }
 
 .box_wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
     margin-bottom: 60px;
 }

@@ -13,19 +13,19 @@ export default function ContactUs() {
                 <div className="contactUsImageTitleAndText">
                     <div className='contactUsTitleAndText'>
                         <div className="contactUsTitle">
-                        <TextComponent 
-                            type="h2"
-                            title="Lorem ipsum dolor sit,amet consectetur
+                            <TextComponent
+                                type="h2"
+                                title="Lorem ipsum dolor sit,amet consectetur
                             adipisicing elit. Incidunt"
                             />
-                           
+
                         </div>
                         <div className="contactUsText">
-                        <TextComponent 
-                            type="span"
-                            title="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"
+                            <TextComponent
+                                type="span"
+                                title="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"
                             />
-                           
+
                         </div>
                     </div>
                     <div className='empty'></div>
@@ -33,12 +33,12 @@ export default function ContactUs() {
             </div>
             <div className='contactUsFormGeneral'>
                 <div className="contactUsFormTitle ">
-                <TextComponent 
-                            type="h2"
-                         
-                            title="CONTACT US"
-                            />
-                   <div className="titleLine"></div>
+                    <TextComponent
+                        type="h2"
+
+                        title="CONTACT US"
+                    />
+                    <div className="titleLine"></div>
                 </div >
                 <div className="contactUsFormConteiner ">
                     <form className="contactUsForm d-flex justify-content-start flex-column" onSubmit={handleSubmit(onSubmit)}>
@@ -90,8 +90,13 @@ export default function ContactUs() {
                         {errors.phone_number && errors.phone_number.type === "minLength" && <div className="errorMessageConteiner">Phone number must include min 8 symbolse </div>}
 
                         {/* -----------------Text area----------------- */}
+<<<<<<< HEAD
                        
                             <Input
+=======
+
+                        <Input
+>>>>>>> dev
                             labelForTextarea="Massage"
                             inputStyle="input-textarea"
                             placeholder="write text here..."
@@ -99,23 +104,34 @@ export default function ContactUs() {
                             pattern={{ minLength: 10 }}
                             required
                             register={register} />
+<<<<<<< HEAD
                        
                         {errors.message && errors.message.type === "required" && <div className="errorMessageConteiner"> please enter a message</div>}
                         {errors.message && errors.message.type === "minLength" && <div className="errorMessageConteiner"> message must include min 10 symbolse</div>}
                         
+=======
+
+                        {errors.message && errors.message.type === "required" && <div className="errorMessageConteiner"> please enter a message</div>}
+                        {errors.message && errors.message.type === "minLength" && <div className="errorMessageConteiner"> message must include min 10 symbolse</div>}
+
+>>>>>>> dev
                         <div className="verificationConteiner ">verification</div>
                         <div className="submitButtnConteiner">
                             <ButtonComponent
                                 button_style="button"
                                 title="submit"
-                                color="green"
+                                color="primary"
                                 type="submit"
+<<<<<<< HEAD
                                 onPress={()=>{}}
+=======
+                                onPress={() => { }}
+>>>>>>> dev
                                 add_class="fontSize"
                             />
                         </div>
                     </form>
-                    
+
 
                 </div>
             </div>

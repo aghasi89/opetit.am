@@ -1,11 +1,13 @@
 import * as React from 'react';
 //COMPONENTS
+
 import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
 import Input from '../../components/Input';
 import Modal from '../../components/Modal';
-import MyComponent from 'react-fullpage-custom-loader'
+import LoaderComponent from 'react-fullpage-custom-loader'
 import RegisterHook from './RegisterHook';
+
 //CSS
 import "./style.css"
 
@@ -24,7 +26,7 @@ const Registration = () => {
         onSubmitRegData,
         onSubmitRegCode,
         modalIsOpen,
-        setIsOpen, 
+        setIsOpen,
         handleSubmitCode,
         registerCode,
         errorsCode
@@ -70,21 +72,21 @@ const Registration = () => {
                                 <TextComponent
                                     type="p"
                                     title="Welcome to"
-                                    color="light_gray"
+                                    color="light"
                                 />
                             </div>
                             <div className="signup_form_logo">
                                 <img src={Logo} alt="signup_logo" />
                             </div>
-                            <div>
+                            <div className="signup_form_about">
                                 <TextComponent
                                     type="p"
-                                    color="gray"
+                                    color="secondary"
                                     title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
                                 />
                             </div>
                             <div className="signup_inputs">
-                                {loading && <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
+                                {loading && <LoaderComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
                                 <form onSubmit={handleSubmit(onSubmitRegData)}>
                                     <Input type="text"
                                         placeholder="Firstname"
@@ -141,7 +143,7 @@ const Registration = () => {
                                             onPress={handleClick}
                                             title="Sign Up"
                                             type="submit"
-                                            color="green"
+                                            color="primary"
                                         />
                                     </div>
                                 </form>
@@ -153,9 +155,9 @@ const Registration = () => {
                                             <form onSubmit={handleSubmitCode(onSubmitRegCode)}>
                                                 <div className='modal-content d-flex justify-content-center align-items-center' >
                                                     <div className='modal-header'>
-                                                    <TextComponent type="p" className='modal-title' title="Confirm code field"/>
+                                                        <TextComponent type="p" className='modal-title' title="Confirm code field" />
                                                     </div>
-                                                    <div className= 'd-flex align-items-center'>
+                                                    <div className='d-flex align-items-center'>
                                                         <Input type="number"
                                                             placeholder="Confirm code"
                                                             inputStyle="input-outlined"
@@ -172,11 +174,11 @@ const Registration = () => {
                                                                 onPress={handleClick}
                                                                 title="Sign Up"
                                                                 type="submit"
-                                                                color="green"
+                                                                color="primary"
                                                             />
                                                         </div>
                                                     </div>
-                                                    {loading && <MyComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
+                                                    {loading && <LoaderComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
                                                 </div>
                                             </form>
                                             <form onSubmit={handleSubmit(onSubmitRegData)}>
@@ -193,7 +195,7 @@ const Registration = () => {
                             <div className="signup_block">
                                 <TextComponent
                                     type="p"
-                                    color="gray"
+                                    color="secondary"
                                     title="continue with social media"
                                 />
                                 <div className="signup_logo_img">

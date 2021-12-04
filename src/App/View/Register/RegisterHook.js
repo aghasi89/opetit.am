@@ -62,7 +62,6 @@ export default function RegisterHook() {
         setIsOpen,
         handleSubmitCode,
         registerCode,
-        errorsCode,
-        isAuth
+        errorsCode
     }
 }

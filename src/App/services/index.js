@@ -1,6 +1,12 @@
 import axios from "axios";
-const api=axios.create({
-    baseURL:'http://game.annaniks.com/'
-})
-
-export default api
+import Keys from './keys';
+export const setApiAuthorizationHeader = (token) => {
+    authApi.defaults.headers.common.Authorization = token
+        ? "Bearer " + token
+        : null;
+};
+const authApi = axios.create({
+    baseURL: Keys.SERVER_URL,
+    //headers: { 'Content-Type': 'application/json' }
+});
+export default authApi;

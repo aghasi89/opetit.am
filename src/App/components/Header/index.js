@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./style.css"
 import logo from "./Sample Logo.png"
 import { ButtonComponent, TextComponent } from "..";
@@ -52,3 +53,8 @@ export default function Header() {
         </div>
     );
 }
+=======
+import Header from "./Header";
+export default Header
+
+>>>>>>> dev
