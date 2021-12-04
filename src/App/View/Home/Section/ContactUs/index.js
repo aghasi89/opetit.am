@@ -90,13 +90,8 @@ export default function ContactUs() {
                         {errors.phone_number && errors.phone_number.type === "minLength" && <div className="errorMessageConteiner">Phone number must include min 8 symbolse </div>}
 
                         {/* -----------------Text area----------------- */}
-<<<<<<< HEAD
-                       
-                            <Input
-=======
 
                         <Input
->>>>>>> dev
                             labelForTextarea="Massage"
                             inputStyle="input-textarea"
                             placeholder="write text here..."
@@ -104,17 +99,10 @@ export default function ContactUs() {
                             pattern={{ minLength: 10 }}
                             required
                             register={register} />
-<<<<<<< HEAD
-                       
-                        {errors.message && errors.message.type === "required" && <div className="errorMessageConteiner"> please enter a message</div>}
-                        {errors.message && errors.message.type === "minLength" && <div className="errorMessageConteiner"> message must include min 10 symbolse</div>}
-                        
-=======
 
                         {errors.message && errors.message.type === "required" && <div className="errorMessageConteiner"> please enter a message</div>}
                         {errors.message && errors.message.type === "minLength" && <div className="errorMessageConteiner"> message must include min 10 symbolse</div>}
 
->>>>>>> dev
                         <div className="verificationConteiner ">verification</div>
                         <div className="submitButtnConteiner">
                             <ButtonComponent
@@ -122,11 +110,7 @@ export default function ContactUs() {
                                 title="submit"
                                 color="primary"
                                 type="submit"
-<<<<<<< HEAD
                                 onPress={()=>{}}
-=======
-                                onPress={() => { }}
->>>>>>> dev
                                 add_class="fontSize"
                             />
                         </div>
