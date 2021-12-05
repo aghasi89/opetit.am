@@ -42,7 +42,7 @@ export default function ContactUs() {
                 </div >
                 <div className="contactUsFormConteiner ">
                     <form className="contactUsForm d-flex justify-content-start flex-column" onSubmit={handleSubmit(onSubmit)}>
-
+                    
                         {/* -----------------name input------------- */}
                         <Input inputStyle="input-outlined-bottom"
                             type="text"
@@ -89,21 +89,23 @@ export default function ContactUs() {
                             placeholder="write text here..."
                             label="message"
                             register={register} />
-                            
+
                         {errors.message?.message && <div className="errorMessageConteiner">{errors.message.message}</div>}
                         
 
                         <div className="verificationConteiner " >verification</div>
+                  
                         <div className="submitButtnConteiner">
                             <ButtonComponent
                                 button_style="button"
-                                title="submit"
+                                title="SUBMIT"
                                 color="primary"
                                 type="submit"
                                 onPress={()=>{}}
-                                add_class="fontSize"
-                            />
+                                
+                            />  
                         </div>
+                     
                     </form>
 
 

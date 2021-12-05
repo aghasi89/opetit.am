@@ -1,7 +1,7 @@
 /* ------------General conteiner-------- */
 .contactUsGeneralConteiner{
     width: 100%;
-    min-height: 700px;
+    min-height: 750px;
     display: flex;
     justify-content: flex-start;
     align-items: start;
@@ -12,7 +12,7 @@
 
 .contactUsImage{
     width:55.53%;
-    min-height:700px ;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,7 @@
 /* -------------------Form-------------- */
 .contactUsFormGeneral{
     display: flex;
-    min-height: 700px;
+    min-height: 100%;
     justify-content: center;
     flex-direction: column;
     width: 60%;
@@ -73,6 +73,7 @@
 }
 .contactUsForm{
     height: 100%;
+ 
 }
 .contactUsFormTitle{
     display: flex;
@@ -94,33 +95,16 @@
     color: #5C5E62;
 }
 
-.massageTextarea {
-    max-width: 468px;
-    height: 80px;
-    box-sizing: border-box;
-    border-radius: 6px;
-    border: 1px solid #5C5E62;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.015em;
-    
-}
-.massageTitle{
-    margin: 25px 0 5px;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: #5C5E62;
-}
-
-
-
 .errorMessageConteiner{
     color: red;
-    font-size: 13px;
+    font-size: 11px;
+    font-style: bold;
 }
-.submitButtnConteiner{
+.contactUsFormConteiner label{
+    margin: 35px 0 5px 0;
+}
+.submitButtnConteiner button{
    width: 100%;
-  min-height: 95px
-   }
+   min-height: 95px;
+   font-size: 38px;
+ }

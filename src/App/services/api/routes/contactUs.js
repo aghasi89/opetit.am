@@ -5,7 +5,6 @@ export const contactUsRequest= async (data)=>{
         const responce= await api.post('contact_us/', data)
         return responce
     } catch (error) {
-        console.log(error);
         throw error
         
     }
