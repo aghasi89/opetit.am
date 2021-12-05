@@ -48,12 +48,9 @@ export default function ContactUs() {
                             type="text"
                             placeholder="Name"
                             label="name"
-                            required
-                            pattern={{ pattern: /^[A-Za-zА-Яа-я]+$/i }}
                             register={register}
                         />
-                        {errors.name && errors.name.type === "required" && <div className="errorMessageConteiner">name is required</div>}
-                        {errors.name && errors.name.type === "pattern" && <div className="errorMessageConteiner">name can only contain letters</div>}
+                        {errors.name?.message && <div className="errorMessageConteiner">{errors.name.message}</div>}
 
                         {/* -----------------Email input------------- */}
                         <Input
@@ -61,12 +58,10 @@ export default function ContactUs() {
                             type="text"
                             placeholder="Email"
                             label="email"
-                            required
                             register={register}
-                            pattern={{ pattern: /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i }}
                         />
-                        {errors.email && errors.email.type === "required" && <div className="errorMessageConteiner">Email is required</div>}
-                        {errors.email && errors.email.type === "pattern" && <div className="errorMessageConteiner">pleas insert a valid email adress</div>}
+                        {errors.email?.message && <div className="errorMessageConteiner">{errors.email.message}</div>}
+                        
 
                         {/* -----------------Subject input----------------- */}
                         <Input
@@ -81,13 +76,10 @@ export default function ContactUs() {
                             inputStyle="input-outlined-bottom"
                             type="text" placeholder="Phone number"
                             label="phone_number"
-                            pattern={{ pattern: /^\+?([0-9]{2,3})\)?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})$/, minLength: 8 }}
-                            required
                             register={register} />
 
-                        {errors.phone_number && errors.phone_number.type === "required" && <div className="errorMessageConteiner">Phone number is required</div>}
-                        {errors.phone_number && errors.phone_number.type === "pattern" && <div className="errorMessageConteiner">Phone number can only contain numbers </div>}
-                        {errors.phone_number && errors.phone_number.type === "minLength" && <div className="errorMessageConteiner">Phone number must include min 8 symbolse </div>}
+                        {errors.phone_number?.message && <div className="errorMessageConteiner">{errors.phone_number.message}</div>}
+                      
 
                         {/* -----------------Text area----------------- */}
 
@@ -96,14 +88,12 @@ export default function ContactUs() {
                             inputStyle="input-textarea"
                             placeholder="write text here..."
                             label="message"
-                            pattern={{ minLength: 10 }}
-                            required
                             register={register} />
+                            
+                        {errors.message?.message && <div className="errorMessageConteiner">{errors.message.message}</div>}
+                        
 
-                        {errors.message && errors.message.type === "required" && <div className="errorMessageConteiner"> please enter a message</div>}
-                        {errors.message && errors.message.type === "minLength" && <div className="errorMessageConteiner"> message must include min 10 symbolse</div>}
-
-                        <div className="verificationConteiner ">verification</div>
+                        <div className="verificationConteiner " >verification</div>
                         <div className="submitButtnConteiner">
                             <ButtonComponent
                                 button_style="button"

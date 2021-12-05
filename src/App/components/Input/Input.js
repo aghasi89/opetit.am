@@ -30,8 +30,9 @@ const Input = (props) => {
         case 'input-textarea':
             return (
                 <div className="textarea d-flex flex-column">
-                    <label for={labelForTextarea}>{labelForTextarea}</label>
+                    <label htmlFor={labelForTextarea}>{labelForTextarea}</label>
                     <textarea
+                        name={labelForTextarea}
                         placeholder={placeholder}
                         rows={rows}
                         // cols={cols}

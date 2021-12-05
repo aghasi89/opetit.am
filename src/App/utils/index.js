@@ -1,2 +1,2 @@
-import {dataSchema, confirmCodeSchema} from "./validationSchema"
-export {dataSchema, confirmCodeSchema}
+import {dataSchema, confirmCodeSchema,contactUsSchema} from "./validationSchema"
+export {dataSchema, confirmCodeSchema,contactUsSchema}
