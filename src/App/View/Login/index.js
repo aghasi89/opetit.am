@@ -30,11 +30,11 @@ export default () => {
                     <div className="loginPageHeader d-flex justify-content-center align-items-center">
                         <TextComponent
                             type="span"
-                            title="Welkome to"
+                            title="Welcome to"
                         />
                     </div>
                     <div className="loginPageIconandPhoto d-flex justify-content-center align-items-center">
-                        <div style={{ width: "150px" }}><img src={SampleLogo} /></div>
+                        <div className="loginPageLogo"><img src={SampleLogo} /></div>
                     </div>
                     <div className="loginPageText d-flex justify-content-center align-items-center">
                         <TextComponent
@@ -70,12 +70,14 @@ export default () => {
 
                             {errors.password && <div style={{ color: "red", fontSize: "12px" }}>this column is required</div>}
 
-                            <div>
+                            <div className="loginPageLink">
                                 <TextComponent
-                                    type="span"
+                                    type="link"
                                     title="Fargat your password?"
+                                    onPress
                                 />
                             </div>
+                            <div className="buttonComponentConteiner">
                             <ButtonComponent
                                 button_style="button"
                                 title="Sign in"
@@ -84,6 +86,7 @@ export default () => {
                                 onPress
 
                             />
+                            </div>
                         </form>
 
 
@@ -121,6 +124,7 @@ export default () => {
                             />
                         </div>
                         <div className="signUpButtonConteiner">
+                            <div className="buttonComponentConteiner">
                             <ButtonComponent
                                 button_style="outline"
                                 title="Sign up"
@@ -128,6 +132,7 @@ export default () => {
                                 onPress
 
                             />
+                            </div>
                         </div>
                     </div>
                 </div>

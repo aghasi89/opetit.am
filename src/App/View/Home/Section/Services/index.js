@@ -21,22 +21,22 @@ export default () => {
                     <div className="servicesInfoText">
                         <TextComponent
                         type="span"
-                        title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."
+                        title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stand"
                         />
                     </div>
                 </div>
                 <div className="servicesCardContenier">
                     <div className="servicesCard">
-                        <Box src={saladIcons} title="Salad" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
+                        <Box src={saladIcons} title="Salad" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
                     </div>
                     <div className="servicesCard">
-                        <Box src={servingdishIcons} title="Hot Dish" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
+                        <Box src={servingdishIcons} title="Hot Dish" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
                     </div>
                     <div className="servicesCard">
-                        <Box src={dessertIcons} title="Dessert" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
+                        <Box src={dessertIcons} title="Dessert" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
                     </div>
                     <div className="servicesCard">
-                        <Box src={cocktailIcons} title="Drinks" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore."/>
+                        <Box src={cocktailIcons} title="Drinks" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
                     </div>
                     {/* <div className="servicesCard">
                         <div className="servicesCardImage"><img src={servingdishIcons} /></div>
@@ -55,6 +55,7 @@ export default () => {
                     </div> */}
                 </div>
                 <div className="servicesButtonDiv d-flex justify-content-end">
+                    <div className="servicesButton">
                     <ButtonComponent
                     button_style="button"
                     type="submit"
@@ -62,6 +63,7 @@ export default () => {
                     onPress
                     color="primary"
                     />
+                    </div>
                 </div>
             </div>
         </div>
