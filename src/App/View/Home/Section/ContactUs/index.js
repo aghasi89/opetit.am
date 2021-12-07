@@ -50,7 +50,7 @@ export default function ContactUs() {
                             label="name"
                             register={register}
                         />
-                        {errors.name?.message && <div className="errorMessageConteiner">{errors.name.message}</div>}
+                       <div className="errorMessageConteiner">{errors?.name?.message?errors.name.message:null}</div>
 
                         {/* -----------------Email input------------- */}
                         <Input
@@ -60,7 +60,7 @@ export default function ContactUs() {
                             label="email"
                             register={register}
                         />
-                        {errors.email?.message && <div className="errorMessageConteiner">{errors.email.message}</div>}
+                        <div className="errorMessageConteiner">{errors?.email?.message?errors.email.message:null}</div>
                         
 
                         {/* -----------------Subject input----------------- */}
@@ -78,7 +78,7 @@ export default function ContactUs() {
                             label="phone_number"
                             register={register} />
 
-                        {errors.phone_number?.message && <div className="errorMessageConteiner">{errors.phone_number.message}</div>}
+                       <div className="errorMessageConteiner">{errors?.phone_number?.message?errors.phone_number.message:null}</div>
                       
 
                         {/* -----------------Text area----------------- */}
@@ -89,8 +89,7 @@ export default function ContactUs() {
                             placeholder="write text here..."
                             label="message"
                             register={register} />
-
-                        {errors.message?.message && <div className="errorMessageConteiner">{errors.message.message}</div>}
+                         <div className="errorMessageConteiner">{errors?.message?.message?errors.message.message:null}</div>
                         
 
                         <div className="verificationConteiner " >verification</div>
