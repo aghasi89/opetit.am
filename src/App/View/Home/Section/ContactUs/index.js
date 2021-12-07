@@ -1,13 +1,14 @@
-import { ToastContainer } from "react-toastify";
 import { ButtonComponent, TextComponent } from "../../../../components";
 import Input from "../../../../components/Input/Input"
 import "./ContactUs.css"
 import contactUsHook from "./hook"
-
+import LoaderComponent from 'react-fullpage-custom-loader'
 export default function ContactUs() {
-    const { register, handleSubmit, onSubmit, errors } = contactUsHook();
-
+    const { register, handleSubmit, onSubmit, errors ,loading} = contactUsHook();
+ 
     return (
+        <>
+        { loading&&<LoaderComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
         <div className="contactUsGeneralConteiner">
             <div className="contactUsImage">
                 <div className="contactUsImageTitleAndText">
@@ -110,7 +111,7 @@ export default function ContactUs() {
                                 title="submit"
                                 color="primary"
                                 type="submit"
-                                onPress={() => { }}
+                                onPress={() => {}}
                                 add_class="fontSize"
                             />
                         </div>
@@ -120,5 +121,6 @@ export default function ContactUs() {
                 </div>
             </div>
         </div>
+        </>
     )
 }

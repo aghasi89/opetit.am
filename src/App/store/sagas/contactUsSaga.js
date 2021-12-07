@@ -1,7 +1,8 @@
-import { call, takeEvery } from "@redux-saga/core/effects";
+import { call, takeEvery,put } from "@redux-saga/core/effects";
 import { contactUsRequest } from "../../services/api/routes/contactUs";
 import { contactUsTypes } from "../types";
 import { toast } from 'react-toastify';
+import { contactUsActions } from "../actions";
 const toastSuccess = (text) => {
   toast.success(text, {
     position: "top-center",
@@ -28,9 +29,12 @@ const toastError = (text) => {
 
 function* sendMassage({ payload }) {
   try {
+    yield put(contactUsActions.sendMassageLoaderAction()) 
     yield call(contactUsRequest, payload)
+    yield put(contactUsActions.sendMassageLoaderAction()) 
     toastSuccess('success')
   } catch (error) {
+    yield put(contactUsActions.sendMassageLoaderAction()) 
     toastError("message not send")
     throw error
   }
