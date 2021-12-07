@@ -93,23 +93,25 @@
 
 .loginSignupText{
     width: 50%;
+    text-align: center;
 }
 .formButton{
     background: #1EDA47;
     border-radius: 6px;
 }
 .loginPageIcons{
-    width: 40%;
+    width: 35%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .signUpButtonConteiner{
     width: 50%;
-    
-    
-    
+      
 }
 
 .loginPageText {
-    margin-left: 35px;
+    text-align: center;
 }

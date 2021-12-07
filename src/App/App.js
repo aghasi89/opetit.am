@@ -2,11 +2,11 @@ import * as React from 'react';
 import './App.css';
 import { Redirect, Route, Switch } from 'react-router';
 import { Header } from './components';
-import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
+import { AboutUs, Boxes, Home, Login, Registration, Services } from './View';
 import { ToastContainer } from "react-toastify";
-import UserPage from './view/UserPage';
+import UserPage from './View/UserPage';
 import { useDispatch, useSelector } from 'react-redux';
-import PrivatePage from './view/PrivatePage';
+import PrivatePage from './View/PrivatePage';
 import { getMeAction } from './store/actions';
 
 function App() {
