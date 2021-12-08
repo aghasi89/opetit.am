@@ -1,14 +1,14 @@
 import * as React from 'react';
-import './App.css';
 import { Redirect, Route, Switch } from 'react-router';
 import { Header } from './components';
 import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
 import { ToastContainer } from 'react-toastify';
 import UserPage from './view/UserPage';
 import { useDispatch, useSelector } from 'react-redux';
-
 import PrivatePage from './view/PrivatePage';
 import { getMeAction } from './store/actions';
+
+import './App.css';
 
 function App() {
     const dispatch = useDispatch();

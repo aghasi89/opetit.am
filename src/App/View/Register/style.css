@@ -43,13 +43,12 @@
 
 .block_1 {
     width: 616px;
-    margin-right: calc(720px - 548px);
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 .block_2 {
     width: 550px;
-    margin-left: calc(720px - 515px);
+    margin: 0 auto;
 }
 
 .block_2_logo_text {
@@ -98,6 +97,7 @@
     z-index: 0;
     width: 50%;
     position: fixed;
+    top: 0;
     background-image: url(/src/App/assets/img/jpg/login_reg.jpg);
     background-repeat: no-repeat;
     background-position-y: center;
