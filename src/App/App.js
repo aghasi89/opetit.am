@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './App.css';
 import { Redirect, Route, Switch } from 'react-router';
 import { Header } from './components';
 import { AboutUs, Boxes, Home, Login, Registration, Services } from './view';
@@ -7,8 +8,6 @@ import UserPage from './view/UserPage';
 import { useDispatch, useSelector } from 'react-redux';
 import PrivatePage from './view/PrivatePage';
 import { getMeAction } from './store/actions';
-
-import './App.css';
 
 function App() {
     const dispatch = useDispatch();
@@ -31,19 +30,20 @@ function App() {
                     <Header />
                     <Home />
                 </Route>
-                <Route path="/about">
-                    <Header />
-                    <AboutUs />
-                </Route>
-                <Route path="/boxes">
-                    <Header />
-                    <Boxes />
-                </Route>
-                <Route path="/services">
-                    <Header />
-                    <Services />
-                </Route>
-                {/* <Route path='/contactus'>
+                {/* <Route path='/about'>
+        <Route path='/about'>
+          <Header />
+          <AboutUs />
+        </Route>
+        <Route path='/boxes'>
+          <Header />
+          <Boxes />
+        </Route>
+        <Route path='/services'>
+          <Header />
+          <Services />
+        </Route>
+        {/* <Route path='/contactus'>
           <Header />
           <ContactUs />
         </Route> */}
@@ -52,9 +52,8 @@ function App() {
                 </Route>
                 <Route path="/registration">
                     <Registration />
-                    {/* <TestRegister /> */}
                 </Route>
-                {/* <Redirect to='/' /> */}
+                <Redirect to="/" />
             </Switch>
         </div>
     );

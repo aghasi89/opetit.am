@@ -1,5 +1,6 @@
 .boxes_wrapper {
     background-color: #f5f5f5;
+    padding-bottom: 80px;
 }
 
 .boxes_h2 {
@@ -23,7 +24,6 @@
     width: 192px;
     height: 52px;
     margin-left: auto;
-    padding-bottom: 80px;
 }
 
 .boxes_btn .button {

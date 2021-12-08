@@ -1,49 +1,14 @@
 import Slider from 'react-slick';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import ButtonComponent from '../../../../components/Button';
 import { TextComponent } from '../../../../components';
+import HeaderSlideHooks from './HeaderSlideHooks';
 import './style.css';
-import { getSliderImg } from '../../../../store/actions';
+// import { useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { getSliderImg } from '../../../../store/actions';
 
 export default function HeaderSlide() {
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(getSliderImg());
-    }, []);
-
-    const imgsData = useSelector(({ slider }) => slider.images);
-
-    const imgsDataJSX = imgsData
-        ? imgsData.map((item, indx) => {
-              return (
-                  <div key={indx}>
-                      <img
-                          src={item.image}
-                          alt={item.alt}
-                          className="background-image"
-                      />
-                  </div>
-              );
-          })
-        : null;
-
-    const settings = {
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-
-        beforeChange: function (currentSlide, nextSlide) {
-            // console.log("before change", currentSlide, nextSlide);
-        },
-        afterChange: function (currentSlide) {
-            // console.log("after change", currentSlide);
-        },
-    };
+    const { settings, imgsDataJSX } = HeaderSlideHooks();
     return (
         <div className="slide-content">
             <div className="slider">
