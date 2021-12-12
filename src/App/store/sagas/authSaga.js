@@ -13,17 +13,17 @@ const notify = (text) => {
 
 function* login({payload}){
     const{username,password,role_code}=payload
-    
-    console.log('saga', payload);
-    
     try {
+        yield put(authActions.loginLoadingAction())
         const response=yield call(loginRequest,username,password,role_code)
         if(response.access){
             localStorage.setItem("access",response.access)
             api.defaults.headers.common["Authorization"]="Bearer"+response.access
             yield put(authActions.loginSuccessAction())
+            yield put(authActions.loginLoadingAction())
         }
     } catch (error) {
+        yield put(authActions.loginLoadingAction())
         notify(error.message)
         // yield put (authActions.setErrorMassageAction(error.message))
     }

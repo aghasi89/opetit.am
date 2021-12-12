@@ -24,6 +24,21 @@
     justify-content: center;
     
 }
+
+.loginPageHeader{
+    
+}
+
+.loginContenier{
+    
+}
+
+
+.loginPageText {
+    text-align: center;
+    
+}
+
 .loginPageBackground{
     width: 100%;
     background: linear-gradient(
@@ -45,6 +60,7 @@
 .loginPageLogo{
     width: 150px;
     margin: 20px 0 20px 0;
+
 }
 
 
@@ -92,6 +108,7 @@
 }
 
 .loginSignupText{
+    text-align: center;
     width: 50%;
 }
 .formButton{
@@ -110,6 +127,7 @@
     
 }
 
-.loginPageText {
-    margin-left: 35px;
-}
+.errorsMessageConteiner{
+     color: red;
+     font-size: 12px ;
+    }

@@ -12,7 +12,7 @@ export default () => {
                 <div className="footerMenu">
                     <div className="footerLink">
                         <TextComponent
-                            type="h4"
+                            type="span"
                             title="Mobile app"
                             link="title"
 
@@ -20,14 +20,14 @@ export default () => {
                     </div>
                     <div className="footerLink">
                         <TextComponent
-                            type="h4"
+                            type="span"
                             title="Community"
                             link="title"
                         />
                     </div>
                     <div className="footerLink">
                         <TextComponent
-                            type="h4"
+                            type="span"
                             title="Company"
                             link="title"
                         />
@@ -35,21 +35,21 @@ export default () => {
                     <div className="footerLinkLogo d-flex"><div><img src={logo} /></div></div>
                     <div className="footerLink">
                         <TextComponent
-                            type="h4"
+                            type="span"
                             title="Help desk"
                             link="title"
                         />
                     </div>
                     <div className="footerLink">
                         <TextComponent
-                            type="h4"
+                            type="span"
                             title="Blog"
                             link="title"
                         />
                     </div>
                     <div className="footerLink">
                         <TextComponent
-                            type="h4"
+                            type="span"
                             title="Resources"
                             link="title"
                         />

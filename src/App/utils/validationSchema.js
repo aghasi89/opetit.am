@@ -22,3 +22,14 @@ export const confirmCodeSchema = Yup.object().shape({
     confirm_code: Yup.string()
         .length(6, "Must be 6 characters")
 });
+
+
+export const loginSchema = Yup.object().shape({
+    
+    username: Yup.string()
+         .required("this column is required")
+        .min(5, "user name must include minimum 5 symbols")
+        ,
+    password:Yup.string()
+    .required('this column is required')
+});

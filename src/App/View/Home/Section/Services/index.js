@@ -38,21 +38,7 @@ export default () => {
                     <div className="servicesCard">
                         <Box src={cocktailIcons} title="Drinks" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
                     </div>
-                    {/* <div className="servicesCard">
-                        <div className="servicesCardImage"><img src={servingdishIcons} /></div>
-                        <div className="servicesCardTitle"><h3>Hot Dish</h3></div>
-                        <div className="servicesCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</div>
-                    </div>
-                    <div className="servicesCard">
-                        <div className="servicesCardImage"><img src={dessertIcons} /></div>
-                        <div className="servicesCardTitle"><h3>Dessert</h3></div>
-                        <div className="servicesCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</div>
-                    </div>
-                    <div className="servicesCard">
-                        <div className="servicesCardImage"><img src={cocktailIcons} /></div>
-                        <div className="servicesCardTitle"><h3>Drinks</h3></div>
-                        <div className="servicesCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore.</div>
-                    </div> */}
+                   
                 </div>
                 <div className="servicesButtonDiv d-flex justify-content-end">
                     <div className="servicesButton">
