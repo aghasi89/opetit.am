@@ -25,14 +25,6 @@
     
 }
 
-.loginPageHeader{
-    
-}
-
-.loginContenier{
-    
-}
-
 
 .loginPageText {
     text-align: center;
@@ -110,24 +102,31 @@
 .loginSignupText{
     text-align: center;
     width: 50%;
+    text-align: center;
 }
 .formButton{
     background: #1EDA47;
     border-radius: 6px;
 }
 .loginPageIcons{
-    width: 40%;
+    width: 35%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .signUpButtonConteiner{
     width: 50%;
-    
-    
-    
+      
 }
+
 
 .errorsMessageConteiner{
      color: red;
      font-size: 12px ;
     }
+
+.loginPageText {
+    text-align: center;
+}
