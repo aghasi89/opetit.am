@@ -28,11 +28,12 @@ const toastError = (text) => {
 
 function* sendMassage({ payload }) {
   try {
+    console.log(payload);
     yield call(contactUsRequest, payload)
     toastSuccess('success')
   } catch (error) {
     toastError("message not send")
-    throw error
+    
   }
 
 

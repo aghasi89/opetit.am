@@ -4,7 +4,7 @@
     
 }
 .mostOrderedPositionConteiner{
-/* width: 65%; */
+width: 70%;
 margin: auto;
 }
 /* ---------------------------Title----------------- */
@@ -12,18 +12,29 @@ margin: auto;
    height: 20%; 
    margin: 20px 0;
 }
+.mostOrderedText{
+    width: 80%;
+    text-align: center;
+}
 
 /* ---------------------------Slides----------------- */
 .mostOrderedSlides{
-    margin: 30px 0;
+    margin: 50px 0;
     height: 60%;
     
 }
-.slideCard{
-    width: 90%; 
+/* .slideCard{
+     
     margin: 0px 5px;    
-}
+} */
 
+.slideCard .box_img{
+    width: 97%;
+}
+.slideCard .text_main{
+    width: 97%;
+ 
+}
 /* ---------------------------Buttons----------------- */
 .mostOrderedButtonsConteiner{
     height:20%;

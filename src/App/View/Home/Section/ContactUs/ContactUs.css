@@ -3,15 +3,22 @@
     width: 100%;
     min-height: 700px;
     display: flex;
-    justify-content: flex-start;
-    align-items: start;
+    justify-content: start;
+    align-items: center;
     margin: 0px auto;
+
+}
+.contactUsPosition{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
 }
 /* --------------Left side image conteiner--------------- */
 
 
 .contactUsImage{
-    width:55.53%;
+    width:50%;
     min-height:700px ;
     display: flex;
     flex-direction: column;
@@ -57,13 +64,16 @@
 .contactUsFormGeneral{
     display: flex;
     min-height: 700px;
-    justify-content: center;
+    justify-content: end;
     flex-direction: column;
-    width: 60%;
-    align-items: center;
+    width: 50%;
+    align-items: end;
    
 
 }
+/* .contactUsTitleAndForm{
+    width: 40%;
+} */
 .contactUsFormConteiner{
     display: flex;
     width: 70%;

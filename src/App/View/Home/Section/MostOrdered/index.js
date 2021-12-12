@@ -50,36 +50,51 @@ export default function MostOrdered() {
                         <TextComponent
                             type="span"
                             color="charcoal"
-                            title=" Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"
+                            title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stand"
                         />
 
                     </div>
                 </div>
                 <div className="mostOrderedSlides " >
-                    <Slider ref={sliderRef} {...settings} >
+                    <Slider ref={sliderRef} {...settings}  >
                         <div className='slideCardConteiner  d-flex justify-content-center align-items-center flex-column' >
                             <div className="slideCard d-flex flex-column align-items-center justify-content-center">
-                                <Box src={p1} title="Sed ut parspiciatis unde omnis" description="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a" />
+                                <Box src={p1}
+                                    title="Sed ut parspiciatis unde omnis"
+                                    description="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia"
+                                />
                             </div>
                         </div>
                         <div className='slideCardConteiner d-flex justify-content-center align-items-center flex-column' >
                             <div className="slideCard d-flex flex-column align-items-center justify-content-center">
-                                <Box src={p2} title="Sed ut parspiciatis unde omnis" description="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a" />
+                                <Box src={p2}
+                                    title="Sed ut parspiciatis unde omnis"
+                                    description="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia"
+                                />
                             </div>
                         </div>
                         <div className='slideCardConteiner  d-flex justify-content-center align-items-center flex-column' >
                             <div className="slideCard d-flex flex-column align-items-center justify-content-center">
-                                <Box src={p3} title="Sed ut parspiciatis unde omnis" description="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a" />
+                                <Box src={p3}
+                                    title="Sed ut parspiciatis unde omnis"
+                                    description="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia"
+                                />
                             </div>
                         </div>
                         <div className='slideCardConteiner d-flex justify-content-center align-items-center flex-column' >
                             <div className="slideCard d-flex flex-column align-items-center justify-content-center">
-                                <Box src={p1} h3="Sed ut parspiciatis unde omnis" span="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a" />
+                                <Box src={p1}
+                                    title="Sed ut parspiciatis unde omnis"
+                                    description="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia"
+                                />
                             </div>
                         </div>
                         <div className='slideCardConteiner d-flex justify-content-center align-items-center flex-column' >
                             <div className="slideCard d-flex flex-column align-items-center justify-content-center">
-                                <Box src={p2} h3="Sed ut parspiciatis unde omnis" span="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a" />
+                                <Box src={p2}
+                                    title="Sed ut parspiciatis unde omnis"
+                                    description="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia"
+                                />
                             </div>
                         </div>
                     </Slider>

@@ -8,6 +8,7 @@ export default () => {
     const dispatch = useDispatch()
     const { register, handleSubmit, formState: { errors } } = useForm()
     const onSubmit = (data) => {
+        console.log("asdasdasd");
         dispatch(contactUsActions.sendMassageAction(data))
 
     }
