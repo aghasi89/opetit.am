@@ -44,12 +44,13 @@ export default function MostOrdered() {
                         <TextComponent
                             type="h2"
                             title="Most ordered dishes"
+                            color="dark"
                         />
                     </div>
                     <div className="mostOrderedText">
                         <TextComponent
                             type="span"
-                            color="charcoal"
+                            color="secondary"
                             title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stand"
                         />
 
