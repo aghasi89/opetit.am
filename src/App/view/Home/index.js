@@ -6,6 +6,7 @@ import Boxes from "./Section/Boxes";
 import Services from "./Section/Services/index";
 import Footer from "./Section/Footer";
 
+
 export default () => {
     return (
         <div className="conatainer">
@@ -17,5 +18,7 @@ export default () => {
             <ContactUs />
             <Footer />
         </div>)
+
 }
+
 

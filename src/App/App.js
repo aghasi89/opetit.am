@@ -18,7 +18,6 @@ function App() {
   return (
     <div className="App">
       <ToastContainer />
-
       <Switch>
         <Route path="/panel">
           <PrivatePage>
@@ -31,7 +30,6 @@ function App() {
           <Home />
         </Route>
         {/* <Route path='/about'>
-
         <Route path='/about'>
           <Header />
           <AboutUs />
@@ -58,6 +56,7 @@ function App() {
       </Switch>
     </div>
   );
+
 
 }
 

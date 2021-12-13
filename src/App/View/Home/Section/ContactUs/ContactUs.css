@@ -1,7 +1,7 @@
 /* ------------General conteiner-------- */
 .contactUsGeneralConteiner{
     width: 100%;
-    min-height: 700px;
+    min-height: 750px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -83,6 +83,7 @@
 }
 .contactUsForm{
     height: 100%;
+ 
 }
 .contactUsFormTitle{
     display: flex;
@@ -104,33 +105,17 @@
     color: #5C5E62;
 }
 
-.massageTextarea {
-    max-width: 468px;
-    height: 80px;
-    box-sizing: border-box;
-    border-radius: 6px;
-    border: 1px solid #5C5E62;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.015em;
-    
-}
-.massageTitle{
-    margin: 25px 0 5px;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: #5C5E62;
-}
-
-
-
 .errorMessageConteiner{
     color: red;
-    font-size: 13px;
+    font-size: 10px;
+    font-style: bold;
+    height: 11px;
 }
-.submitButtnConteiner{
+.contactUsFormConteiner label{
+    margin: 24px 0 5px 0;
+}
+.submitButtnConteiner button{
    width: 100%;
-  min-height: 95px
-   }
+   min-height: 95px;
+   font-size: 38px;
+ }

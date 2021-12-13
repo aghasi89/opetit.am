@@ -8,5 +8,6 @@ function* rootSaga() {
     contactusSaga(),
     watchAuthSaga()
   ]);
+
 }
 export default rootSaga;

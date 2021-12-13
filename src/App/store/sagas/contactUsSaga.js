@@ -40,7 +40,7 @@ function* sendMassage({ payload }) {
 }
 
 
+
 export default function* contactUsWatch() {
   yield takeEvery(contactUsTypes.SEND_MASSAGE, sendMassage)
-
 }
