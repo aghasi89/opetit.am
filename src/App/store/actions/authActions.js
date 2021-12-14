@@ -17,6 +17,11 @@ export const loginSuccessAction=()=>{
         type:authTypes.LOGIN_SUCCESS
     }
 }
+export const loginLoadingAction=()=>{
+    return{
+        type:authTypes.LOGIN_LOADING
+    }
+}
 
 export const setErrorMassageAction=(massage)=>{
 

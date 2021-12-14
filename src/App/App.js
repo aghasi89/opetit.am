@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import PrivatePage from './view/PrivatePage';
 import { getMeAction } from './store/actions';
 
+
 function App() {
   const dispatch = useDispatch()
   React.useEffect(() => {
@@ -16,7 +17,9 @@ function App() {
   }, [])
 
   return (
+    
     <div className="App">
+      <React.Suspense fallback='loading...'>
       <ToastContainer />
       <Switch>
         <Route path="/panel">
@@ -26,6 +29,7 @@ function App() {
           </PrivatePage>
         </Route>
         <Route exact path='/'>
+          {/* <LanguageSelect/> */}
           <Header />
           <Home />
         </Route>
@@ -54,6 +58,7 @@ function App() {
         </Route>
         <Redirect to='/' />
       </Switch>
+      </React.Suspense>
     </div>
   );
 
