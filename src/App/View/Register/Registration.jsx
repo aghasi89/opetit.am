@@ -1,41 +1,39 @@
 import * as React from 'react';
+import LoaderComponent from 'react-fullpage-custom-loader';
+//CSS
+import "./style.css";
 //COMPONENTS
-
+import RegisterHook from './RegisterHook';
 import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
 import Input from '../../components/Input';
 import Modal from '../../components/Modal';
-import LoaderComponent from 'react-fullpage-custom-loader'
-import RegisterHook from './RegisterHook';
-
-//CSS
-import "./style.css"
-
 //PICTURE
 import instagram from '../../assets/img/svg/instagram.svg';
 import fb from '../../assets/img/svg/fb.svg';
 import twiter from '../../assets/img/svg/twiter.svg';
 import linkedin from '../../assets/img/svg/linkedin.svg';
-import Logo from '../../components/Header/Sample Logo.png';
+import Logo from '../../assets/img/png/Sample-Logo.png';
 
 const Registration = () => {
-    const { register,
-        handleSubmit,
+    const {
+        errorsCode,
+        modalIsOpen,
         errors,
         loading,
+        register,
+        handleSubmit,
+        setLoading,
         onSubmitRegData,
         onSubmitRegCode,
-        modalIsOpen,
         setIsOpen,
         handleSubmitCode,
         registerCode,
-        errorsCode
-    } = RegisterHook()
+    } = RegisterHook();
 
     const handleClick = () => {
         console.log('click');
     };
-
     return (
         <section className="signup_about">
             <div className="">
@@ -86,7 +84,10 @@ const Registration = () => {
                                 />
                             </div>
                             <div className="signup_inputs">
-                                {loading && <LoaderComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
+                                {loading && <LoaderComponent
+                                    sentences
+                                    loaderType="square-jelly-box"
+                                    wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
                                 <form onSubmit={handleSubmit(onSubmitRegData)}>
                                     <Input type="text"
                                         placeholder="Firstname"
@@ -97,7 +98,6 @@ const Registration = () => {
                                     <div className="input-error">
                                         {errors.first_name?.message}
                                     </div>
-
                                     <Input type="text"
                                         placeholder="Lastname"
                                         inputStyle="input-outlined"
@@ -107,7 +107,6 @@ const Registration = () => {
                                     <div className="input-error">
                                         {errors.last_name?.message}
                                     </div>
-
                                     <Input type="password"
                                         placeholder="Password"
                                         inputStyle="input-outlined"
@@ -117,7 +116,6 @@ const Registration = () => {
                                     <div className="input-error">
                                         {errors.password?.message}
                                     </div>
-
                                     <Input type="password"
                                         placeholder="Confirm password"
                                         inputStyle="input-outlined"
@@ -127,7 +125,6 @@ const Registration = () => {
                                     <div className="input-error">
                                         {errors.confirm_password?.message}
                                     </div>
-
                                     <Input type="email" novalidate
                                         placeholder="Email"
                                         inputStyle="input-outlined"
@@ -147,7 +144,6 @@ const Registration = () => {
                                         />
                                     </div>
                                 </form>
-
                                 <Modal onClose={() => setIsOpen(false)}
                                     modalIsOpen={modalIsOpen}
                                     body={
@@ -189,9 +185,7 @@ const Registration = () => {
                                         </>
                                     }
                                 />
-
                             </div>
-
                             <div className="signup_block">
                                 <TextComponent
                                     type="p"

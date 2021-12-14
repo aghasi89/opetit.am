@@ -1,11 +1,10 @@
 .mostOrderedGeneralConteiner{
     width: 100%;
     background: #F5F5F5;
-    
 }
 .mostOrderedPositionConteiner{
-width: 70%;
-margin: auto;
+    width: 70%;
+    margin: auto;
 }
 /* ---------------------------Title----------------- */
 .mostOrderedTitle{
@@ -19,18 +18,11 @@ margin: auto;
     width: 80%;
     text-align: center;
 }
-
 /* ---------------------------Slides----------------- */
 .mostOrderedSlides{
     margin: 50px 0;
-    height: 60%;
-    
+    height: 60%;  
 }
-/* .slideCard{
-     
-    margin: 0px 5px;    
-} */
-
 .slideCard .box_img{
     width: 97%;
 }
@@ -47,7 +39,6 @@ margin: auto;
 .leftArrow{
     width: 120px;
     margin-right: 2px;
-
 }
 .rightArrow{
     width: 120px;

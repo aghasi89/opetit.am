@@ -1,17 +1,15 @@
-import p1 from "../../../../../assets/img/mostOrdered/p1.png"
-import p2 from "../../../../../assets/img/mostOrdered/p2.png"
-import p3 from "../../../../../assets/img/mostOrdered/p3.png"
-import "./MostOrdered.css"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { useRef } from 'react';
-import Box from "../../../../components/Box/index";
-import { ButtonComponent, TextComponent } from "../../../../components";
+import Slider from "react-slick";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./MostOrdered.css"
+import { ButtonComponent, TextComponent } from "../../../../components";
+import Box from "../../../../components/Box/index";
+import p1 from "../../../../../assets/img/mostOrdered/p1.png";
+import p2 from "../../../../../assets/img/mostOrdered/p2.png";
+import p3 from "../../../../../assets/img/mostOrdered/p3.png";
 
 export default function MostOrdered() {
     const settings = {
@@ -22,20 +20,17 @@ export default function MostOrdered() {
         slidesToScroll: 1,
         arrows: false
     };
-    const sliderRef = useRef(null)
+    const sliderRef = useRef(null);
     const nextSlide = () => {
         if (sliderRef.current) {
-            sliderRef.current.slickNext()
-        }
-
-    }
+            sliderRef.current.slickNext();
+        };
+    };
     const previousSlide = () => {
         if (sliderRef.current) {
-            sliderRef.current.slickPrev()
-        }
-
-    }
-
+            sliderRef.current.slickPrev();
+        };
+    };
     return (
         <div className='mostOrderedGeneralConteiner d-flex justify-content-center align-items-center ' >
             <div className="container mostOrderedPositionConteiner" >
@@ -99,10 +94,8 @@ export default function MostOrdered() {
                             </div>
                         </div>
                     </Slider>
-
                 </div>
                 <div className="mostOrderedButtonsConteiner d-flex justify-content-end align-items-end">
-
                     <div className="leftArrow d-flex justify-content-center" >
                         <ButtonComponent
                             button_style="button"
@@ -112,7 +105,6 @@ export default function MostOrdered() {
                         />
                     </div>
                     <div className="rightArrow d-flex ">
-
                         <ButtonComponent
                             button_style="outline"
                             title={<ArrowForwardIcon />}
@@ -123,5 +115,5 @@ export default function MostOrdered() {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

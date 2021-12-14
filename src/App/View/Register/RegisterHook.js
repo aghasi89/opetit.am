@@ -1,22 +1,22 @@
 import * as React from 'react';
-import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
-import { getConfirmCodeAction, registerAction } from "../../store/actions"
-import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from 'react';
-import { confirmCodeSchema, dataSchema } from '../../utils/';
 import { useHistory } from 'react-router';
+import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { getConfirmCodeAction, registerAction } from "../../store/actions";
 import { isAuthSelector } from '../../store/selectors';
+import { confirmCodeSchema, dataSchema } from '../../utils/';
 
 export default function RegisterHook() {
     const [regData, setRegdata] = useState(null);
-    const formOptions = { mode: 'onBlur', resolver: yupResolver(dataSchema) }
-    const formOptionsCode = { mode: 'onBlur', resolver: yupResolver(confirmCodeSchema) }
+    const formOptions = { mode: 'onBlur', resolver: yupResolver(dataSchema) };
+    const formOptionsCode = { mode: 'onBlur', resolver: yupResolver(confirmCodeSchema) };
 
     const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
     const { register: registerCode, handleSubmit: handleSubmitCode, formState: { errors: errorsCode } } = useForm(formOptionsCode);
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const [loading, setLoading] = React.useState(false);
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -27,41 +27,31 @@ export default function RegisterHook() {
             history.push("/panel");
         }
     }, [isAuth]);
-
     const onSubmitRegData = (data) => {
-        //console.log(data, data.email);
-        setRegdata(data)
-        setLoading(true)
-        console.log(data, data.confirm_code);
-
+        setRegdata(data);
+        setLoading(true);
         if (data) {
             dispatch(getConfirmCodeAction({ ...data, setLoad: () => setLoading(false), setOpen: () => setIsOpen(true) }))
-            console.log("dispatch ", data.email);
         }
     };
-
     const onSubmitRegCode = (data) => {
-        setLoading(true)
-        console.log(regData);
-
+        setLoading(true);
         if (data) {
-            dispatch(registerAction({ ...data, ...regData, setLoad: () => setLoading(false) }))
-            console.log("dispatch after confirm code", data);
-        }
+            dispatch(registerAction({ ...data, ...regData, setLoad: () => setLoading(false) }));
+        };
     };
-
     return {
-        register,
-        handleSubmit,
+        errorsCode,
+        modalIsOpen,
         errors,
         loading,
+        register,
+        handleSubmit,
         setLoading,
         onSubmitRegData,
         onSubmitRegCode,
-        modalIsOpen,
         setIsOpen,
         handleSubmitCode,
         registerCode,
-        errorsCode
     }
 }

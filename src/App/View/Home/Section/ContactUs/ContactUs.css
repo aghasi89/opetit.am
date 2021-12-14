@@ -15,8 +15,6 @@
     width: 85%;
 }
 /* --------------Left side image conteiner--------------- */
-
-
 .contactUsImage{
     width:50%;
     min-height:700px ;
@@ -34,7 +32,6 @@
     align-items: center;
     color: white;
     min-height: 500px;
-    
 }
 .contactUsTitleAndText{
     height: 60%;
@@ -42,9 +39,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
-
 .contactUsTitle{
     display: flex;
     align-items: center;
@@ -68,8 +63,6 @@
     flex-direction: column;
     width: 50%;
     align-items: end;
-   
-
 }
 /* .contactUsTitleAndForm{
     width: 40%;
@@ -83,7 +76,6 @@
 }
 .contactUsForm{
     height: 100%;
- 
 }
 .contactUsFormTitle{
     display: flex;
@@ -94,7 +86,6 @@
     margin: 15px 0;
 }
 .titleLine{
-    
     width: 10%;
     border: 0.5px solid black;
 }
@@ -104,7 +95,6 @@
     font-family: 'Montserrat', sans-serif;
     color: #5C5E62;
 }
-
 .errorMessageConteiner{
     color: red;
     font-size: 10px;

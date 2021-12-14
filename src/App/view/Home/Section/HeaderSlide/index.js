@@ -55,7 +55,7 @@ export default function HeaderSlide() {
                     </div>
                 </Slider>
                 <div className="layer d-flex justify-content-center align-items-center">
-                    <div className="layer-wrapper d-flex flex-column align-items-start justify-content-between">
+                    <div className="container layer-wrapper d-flex flex-column align-items-start justify-content-between">
                         <div className="layer-text d-flex flex-column justify-content-center">
                             <TextComponent
                                 type="p"

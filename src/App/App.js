@@ -17,23 +17,23 @@ function App() {
   }, [])
 
   return (
-    
+
     <div className="App">
       <React.Suspense fallback='loading...'>
-      <ToastContainer />
-      <Switch>
-        <Route path="/panel">
-          <PrivatePage>
+        <ToastContainer />
+        <Switch>
+          <Route path="/panel">
+            <PrivatePage>
+              <Header />
+              <UserPage></UserPage>
+            </PrivatePage>
+          </Route>
+          <Route exact path='/'>
+            {/* <LanguageSelect/> */}
             <Header />
-            <UserPage></UserPage>
-          </PrivatePage>
-        </Route>
-        <Route exact path='/'>
-          {/* <LanguageSelect/> */}
-          <Header />
-          <Home />
-        </Route>
-        {/* <Route path='/about'>
+            <Home />
+          </Route>
+          {/* <Route path='/about'>
         <Route path='/about'>
           <Header />
           <AboutUs />
@@ -50,14 +50,14 @@ function App() {
           <Header />
           <ContactUs />
         </Route> */}
-        <Route path='/login'>
-          <Login />
-        </Route>
-        <Route path='/registration'>
-          <Registration />
-        </Route>
-        <Redirect to='/' />
-      </Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
+          <Route path='/registration'>
+            <Registration />
+          </Route>
+          <Redirect to='/' />
+        </Switch>
       </React.Suspense>
     </div>
   );

@@ -1,5 +1,6 @@
 import './About.css'
-import { TextComponent } from "../../../../components"
+import { TextComponent } from "../../../../components";
+
 export default () => {
     return (
         <div className='aboutUsGeneralConteiner'>
@@ -10,7 +11,7 @@ export default () => {
                 <div className="aboutUsbody">
                     <TextComponent
                         type="span"
-                        color="charcoal"
+                        color="dim_gray"
                         title=" Lorem ipsum dolor sit, amet consectetur
                     adipisicing elit. Incidunt vero cum non excepturi nulla iste nam debitis a
                     nemo, error nobis itaque tenetur repudiandae blanditiis reprehenderit amet
@@ -25,5 +26,5 @@ export default () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

@@ -1,28 +1,25 @@
-import "./style.css"
-import logo from "./Sample Logo.png"
-import { ButtonComponent, TextComponent } from "..";
-import { getMeSelector } from "../../store/selectors";
 import { useSelector } from "react-redux";
-import LanguageSelect from "../LanguageSelector/LanguageSelect";
 import { useTranslation } from "react-i18next";
-
+import "./style.css";
+import { ButtonComponent, TextComponent } from "..";
+import LanguageSelect from "../LanguageSelector/LanguageSelect";
+import { getMeSelector } from "../../store/selectors";
+import logo from "../../assets/img/png/Sample-Logo.png";
 
 export default function Header() {
-    const access = localStorage.getItem("access")
+    const access = localStorage.getItem("access");
     const user = useSelector(getMeSelector);
-    const {t,i18n}= useTranslation()
+    const { t } = useTranslation();
 
     return (
         <div className="header d-flex justify-content-center align-items-center">
             <div className="container wrapper d-flex justify-content-between align-items-center">
-
                 <div className="nav d-flex  flex-nowrap align-items-center">
                     <div className="logo">
                         <img src={logo} alt="" />
                     </div>
                     <div className="navbar d-flex align-items-center">
                         <div className="navbar_links">
-
                             <TextComponent type="link" link="/about" color="dim_gray" title={t("navmenu.about")} />
                         </div>
                         <div className="navbar_links">
@@ -33,9 +30,8 @@ export default function Header() {
                         </div>
                         <div className="navbar_links">
                             <TextComponent type="link" link="/contactus" color="dim_gray" title="Contact us" />
-
                         </div>
-                        <LanguageSelect/>
+                        <LanguageSelect />
                     </div>
                 </div>
                 <div className="login-buttons d-flex justify-content-between">
@@ -49,7 +45,6 @@ export default function Header() {
                                         title="Log in"
                                         borderColor="primary"
                                         title_color="primary"
-
                                     />
                                 </div>
                                 <div className="log_in_btn">
@@ -59,7 +54,6 @@ export default function Header() {
                                         title="Register"
                                         color="primary"
                                         borderColor="primary"
-
                                     />
                                 </div>
                             </>
