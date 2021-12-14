@@ -13,3 +13,8 @@ export const sendMassageSuccessAction=()=>{
     }
 
 }
+export const sendMassageLoaderAction=()=>{
+    return{
+        type:contactUsTypes.SEND_MESSAGE_LOADER
+    }
+}
