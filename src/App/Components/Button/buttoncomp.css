@@ -18,6 +18,9 @@ button{
     background: none;
  
 }
+.Toastify__toast-theme--light button{
+    width: fit-content;
+}
 .button:hover {
     text-decoration: none;
 }
