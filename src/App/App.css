@@ -41,9 +41,9 @@ span {
     padding: 0;
 }
 
-@media screen and (min-width: 1366px) and (min-width: 1200px) and (min-width: 992px) {
+/* @media screen and (min-width: 1366px) {
     .container {
         max-width: 1440px;
         padding: 0;
     }
-}
+} */

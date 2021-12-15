@@ -1,11 +1,8 @@
 import Slider from 'react-slick';
 import ButtonComponent from '../../../../components/Button';
 import { TextComponent } from '../../../../components';
-import HeaderSlideHooks from './HeaderSlideHooks';
+import HeaderSlideHooks from './headerSlideHooks';
 import './style.css';
-// import { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { getSliderImg } from '../../../../store/actions';
 
 export default function HeaderSlide() {
     const { settings, imgsDataJSX } = HeaderSlideHooks();
@@ -14,34 +11,6 @@ export default function HeaderSlide() {
             <div className="slider">
                 <Slider {...settings}>
                     {imgsDataJSX ? imgsDataJSX : null}
-                    {/* <div>
-                        <img
-                            src={background}
-                            alt="bg-img"
-                            className="background-image"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={background}
-                            alt="bg-img"
-                            className="background-image"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={background}
-                            alt="bg-img"
-                            className="background-image"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={background}
-                            alt="bg-img"
-                            className="background-image"
-                        />
-                    </div> */}
                 </Slider>
                 <div className="layer d-flex justify-content-center align-items-center">
                     <div className="layer-wrapper d-flex flex-column align-items-start justify-content-between">
