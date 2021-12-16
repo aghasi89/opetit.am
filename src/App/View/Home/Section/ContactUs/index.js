@@ -14,25 +14,25 @@ export default function ContactUs() {
                 loaderType="square-jelly-box"
                 wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
             <div className="contactUsGeneralConteiner">
-            
+                <div className='img'></div>
                 <Container >
                     <Row>
-                        <Col>
-                        {/* <div className="contactUsPosition"> */}
-                        <div className="contactUsImage">
+                        <Col className='titlCol'>
+                          <div className="contactUsImage">
                             <div className="contactUsImageTitleAndText">
                                 <div className='contactUsTitleAndText'>
                                     <div className="contactUsTitle">
                                         <TextComponent
                                             type="h2"
-                                            title="Lorem ipsum dolor sit,amet consectetur
-                                         adipisicing elit. Incidunt"
+                                            title="Lorem Ipsum is simply dummy text of the printing and typesetting"
+                                            color="white"
                                         />
                                     </div>
                                     <div className="contactUsText">
                                         <TextComponent
                                             type="span"
-                                            title="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"
+                                            title="Lorem Ipsum is simply dummy text of the printing and typesetting"
+                                            color="white"
                                         />
                                     </div>
                                 </div>

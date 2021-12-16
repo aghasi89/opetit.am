@@ -15,13 +15,26 @@
     width: 85%;
 }
 /* --------------Left side image conteiner--------------- */
+.img{
+    background-image: url(../../../../../assets/img/contactUs/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
+    width: 45%;
+    min-height: 700px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.titlCol{
+    display: flex;
+    align-items: flex-start;
+}
 .contactUsImage{
     width:100%;
     min-height:700px ;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../../../../../assets/img/contactUs/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
+    
     background-position: center;
     background-size: cover;
 }
@@ -30,12 +43,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    /* color: white; */
     min-height: 500px;
 }
 .contactUsTitleAndText{
     height: 60%;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -51,6 +64,7 @@
     align-items: center;
     justify-content: center;
     width: 70%;
+    
 }
 .empty{
     height: 40%;
@@ -105,6 +119,9 @@
 
 .container{
     width: 70%;
+}
+.row{
+    flex-wrap: nowrap;
 }
 .FormCol{
     display: flex;
