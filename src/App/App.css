@@ -36,7 +36,10 @@ span {
     margin: 0;
     padding: 0;
 }
-.container {
-    max-width: 1440px;
-    padding: 0;
-}
+
+/* @media screen and (min-width: 1366px) {
+    .container {
+        max-width: 1440px;
+        padding: 0;
+    }
+} */

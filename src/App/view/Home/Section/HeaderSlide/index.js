@@ -1,58 +1,16 @@
 import Slider from 'react-slick';
-import background from './background.png';
-import './style.css';
-import ButtonComponent from "../../../../components/Button"
+import ButtonComponent from '../../../../components/Button';
 import { TextComponent } from '../../../../components';
+import HeaderSlideHooks from './headerSlideHooks';
+import './style.css';
 
 export default function HeaderSlide() {
-    const settings = {
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-
-        beforeChange: function (currentSlide, nextSlide) {
-            // console.log("before change", currentSlide, nextSlide);
-        },
-        afterChange: function (currentSlide) {
-            // console.log("after change", currentSlide);
-        }
-
-    };
+    const { settings, imgsDataJSX } = HeaderSlideHooks();
     return (
         <div className="slide-content">
             <div className="slider">
                 <Slider {...settings}>
-                    <div>
-                        <img
-                            src={background}
-                            alt="bg-img"
-                            className="background-image"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={background}
-                            alt="bg-img"
-                            className="background-image"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={background}
-                            alt="bg-img"
-                            className="background-image"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={background}
-                            alt="bg-img"
-                            className="background-image"
-                        />
-                    </div>
+                    {imgsDataJSX ? imgsDataJSX : null}
                 </Slider>
                 <div className="layer d-flex justify-content-center align-items-center">
                     <div className="container layer-wrapper d-flex flex-column align-items-start justify-content-between">
@@ -61,16 +19,20 @@ export default function HeaderSlide() {
                                 type="p"
                                 color="white"
                                 title="LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING
-                                AND TYPESETTING" />
+                                AND TYPESETTING"
+                            />
                             <TextComponent
                                 type="h1"
                                 color="white"
                                 title="Lorem Ipsum is simply dummy text of the printing
-                                and typesetting" />
+                                and typesetting"
+                            />
                         </div>
                         <div className="join_us_btn">
                             <ButtonComponent
-                                onPress={() => { console.log("Clicked"); }}
+                                onPress={() => {
+                                    console.log('Clicked');
+                                }}
                                 button_style="outline"
                                 title="Join Today"
                                 borderColor="white"

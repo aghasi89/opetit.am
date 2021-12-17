@@ -1,15 +1,10 @@
-import { useTranslation } from "react-i18next"
+import { useTranslation } from 'react-i18next';
 
 export default () => {
-    const { t, i18n } = useTranslation()
+    const { t, i18n } = useTranslation();
     const changeLanguage = (lang) => {
-        i18n.changeLanguage(lang)
-    }
+        i18n.changeLanguage(lang);
+    };
 
-
-
-    return { t, changeLanguage }
-
-
-
-}
+    return { t, changeLanguage };
+};
