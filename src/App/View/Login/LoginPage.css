@@ -1,0 +1,132 @@
+.loginPageContenier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+.loginPage{
+   
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    
+}
+.loginPagePhoto{
+    width: 50%;
+    background-image: url(../../../assets/img/image1.png);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+.loginPageText {
+    text-align: center;
+    
+}
+
+.loginPageBackground{
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 11, 15, 0.518) 0%,
+        rgba(37, 40, 55, 0.7) 100%
+    );
+    height: 100%;
+}
+.loginContenier {
+    width:50% ;
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.loginPageLogo{
+    width: 150px;
+    margin: 20px 0 20px 0;
+
+}
+
+
+.loginPageFormConteiner{
+  
+    justify-content: space-between;
+    height: 25%;
+    margin-top: 20px;
+}
+
+.loginPageLink{
+    margin-left: 40px;
+    
+}
+
+.loginForm{
+    
+    justify-content: space-between;
+    height: 100%;
+}
+
+.socialMedia{
+    margin: 40px 0 15px 0;
+    
+}
+
+.loginPageLine{
+    
+    width: 10%;
+    border: 1px solid #FFFFFF
+}
+.loginPageSignup{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 35%;
+    
+    
+}
+
+.buttonComponentConteiner{
+    height: 40px;
+    width: 100%;
+}
+
+.loginSignupText{
+    text-align: center;
+    width: 50%;
+    text-align: center;
+}
+.formButton{
+    background: #1EDA47;
+    border-radius: 6px;
+}
+.loginPageIcons{
+    width: 35%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUpButtonConteiner{
+    width: 50%;
+      
+}
+
+
+.errorsMessageConteiner{
+     color: red;
+     font-size: 12px ;
+    }
+
+.loginPageText {
+    text-align: center;
+}

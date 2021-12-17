@@ -45,13 +45,13 @@ const TextComponent = ({ type, title, onPress, link, color }) => {
             );
         case 'h4':
             return (
-                <h3 className="text_main h4_text" style={commonStyle}>
+                <h4 className="text_main h4_text" style={commonStyle}>
                     {title}
-                </h3>
+                </h4>
             );
         case 'link':
             return (
-                <Link className="" style={commonStyle}>
+                <Link className="" to={link} style={commonStyle}>
                     {title}
                 </Link>
             );

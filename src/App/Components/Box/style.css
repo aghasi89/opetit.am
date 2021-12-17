@@ -1,9 +1,13 @@
 .box {
-    height: auto;
-    width: 467px;
-    justify-content: space-between;
+    width: 468px;
 }
 
-.box_span {
-    color: #a1a1a1;
+.box_img {
+    /* width: 100%; */
+    height: auto;
+    margin: 0px auto;
+}
+
+.box .h3_text {
+    font-weight: 700;
 }
