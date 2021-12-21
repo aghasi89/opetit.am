@@ -21,7 +21,7 @@ const TextComponent = ({ type, title, onPress, link, color }) => {
             );
         case 'span':
             return (
-                <span className="text_main" style={commonStyle}>
+                <span className="text_main span_text" style={commonStyle}>
                     {title}
                 </span>
             );
@@ -42,12 +42,6 @@ const TextComponent = ({ type, title, onPress, link, color }) => {
                 <h3 className="text_main h3_text" style={commonStyle}>
                     {title}
                 </h3>
-            );
-        case 'h4':
-            return (
-                <h4 className="text_main h4_text" style={commonStyle}>
-                    {title}
-                </h4>
             );
         case 'link':
             return (

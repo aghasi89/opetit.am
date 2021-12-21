@@ -1,11 +1,11 @@
 import './Services.css';
-import Box from '../../../components/Box';
-import TextComponent from '../../../components/Text';
-import ButtonComponent from '../../../components/Button';
-import saladIcons from '../../../../assets/img/salad.png';
-import servingdishIcons from '../../../../assets/img/servingdish.png';
-import dessertIcons from '../../../../assets/img/dessert.png';
-import cocktailIcons from '../../../../assets/img/cocktail.png';
+import Box from '../../../../components/Box';
+import TextComponent from '../../../../components/Text';
+import ButtonComponent from '../../../../components/Button';
+import saladIcons from '../../../../../assets/img/salad.png';
+import servingdishIcons from '../../../../../assets/img/servingdish.png';
+import dessertIcons from '../../../../../assets/img/dessert.png';
+import cocktailIcons from '../../../../../assets/img/cocktail.png';
 
 export default () => {
     return (

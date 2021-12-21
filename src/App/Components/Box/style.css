@@ -1,9 +1,9 @@
-.box {
+/* .box {
     width: 468px;
-}
+} */
 
 .box_img {
-    /* width: 100%; */
+    width: 100%;
     height: auto;
     margin: 0px auto;
 }

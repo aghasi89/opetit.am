@@ -3,8 +3,8 @@ import HeaderSlide from './Section/HeaderSlide';
 import MostOrdered from './Section/MostOrdered';
 import About from './Section/About';
 import Boxes from './Section/Boxes';
-import Services from './Services/index';
-import Footer from './Services/';
+import Footer from './Section/Footer';
+import Services from './Section/Services';
 
 export default () => {
     return (
