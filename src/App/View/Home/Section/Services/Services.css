@@ -1,24 +1,23 @@
 .servicesGeneralContenier{
     min-height: 600px;
 }
-
-
-
 .servicesContenier{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60%;
-    flex-direction: column;
-    
-    
+    flex-direction: column;    
 }
 .servicesInfo {
     justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+}
+.servicesInfoText{
+    width: 60%;
+    text-align: center;
+    margin: 10px 0 30px 0;
 }
 .servicesCardContenier {
     display: flex;
@@ -36,11 +35,7 @@
     width: 20%;
     height: 20%;
     margin: 20px;
-    
-}
-
-.servicesCardImage{
-    
+    text-align: center;
 }
 .servicesCardText{
     width: 80%;
@@ -49,7 +44,7 @@
     margin: 10px 0;
 }
 .servicesButtonDiv{
-    width: 100%;
+width: 100%;
     
 }
 .servicesButton{
@@ -57,4 +52,14 @@
     border-radius: 6px;
     width: 160px;
     height: 40px;
+}
+.servicesCard .box .text_main{ 
+    margin-top: 20px;
+}
+.servicesCard .box .h3_text{
+   margin: 0 auto;
+}
+.servicesButton{
+    width: 180px;
+    height: 50px;
 }

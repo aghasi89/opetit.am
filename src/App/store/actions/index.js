@@ -3,11 +3,11 @@ import {
     registerAction,
     authSuccessAction,
     getMeAction,
-    setMeAction
-
-} from "./RegisterActions";
-import * as authActions from "./authActions";
-import * as contactUsActions from "./contactUs";
+    setMeAction,
+} from './RegisterActions';
+import { getSliderImg } from './SliderAction';
+import * as authActions from './authActions';
+import * as contactUsActions from './contactUs';
 export {
     getConfirmCodeAction,
     registerAction,
@@ -15,6 +15,6 @@ export {
     getMeAction,
     setMeAction,
     contactUsActions,
-    authActions
-}
-
+    authActions,
+    getSliderImg,
+};

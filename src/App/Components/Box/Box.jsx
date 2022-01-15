@@ -1,6 +1,5 @@
-import TextComponent from '../Text';
 import './style.css';
-
+import TextComponent from '../Text';
 export default function Box({ src, title, description }) {
     return (
         <div className="box">

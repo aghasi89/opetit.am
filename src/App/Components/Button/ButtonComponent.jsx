@@ -11,7 +11,7 @@ const ButtonComponent = ({
     color,
     borderColor,
     title_color,
-    add_class
+    add_class,
 }) => {
     const theme = useContext(ThemeContext);
     const commonStyle = {};
@@ -46,8 +46,9 @@ const ButtonComponent = ({
     return link ? (
         <Link to={link}>{content}</Link>
     ) : onPress ? (
-        <div className="buttonConteiner" onClick={onPress}>{content}</div>
-
+        <div className="buttonConteiner" onClick={onPress}>
+            {content}
+        </div>
     ) : null;
 };
 

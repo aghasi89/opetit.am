@@ -1,124 +1,131 @@
-import { ToastContainer } from "react-toastify";
-import { ButtonComponent, TextComponent } from "../../../../components";
-import Input from "../../../../components/Input/Input"
+import LoaderComponent from 'react-fullpage-custom-loader';
 import "./ContactUs.css"
-import contactUsHook from "./hook"
+import contactUsHook from "./hook";
+import { ButtonComponent, TextComponent } from "../../../../components";
+import Input from "../../../../components/Input/Input";
+import { Col, Container, Row } from 'react-bootstrap';
 
 export default function ContactUs() {
-    const { register, handleSubmit, onSubmit, errors } = contactUsHook();
-
+    const { errors, loading, register, handleSubmit, onSubmit } = contactUsHook();
     return (
-        <div className="contactUsGeneralConteiner">
-            <div className="contactUsImage">
-                <div className="contactUsImageTitleAndText">
-                    <div className='contactUsTitleAndText'>
-                        <div className="contactUsTitle">
-                            <TextComponent
-                                type="h2"
-                                title="Lorem ipsum dolor sit,amet consectetur
-                            adipisicing elit. Incidunt"
-                            />
-
+        <>
+            {loading && <LoaderComponent
+                sentences
+                loaderType="square-jelly-box"
+                wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
+            <div className="contactUsGeneralConteiner">
+                <div className='img'></div>
+                <Container >
+                    <Row>
+                        <Col className='titlCol'>
+                          <div className="contactUsImage">
+                            <div className="contactUsImageTitleAndText">
+                                <div className='contactUsTitleAndText'>
+                                    <div className="contactUsTitle">
+                                        <TextComponent
+                                            type="h2"
+                                            title="Lorem Ipsum is simply dummy text of the printing and typesetting"
+                                            color="white"
+                                        />
+                                    </div>
+                                    <div className="contactUsText">
+                                        <TextComponent
+                                            type="span"
+                                            title="Lorem Ipsum is simply dummy text of the printing and typesetting"
+                                            color="white"
+                                        />
+                                    </div>
+                                </div>
+                                <div className='empty'></div>
+                            </div>
                         </div>
-                        <div className="contactUsText">
-                            <TextComponent
-                                type="span"
-                                title="Lorem ipsum dolor sit,  vero cum non excepturi nulla iste nam debitis a"
-                            />
+                        </Col>
+                    <Col className='FormCol' >
+                        <div className='contactUsFormGeneral'>
+                            <div className="contactUsFormTitle ">
+                                <TextComponent
+                                    type="h2"
+                                    title="CONTACT US"
+                                />
+                                <div className="titleLine"></div>
+                            </div >
+                            <div className="contactUsFormConteiner ">
+                                <form className="contactUsForm d-flex justify-content-start flex-column"
+                                    onSubmit={handleSubmit(onSubmit)}>
+                                    {/* -----------------name input------------- */}
+                                    <Input inputStyle="input-outlined-bottom"
+                                        type="text"
+                                        placeholder="Name"
+                                        label="name"
+                                        register={register}
+                                    />
+                                    <div className="errorMessageConteiner">{errors
+                                        ?.name
+                                        ?.message
+                                        ? errors.name.message
+                                        : null}</div>
+                                    {/* -----------------Email input------------- */}
+                                    <Input
+                                        inputStyle="input-outlined-bottom"
+                                        type="text"
+                                        placeholder="Email"
+                                        label="email"
+                                        register={register}
+                                    />
+                                    <div className="errorMessageConteiner">{errors
+                                        ?.email
+                                        ?.message
+                                        ? errors.email.message
+                                        : null}</div>
+                                    {/* -----------------Subject input----------------- */}
+                                    <Input
+                                        inputStyle="input-outlined-bottom"
+                                        type="text"
+                                        placeholder="Subject"
+                                        label="subject"
+                                        register={register} />
+                                    {/* -----------------Phone number input----------------- */}
+                                    <Input
+                                        inputStyle="input-outlined-bottom"
+                                        type="text" placeholder="Phone number"
+                                        label="phone_number"
+                                        register={register} />
 
+                                    <div className="errorMessageConteiner">{errors
+                                        ?.phone_number
+                                        ?.message
+                                        ? errors.phone_number.message
+                                        : null}</div>
+                                    {/* -----------------Text area----------------- */}
+                                    <Input
+                                        labelForTextarea="Massage"
+                                        inputStyle="input-textarea"
+                                        placeholder="write text here..."
+                                        label="message"
+                                        register={register} />
+                                    <div className="errorMessageConteiner">{errors
+                                        ?.message
+                                        ?.message
+                                        ? errors.message.message
+                                        : null}</div>
+                                    <div className="verificationConteiner " >verification</div>
+                                    <div className="submitButtnConteiner">
+                                        <ButtonComponent
+                                            button_style="button"
+                                            title="SUBMIT"
+                                            color="primary"
+                                            type="submit"
+                                            onPress={() => { }}
+                                        />
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <div className='empty'></div>
-                </div>
+                        </Col>
+                    </Row>
+                    {/* </div> */}
+                </Container>
             </div>
-            <div className='contactUsFormGeneral'>
-                <div className="contactUsFormTitle ">
-                    <TextComponent
-                        type="h2"
-
-                        title="CONTACT US"
-                    />
-                    <div className="titleLine"></div>
-                </div >
-                <div className="contactUsFormConteiner ">
-                    <form className="contactUsForm d-flex justify-content-start flex-column" onSubmit={handleSubmit(onSubmit)}>
-
-                        {/* -----------------name input------------- */}
-                        <Input inputStyle="input-outlined-bottom"
-                            type="text"
-                            placeholder="Name"
-                            label="name"
-                            required
-                            pattern={{ pattern: /^[A-Za-zА-Яа-я]+$/i }}
-                            register={register}
-                        />
-                        {errors.name && errors.name.type === "required" && <div className="errorMessageConteiner">name is required</div>}
-                        {errors.name && errors.name.type === "pattern" && <div className="errorMessageConteiner">name can only contain letters</div>}
-
-                        {/* -----------------Email input------------- */}
-                        <Input
-                            inputStyle="input-outlined-bottom"
-                            type="text"
-                            placeholder="Email"
-                            label="email"
-                            required
-                            register={register}
-                            pattern={{ pattern: /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i }}
-                        />
-                        {errors.email && errors.email.type === "required" && <div className="errorMessageConteiner">Email is required</div>}
-                        {errors.email && errors.email.type === "pattern" && <div className="errorMessageConteiner">pleas insert a valid email adress</div>}
-
-                        {/* -----------------Subject input----------------- */}
-                        <Input
-                            inputStyle="input-outlined-bottom"
-                            type="text"
-                            placeholder="Subject"
-                            label="subject"
-                            register={register} />
-
-                        {/* -----------------Phone number input----------------- */}
-                        <Input
-                            inputStyle="input-outlined-bottom"
-                            type="text" placeholder="Phone number"
-                            label="phone_number"
-                            pattern={{ pattern: /^\+?([0-9]{2,3})\)?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})?([-. ]{1})?([0-9]{2})$/, minLength: 8 }}
-                            required
-                            register={register} />
-
-                        {errors.phone_number && errors.phone_number.type === "required" && <div className="errorMessageConteiner">Phone number is required</div>}
-                        {errors.phone_number && errors.phone_number.type === "pattern" && <div className="errorMessageConteiner">Phone number can only contain numbers </div>}
-                        {errors.phone_number && errors.phone_number.type === "minLength" && <div className="errorMessageConteiner">Phone number must include min 8 symbolse </div>}
-
-                        {/* -----------------Text area----------------- */}
-
-                        <Input
-                            labelForTextarea="Massage"
-                            inputStyle="input-textarea"
-                            placeholder="write text here..."
-                            label="message"
-                            pattern={{ minLength: 10 }}
-                            required
-                            register={register} />
-
-                        {errors.message && errors.message.type === "required" && <div className="errorMessageConteiner"> please enter a message</div>}
-                        {errors.message && errors.message.type === "minLength" && <div className="errorMessageConteiner"> message must include min 10 symbolse</div>}
-
-                        <div className="verificationConteiner ">verification</div>
-                        <div className="submitButtnConteiner">
-                            <ButtonComponent
-                                button_style="button"
-                                title="submit"
-                                color="primary"
-                                type="submit"
-                                onPress={() => { }}
-                                add_class="fontSize"
-                            />
-                        </div>
-                    </form>
-
-
-                </div>
-            </div>
-        </div>
+        </>
     )
 }

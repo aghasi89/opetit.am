@@ -1,15 +1,20 @@
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
-import { contactUsActions } from "../../../../store/actions";
-
 import 'react-toastify/dist/ReactToastify.css';
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useDispatch, useSelector } from "react-redux";
+import { contactUsActions } from "../../../../store/actions";
+import { contactUsSchema } from "../../../../utils";
+import { contactUsSelectors } from "../../../../store/selectors";
 
 export default () => {
-    const dispatch = useDispatch()
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const dispatch = useDispatch();
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(contactUsSchema),
+        mode: "onSubmit"
+    });
+    const loading = useSelector(contactUsSelectors.contactUsLoadingSelector);
     const onSubmit = (data) => {
-        dispatch(contactUsActions.sendMassageAction(data))
-
+        dispatch(contactUsActions.sendMassageAction(data));
     }
-    return { register, handleSubmit, onSubmit, errors }
+    return { errors, loading, register, handleSubmit, onSubmit };
 }

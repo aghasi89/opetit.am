@@ -1,22 +1,40 @@
 /* ------------General conteiner-------- */
 .contactUsGeneralConteiner{
     width: 100%;
-    min-height: 700px;
+    min-height: 750px;
     display: flex;
-    justify-content: flex-start;
-    align-items: start;
+    justify-content: start;
+    align-items: center;
     margin: 0px auto;
+
+}
+.contactUsPosition{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
 }
 /* --------------Left side image conteiner--------------- */
-
-
+.img{
+    background-image: url(../../../../../assets/img/contactUs/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
+    width: 45%;
+    min-height: 700px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.titlCol{
+    display: flex;
+    align-items: flex-start;
+}
 .contactUsImage{
-    width:55.53%;
+    width:100%;
     min-height:700px ;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../../../../../assets/img/contactUs/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
+    
     background-position: center;
     background-size: cover;
 }
@@ -25,19 +43,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    /* color: white; */
     min-height: 500px;
-    
 }
 .contactUsTitleAndText{
     height: 60%;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
-
 .contactUsTitle{
     display: flex;
     align-items: center;
@@ -49,6 +64,7 @@
     align-items: center;
     justify-content: center;
     width: 70%;
+    
 }
 .empty{
     height: 40%;
@@ -56,17 +72,15 @@
 /* -------------------Form-------------- */
 .contactUsFormGeneral{
     display: flex;
-    min-height: 700px;
-    justify-content: center;
     flex-direction: column;
-    width: 60%;
-    align-items: center;
-   
+  
 
 }
+/* .contactUsTitleAndForm{
+    width: 40%;
+} */
 .contactUsFormConteiner{
     display: flex;
-    width: 70%;
     align-items: center;
     justify-content: flex-start;
     height: 100%;
@@ -75,15 +89,10 @@
     height: 100%;
 }
 .contactUsFormTitle{
-    display: flex;
-    width: 70%;
-    flex-direction:column;
-    align-items: flex-start;
-    justify-content: flex-start;
     margin: 15px 0;
+    
 }
 .titleLine{
-    
     width: 10%;
     border: 0.5px solid black;
 }
@@ -93,34 +102,29 @@
     font-family: 'Montserrat', sans-serif;
     color: #5C5E62;
 }
-
-.massageTextarea {
-    max-width: 468px;
-    height: 80px;
-    box-sizing: border-box;
-    border-radius: 6px;
-    border: 1px solid #5C5E62;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.015em;
-    
-}
-.massageTitle{
-    margin: 25px 0 5px;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: #5C5E62;
-}
-
-
-
 .errorMessageConteiner{
     color: red;
-    font-size: 13px;
+    font-size: 10px;
+    font-style: bold;
+    height: 11px;
 }
-.submitButtnConteiner{
+.contactUsFormConteiner label{
+    margin: 24px 0 5px 0;
+}
+.submitButtnConteiner button{
    width: 100%;
-  min-height: 95px
-   }
+   min-height: 95px;
+   font-size: 38px;
+ }
+
+.container{
+    width: 70%;
+}
+.row{
+    flex-wrap: nowrap;
+}
+.FormCol{
+    display: flex;
+    justify-content: end;
+   
+}

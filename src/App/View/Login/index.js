@@ -11,30 +11,23 @@ import Input from "../../components/Input/index"
 import hook from "./hook"
 import TextComponent from "../../components/Text"
 import ButtonComponent from "../../components/Button"
-import { useEffect } from "react"
-import { useHistory } from "react-router"
-
+import LoaderComponent from 'react-fullpage-custom-loader'
 export default () => {
-    const isAuth = localStorage.getItem('access')
-    const history = useHistory()
-    useEffect(() => {
-        if (isAuth) {
-            history.push('/panel')
-        }
-    }, [])
-    const { register, handleSubmit, onSubmit, errors, errorMassage } = hook()
+   
+    const { register, handleSubmit, onSubmit, errors, errorMassage ,loading} = hook()
     return (
         <div className="loginPageContenier">
+             {loading&&<LoaderComponent sentences loaderType="square-jelly-box" wrapperBackgroundColor="rgba(192,192,192,0.3)" />}
             <div className="loginPage d-flex justify-content-center align-items-center">
                 <div className="loginContenier d-flex flex-column  justify-content-center" >
                     <div className="loginPageHeader d-flex justify-content-center align-items-center">
                         <TextComponent
                             type="span"
-                            title="Welkome to"
+                            title="Welcome to"
                         />
                     </div>
                     <div className="loginPageIconandPhoto d-flex justify-content-center align-items-center">
-                        <div style={{ width: "150px" }}><img src={SampleLogo} /></div>
+                        <div className="loginPageLogo"><img className="img" src={SampleLogo}  /></div>
                     </div>
                     <div className="loginPageText d-flex justify-content-center align-items-center">
                         <TextComponent
@@ -51,13 +44,10 @@ export default () => {
                                 type="text"
                                 placeholder="Username"
                                 register={register}
-                                required
-                                pattern={{ minLength: 5 }}
+                              
                             />
-
-                            {errors.username && errors.username.type === "required" && <div style={{ color: "red", fontSize: "12px" }}>this column is required</div>}
-                            {errors.username && errors.username.type === "minLength" && <div style={{ color: "red", fontSize: "12px" }}>user name must include minimum 5 symbols</div>}
-
+                               
+                            {errors.username?.message && <div className="errorsMessageConteiner">{errors.username.message}</div>}
 
                             <Input
                                 inputStyle="input-outlined"
@@ -65,17 +55,19 @@ export default () => {
                                 label="password"
                                 placeholder="Password"
                                 register={register}
-                                required
+                              
                             />
 
-                            {errors.password && <div style={{ color: "red", fontSize: "12px" }}>this column is required</div>}
+                            {errors?.password?.message && <div className="errorsMessageConteiner">{errors.password.message}</div>}
 
-                            <div>
+                            <div className="loginPageLink">
                                 <TextComponent
                                     type="span"
                                     title="Fargat your password?"
+                                    onPress
                                 />
                             </div>
+                            <div className="buttonComponentConteiner">
                             <ButtonComponent
                                 button_style="button"
                                 title="Sign in"
@@ -84,6 +76,7 @@ export default () => {
                                 onPress
 
                             />
+                            </div>
                         </form>
 
 
@@ -121,6 +114,7 @@ export default () => {
                             />
                         </div>
                         <div className="signUpButtonConteiner">
+                            <div className="buttonComponentConteiner">
                             <ButtonComponent
                                 button_style="outline"
                                 title="Sign up"
@@ -128,6 +122,7 @@ export default () => {
                                 onPress
 
                             />
+                            </div>
                         </div>
                     </div>
                 </div>

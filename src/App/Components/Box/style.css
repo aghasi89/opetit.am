@@ -1,13 +1,13 @@
-.box {
-    display: flex;
-    flex-direction: column;
-}
-.box_span {
-    color: #a1a1a1;
-}
-.box_img{
-    /* width: 100%; */
+/* .box {
+    width: 468px;
+} */
+
+.box_img {
+    width: 100%;
     height: auto;
     margin: 0px auto;
 }
 
+.box .h3_text {
+    font-weight: 700;
+}
