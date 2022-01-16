@@ -22,8 +22,9 @@ export default () => {
                 <div className="loginContenier d-flex flex-column  justify-content-center" >
                     <div className="loginPageHeader d-flex justify-content-center align-items-center">
                         <TextComponent
-                            type="span"
+                            type="h4"
                             title="Welcome to"
+                            color="light"
                         />
                     </div>
                     <div className="loginPageIconandPhoto d-flex justify-content-center align-items-center">
@@ -33,6 +34,7 @@ export default () => {
                         <TextComponent
                             type="span"
                             title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore"
+                            color="secondary"
                         />
                     </div>
                     <div className="loginPageFormConteiner d-flex flex-column justify-content-between " >
@@ -62,9 +64,10 @@ export default () => {
 
                             <div className="loginPageLink">
                                 <TextComponent
-                                    type="span"
+                                    type="link"
                                     title="Fargat your password?"
                                     onPress
+                                    color="secondary"
                                 />
                             </div>
                             <div className="buttonComponentConteiner">
@@ -87,6 +90,7 @@ export default () => {
                             <TextComponent
                                 type="span"
                                 title="continue with social media"
+                                color="secondary"
                             />
                         </div>
                     </div>
