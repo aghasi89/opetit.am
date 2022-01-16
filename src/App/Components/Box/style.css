@@ -1,9 +1,13 @@
-.box {
+/* .box {
+    width: 468px;
+} */
+
+.box_img {
+    width: 100%;
     height: auto;
-    width: 467px;
-    justify-content: space-between;
+    margin: 0px auto;
 }
 
-.box_span {
-    color: #a1a1a1;
+.box .h3_text {
+    font-weight: 700;
 }

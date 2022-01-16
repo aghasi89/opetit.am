@@ -1,0 +1,130 @@
+/* ------------General conteiner-------- */
+.contactUsGeneralConteiner{
+    width: 100%;
+    min-height: 750px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0px auto;
+
+}
+.contactUsPosition{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+}
+/* --------------Left side image conteiner--------------- */
+.img{
+    background-image: url(../../../../../assets/img/contactUs/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
+    width: 45%;
+    min-height: 700px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.titlCol{
+    display: flex;
+    align-items: flex-start;
+}
+.contactUsImage{
+    width:100%;
+    min-height:700px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-position: center;
+    background-size: cover;
+}
+.contactUsImageTitleAndText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    min-height: 500px;
+}
+.contactUsTitleAndText{
+    height: 60%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.contactUsTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.contactUsText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    
+}
+.empty{
+    height: 40%;
+}
+/* -------------------Form-------------- */
+.contactUsFormGeneral{
+    display: flex;
+    flex-direction: column;
+  
+
+}
+/* .contactUsTitleAndForm{
+    width: 40%;
+} */
+.contactUsFormConteiner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+.contactUsForm{
+    height: 100%;
+}
+.contactUsFormTitle{
+    margin: 15px 0;
+    
+}
+.titleLine{
+    width: 10%;
+    border: 0.5px solid black;
+}
+.verificationConteiner{
+    margin: 10px 0 10px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #5C5E62;
+}
+.errorMessageConteiner{
+    color: red;
+    font-size: 10px;
+    font-style: bold;
+    height: 11px;
+}
+.contactUsFormConteiner label{
+    margin: 24px 0 5px 0;
+}
+.submitButtnConteiner button{
+   width: 100%;
+   min-height: 95px;
+   font-size: 38px;
+ }
+
+.container{
+    width: 70%;
+}
+.row{
+    flex-wrap: nowrap;
+}
+.FormCol{
+    display: flex;
+    justify-content: end;
+   
+}

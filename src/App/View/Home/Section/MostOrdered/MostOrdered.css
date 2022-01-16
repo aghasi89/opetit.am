@@ -1,0 +1,47 @@
+.mostOrderedGeneralConteiner{
+    width: 100%;
+    background: #F5F5F5;
+}
+.mostOrderedPositionConteiner{
+    width: 70%;
+    margin: auto;
+}
+/* ---------------------------Title----------------- */
+.mostOrderedTitle{
+    margin-top: 65px;
+}
+.mostOrderedTitleAndText{
+   height: 20%; 
+   margin: 20px 0;
+}
+.mostOrderedText{
+    width: 80%;
+    text-align: center;
+}
+/* ---------------------------Slides----------------- */
+.mostOrderedSlides{
+    margin: 50px 0;
+    height: 60%;  
+}
+.slideCard .box_img{
+    width: 97%;
+}
+.slideCard .text_main{
+    width: 97%;
+ 
+}
+/* ---------------------------Buttons----------------- */
+.mostOrderedButtonsConteiner{
+   
+    width: 100%;
+    margin-bottom: 40px;
+}
+.leftArrow{
+    width: 192px;
+    margin-right: 2px;
+    height: 52px;
+}
+.rightArrow{
+    width: 192px;
+    height: 52px;
+}

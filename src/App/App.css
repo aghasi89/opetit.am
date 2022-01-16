@@ -1,11 +1,7 @@
-/* .App{
+.App{
   height: 100vh;
   min-width:320px ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
+}
 .header {
     width: 100%;
     justify-content: space-between;
@@ -24,13 +20,13 @@
     align-items: center;
     flex: 1;
 }
+
 .registrationAndSignInButton {
     width: 200px;
     display: flex;
 }
-.App {
-    box-sizing: border-box;
-}
+
+
 h1,
 h2,
 h3,
@@ -40,7 +36,10 @@ span {
     margin: 0;
     padding: 0;
 }
-.container {
-    max-width: 1440px;
-    padding: 0;
-}
+
+/* @media screen and (min-width: 1366px) {
+    .container {
+        max-width: 1440px;
+        padding: 0;
+    }
+} */
