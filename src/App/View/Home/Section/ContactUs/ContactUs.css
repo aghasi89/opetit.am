@@ -1,0 +1,111 @@
+/* ------------General conteiner-------- */
+.contactUsGeneralConteiner{
+    width: 100%;
+    min-height: 750px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    margin: 0px auto;
+}
+/* --------------Left side image conteiner--------------- */
+
+
+.contactUsImage{
+    width:55.53%;
+    min-height: 744px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../../../../../assets/img/contactUs/joshua-ryder-I51a7Yy7mQA-unsplash\ 1.png);
+    background-position: center;
+    background-size: cover;
+}
+.contactUsImageTitleAndText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 500px;
+    
+}
+.contactUsTitleAndText{
+    height: 60%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.contactUsTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.contactUsText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.empty{
+    height: 40%;
+}
+/* -------------------Form-------------- */
+.contactUsFormGeneral{
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+   
+
+}
+.contactUsFormConteiner{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+.contactUsForm{
+    height: 100%;
+ 
+}
+.contactUsFormTitle{
+    display: flex;
+    width: 70%;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+.titleLine{
+    
+    width: 10%;
+    border: 0.5px solid black;
+}
+.verificationConteiner{
+    margin: 10px 0 10px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #5C5E62;
+}
+
+.errorMessageConteiner{
+    color: red;
+    font-size: 10px;
+    font-style: bold;
+    height: 11px;
+}
+.contactUsFormConteiner label{
+    margin: 24px 0 5px 0;
+}
+.submitButtnConteiner button{
+   width: 100%;
+   min-height: 95px;
+   font-size: 38px;
+ }

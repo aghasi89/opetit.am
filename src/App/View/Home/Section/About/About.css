@@ -1,0 +1,29 @@
+.aboutUsGeneralConteiner{
+    width:100% ;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+    margin: 60px 0 40px;
+
+}
+.titleAndTextConteiner{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.aboutUsTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 65%; */
+    margin: 60px 0;
+}
+.aboutUsbody{
+    /* width: 65%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
