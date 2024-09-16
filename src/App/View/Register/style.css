@@ -1,0 +1,186 @@
+.signup_wrapper {
+    display: flex;
+    position: relative;
+}
+
+.signup_logo_block {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 329px 0 25px 0;
+}
+
+.signup_logo_block::before {
+    content: '';
+    width: 132px;
+    border-top: 1px solid white;
+    position: absolute;
+    margin-top: -35px;
+}
+
+.signup_logo_block .h1_style {
+    font-family: 'Comfortaa-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 80px;
+    color: #ffffff;
+    margin: 35px 0 0 30px;
+}
+
+.signup_form_btn_block {
+    margin: 0 auto;
+    margin-bottom: 362px;
+    margin-top: 71px;
+    border-color: white;
+    cursor: pointer;
+}
+
+.big_btn .button {
+    width: 550px;
+    height: 52px;
+}
+
+.block_1 {
+    width: 616px;
+    margin: 0 auto;
+}
+
+.block_2 {
+    width: 550px;
+    margin: 0 auto;
+}
+
+.block_2_logo_text {
+    margin-top: 105px;
+    margin-bottom: 20px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.signup_form_p {
+    margin-left: 172px;
+}
+
+.signup_form_logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.signup_form_img {
+    filter: invert(1);
+}
+
+.signup_inputs {
+    margin-top: 25px !important;
+    margin-bottom: 40px !important;
+    margin: 0 auto;
+}
+
+.input_wrapper {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.signup_logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup_logo_img {
+    margin-right: 30px;
+}
+.signup_container {
+    z-index: 0;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    background-image: url(/src/App/assets/img/jpg/login_reg.jpg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.background {
+    background: linear-gradient(
+        180deg,
+        rgba(10, 11, 15, 0.518) 0%,
+        rgba(37, 40, 55, 0.7) 100%
+    );
+}
+
+.signup_form {
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.signup_container .p_style {
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    margin: 0 auto;
+}
+
+.signup_container::before {
+    content: '';
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 11, 15, 0.518) 0%,
+        rgba(37, 40, 55, 0.7) 100%
+    );
+}
+
+.signup_block {
+    margin-top: 50px;
+    margin-bottom: 204px;
+}
+
+@media screen and (max-width: 1366px) {
+    .block_2 {
+        width: 550px;
+        margin-left: calc(100% - 90%);
+    }
+    .signup_logo_block {
+        margin-top: 225px;
+    }
+}
+.input-error {
+    color: red;
+    position: absolute;
+    margin: 0px 10px 0px;
+    font-size: 12px;
+}
+.modal-content {
+    height: 230px;
+    width: 100%;
+    border: none;
+}
+.modal-header,
+.modal-footer {
+    border: none;
+    padding: 10px;
+}
+.modal-title {
+    margin: 0;
+}
+.styles_WrapperUi__2TxXl {
+    bottom: 0 !important;
+    position: fixed !important;
+}
+
+.square-jelly-box-min_la-square-jelly-box__3qdI1 {
+    color: #fade6f !important;
+}
+.send_code_again_btn {
+    border-bottom: 1px solid;
+    width: 100%;
+    padding: 5px 15px;
+}
