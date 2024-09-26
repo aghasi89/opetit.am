@@ -1,8 +1,40 @@
-.content {
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(31, 26, 26, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  .modal-main {
+    width: 752px;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .modal-content {
+    height: 230px;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-header, .modal-footer {
+    border: none;
+    padding: 10px
+  }
+  .modal-title {
+    margin: 0
+  }
+  /* .modal-body {
+    display: flex;
+    align-items: center;
+  } */

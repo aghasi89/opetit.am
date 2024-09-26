@@ -12,11 +12,12 @@ export default function HeaderSlide() {
         autoplaySpeed: 2000,
 
         beforeChange: function (currentSlide, nextSlide) {
-            console.log('before change', currentSlide, nextSlide);
+           // console.log("before change", currentSlide, nextSlide);
         },
         afterChange: function (currentSlide) {
-            console.log('after change', currentSlide);
-        },
+           // console.log("after change", currentSlide);
+        }
+
     };
     return (
         <div className="slide-content">

@@ -1,6 +1,6 @@
 import axios from "axios";
 const api=axios.create({
-    baseURL:'http://localhost:8000/'
+    baseURL:'http://game.annaniks.com/'
 })
 
 export default api

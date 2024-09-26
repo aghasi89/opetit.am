@@ -50,4 +50,7 @@
    /* height: 100vh; */
    position: absolute;
  }
+ .slide-content {
+   margin-top: 60px;
+ }
  

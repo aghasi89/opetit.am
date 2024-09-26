@@ -1,9 +1,7 @@
 //COMPONENTS
-import { useContext } from 'react';
 import TextComponent from '../../components/Text';
 import ButtonComponent from '../../components/Button';
 import Box from '../../components/Box';
-import { ThemeContext } from '../../../context';
 
 import boxe_img1 from '../../assets/img/jpg/boxe_img1.jpg';
 import boxe_img2 from '../../assets/img/jpg/boxe_img2.jpg';
@@ -13,7 +11,6 @@ import boxe_img3 from '../../assets/img/jpg/boxe_img3.jpg';
 import './boxes.css';
 
 const Boxes = () => {
-    const theme = useContext(ThemeContext);
     const handleClick = () => {
         console.log();
     };
